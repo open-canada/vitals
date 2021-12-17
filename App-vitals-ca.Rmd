@@ -7,10 +7,8 @@ output:
     social: menu
     source_code: embed
     vertical_layout: fill #scroll 
-
 runtime: shiny       
 ---
-
 
 <!--
 MIT License
@@ -94,7 +92,22 @@ dt <- dt[Date >= ymd("2019-09-01")]
 dt[, GEO := gsub(", place of occurrence", "", GEO)]
 dt[, GEO:=fct_relevel(GEO, choicesGEO)]
 
-# Read dtVac -----
+# 2. Merge with population, compute rates per million----
+
+dtGeo <- data.table(
+    GEO = c(  "Ontario", "Quebec", "British Columbia", "Alberta",
+              "Manitoba", "Saskatchewan", "Nova Scotia", "New Brunswick",
+              "Newfoundland and Labrador", "Prince Edward Island", "Northwest Territories", "Nunavut", "Yukon", "Canada"  ),
+    population = c( 14826276, 8604495, 5214805, 4442879, 1383765, 1179844, 992055, 789225, 
+                    520553, 164318, 45504, 39403, 42986, 38246108 )
+)
+dtGeo[, GEO:=fct_relevel(GEO, choicesGEO)]
+
+dt <- dtGeo[dt, on="GEO"]
+dt [, rate:=round(1000000*val_norm/population)]
+
+
+# 3. Merge it with Vaccination data -----
 
 # Alternative source:
 # dtVac2 <- fread("vaccination-coverage-byVaccineType-2021-12-07.csv", stringsAsFactors = T)
@@ -109,13 +122,13 @@ dtVac <- readRDS("vaccination-coverage-byAgeAndSex-overTimeDownload-2021-12-07.R
 
 dtVac[.N]
 dtVac %>% names
-dtVac <- dtVac[sex=="All sexes", c(2, 4:12)]
+dtVac <- dtVac[sex=="All sexes", c(2, 4:7,9)]
 
 dtVac[, week_end := ymd(week_end)]
 setnames(dtVac, old=c("prename", "week_end"), new=c("GEO", "Date"))
 
 dtVac %>% names
-colValues <- 5:10
+colValues <- c("numtotal_atleast1dose","numtotal_fully"  )
 dtVac[, (colValues):=lapply(.SD, as.numeric), .SDcols=colValues]
 
 dtVac$GEO  %>% unique() 
@@ -133,23 +146,27 @@ dtAll <- dtVacAllAges[dt, on=c("GEO", "Date")]
 
 ```{r shiny_input_in0}
 
-# Default selection
+# 4.a Set parameters: static ----
+
+
 in0 <- list(
   # remove province with low count
-  state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut", "Newfoundland and Labrador", "Manitoba"), 
+  state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut"), 
   # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ),
   cause = choicesCauses[c(1,2,5:9, 12, 15:17)],
   national = F,
   vaccination=T,
   alternative_view=F,
-  date = c("2021-01-01", as.character(dateToday))
+  date = c("2019-12-01", as.character(dateToday))
 )
 
 if ( !shiny::isRunning() ) { # DOES NOT WORK ...ssometimes
   cat("Relax - Shiny is NOT Running :)")
   input <- in0
 }
-# else {
+
+# 4.b Set parameters: interactive ----
+
 
 checkboxInput("alternative_view", h5("Reverse axes"),  in0$alternative_view) 
 checkboxInput("vaccination", h5("Include vaccination"),  in0$vaccination)
@@ -166,8 +183,8 @@ dateRangeInput("date", h4("Change date range"), weekstart=1, start = in0$date[1]
 ## .... Upper Row {.tabset .tabset-fade }
 
 
-### Plot
-<!-- ### Multi-dimentional plot -->
+<!-- ### Plot -->
+### Multi-dimensional plot
 
 ```{r r.dt0 ggplot}
 
@@ -191,21 +208,23 @@ r.g <- reactive({
   if (input$alternative_view==F) {
     g1 <-  ggplot(dt0) +  theme(legend.position = "bottom") + 
       # guides(col="none") +
-      geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+      geom_step(aes(Date, rate, col = `Cause of death (ICD-10)`)) +
       facet_grid(`Cause of death (ICD-10)` ~ GEO , scales = "free") +
-      labs(        title = NULL,         x = NULL,        y = NULL, 
+      labs(        title = NULL,         x = NULL,         y = "Deaths per million / week", 
                    caption = "Source: Statistics Canada - Table 13-10-0810-01"     )
     
     if (input$vaccination==T) {
       g2 <-  ggplot(dt0) +   guides(col="none") +
-        geom_line(aes(Date, numtotal_fully), col = "red") +
-        geom_line(aes(Date, numtotal_partially), col = "red", linetype=3) +
-        geom_line(aes(Date, numtotal_atleast1dose), col = "red", linetype=2) +   
+        geom_line(aes(Date, 100*numtotal_fully/population), col = "red") +
+        # geom_line(aes(Date, numtotal_partially), col = "red", linetype=3) +
+        geom_line(aes(Date, 100*numtotal_atleast1dose/population), col = "red", linetype=2) +   
         facet_grid( vaccination ~ GEO , scales = "free") +
-        labs(      title = NULL,         x = NULL,        y = NULL, 
+        labs(      title = "Canadian Vaccination and Vital Statistics data",         x = NULL,        y = "(%)", 
                    caption = "Source: https://health-infobase.canada.ca/covid-19/vaccination-coverage"  )
-      
-      g <- ggpubr::ggarrange(g2, g1, nrow = 2, heights = c(1,5))
+      # a <- max(1, input$cause %>% length - 4)
+      a=5
+   
+      g <- ggpubr::ggarrange(g2, g1, nrow = 2, heights = c(1,a))
     } else {
       g <- g1
     }
@@ -216,14 +235,14 @@ r.g <- reactive({
       # guides(col="none") +
       geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
       facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
-      labs(        title = NULL,         x = NULL,        y = NULL, 
+      labs(        title = NULL,         x = NULL,        y = "Deaths / week", 
                    caption = "Source: Statistics Canada - Table 13-10-0810-01"     )
     
     if (input$vaccination==T) {
       
       g2 <-  ggplot(dt0) +   guides(col="none") +
         geom_line(aes(Date, numtotal_fully), col = "red") +
-        geom_line(aes(Date, numtotal_partially), col = "red", linetype=3) +
+        # geom_line(aes(Date, numtotal_partially), col = "red", linetype=3) +
         geom_line(aes(Date, numtotal_atleast1dose), col = "red", linetype=2) +   
         facet_grid(GEO ~ vaccination , scales = "free") +
         labs(      title = NULL,         x = NULL,        y = NULL, 
@@ -246,15 +265,47 @@ renderPlot( r.g() )
 ```
 
 
-<!-- ###  Interactive plot -->
+###  Interactive plot
 
-<!-- ```{r ggplotly} -->
+Plot shows data for one region only (the first on the list). Dashed lines show the vaccination rate, when selected in menu.
 
-<!--   plot = renderPlotly( plotly::ggplotly( r.g() ) ) -->
-<!-- #   htmlwidgets::saveWidget(plot, "interactive-plot.html") -->
-<!-- #   plot -->
+#### How use interactive plot:
 
-<!-- ``` -->
+- Select/deselect any line by clicking on line description on right (Double-click  reverts the selection).
+- Zoom on any section by drugging mouse of the region of interest in the  plot (Double-click on the plot restores original plot).
+- Hover over a lines to see data details
+
+
+
+
+```{r ggplotly}
+# if (input$vaccination==F) {
+#   plotly::ggplotly( r.g() )
+# }
+
+renderPlotly( {
+  
+  dt0 <- r.dt0()
+  # Interactive plot can visualize only data for one region
+  region <- dt0$GEO %>% unique %>% .[1]
+  g <-ggplot(dt0[GEO==region]) +
+    geom_line(aes(Date, rate, 
+                  col = `Cause of death (ICD-10)`)) +
+    labs(        title = "Canadian Vital Statistics data (Table 13-10-0810-01)"  ,         x = NULL,        y = "Deaths per million / week"  )
+  
+  if (input$vaccination==T) {
+    
+    g <-  g +
+      geom_line(aes(Date, 100*numtotal_fully/population), col = "red", linetype=2) +
+      geom_line(aes(Date, 100*numtotal_atleast1dose/population), col = "red", linetype=3)
+  }
+  plotly::ggplotly( g ) 
+})
+
+#   htmlwidgets::saveWidget(plot, "interactive-plot.html")
+#   plot
+
+```
 
 ###  Table
 
@@ -268,14 +319,6 @@ renderDataTable( r.dt0() %>% DT::datatable (filter = "top") )
 # }
 ```
 
-<!-- ### Debug window -->
-
-<!-- #### input -->
-
-<!-- ```{r print input} -->
-<!-- renderPrint( input ) -->
-<!-- renderPrint( input$date ) -->
-<!-- ``` -->
 
 
 # Births
@@ -284,11 +327,41 @@ renderDataTable( r.dt0() %>% DT::datatable (filter = "top") )
 
 ### Plot
 
-A place-holder for additional Vital Statistics time-series data
+A place-holder for additional Vital Statistics  data
 
 
 
-# About
+# About {data-icon="fa-info-circle"}
+
+
+```{r -meta, include=F}
+library(metathis)
+meta() %>%
+  meta_description(
+    "Open Canada Vital Statistics Tracker App enables interactive visualization of various Open Canada vital statistics databases data"
+  ) %>%
+  meta_name("github-repo" = "open-canada/vitals") %>%
+  meta_viewport() %>%
+  meta_social(
+    title = "Open Canada Vital Statistics Tracker App",
+    url = "https://open-canada.github.io/Apps/vitals",
+    image = "https://github.com/open-canada/r4gc/raw/main/images/rCanada-octogon.png",
+    image_alt = "o-Canada Vitals Logo",
+    og_type = "app",
+    og_author = c("R4GC Community"),
+  )   %>%
+  meta_general(
+    # keywords = "open canada, statistics, vital databases, cases, deaths, births, covidcanada, covid", # This does not work
+    application_name = "Vital Statistics Tracker App",
+    theme_color = "#4285f4",
+    description = "",
+    robots = "index,follow",
+    generator = "R-Shiny",
+    subject = "Open Canada projects",
+    rating = "General",
+    referrer = "no-referrer"
+  )
+``` 
 
 ## ....
 
@@ -299,9 +372,18 @@ A place-holder for additional Vital Statistics time-series data
 
 ### About the App
 
-This App is developed using Open Source data and codes. It is free to use by anyone under the  MIT License. 
+The Open Canada Vital Statistics Tracker App is developed by the R4GC Community. 
+The code is under MIT license and is free to use by anyone.
+All the data is under Open Government License - Canada (http://open.canada.ca/en/open-government-licence-canada).
+
+For official information related to Cases  following vaccination,  see COVID-19 Daily Epidemiology Update at [https://health-infobase.canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9).
+The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://canada.ca/coronavirus) or or [covid-19.Ontario.ca](https://covid-19.ontario.ca/) 
+
+<!-- It is free to use by anyone under the  MIT License.  -->
+
 <!-- The Open Canada Vital Statistics Tracker  -->
 <!-- #subtitle: "Open Source Tool for Visualizing Open Data" -->
+
 
 #### Data Sources: 
 
@@ -309,12 +391,12 @@ This App is developed using Open Source data and codes. It is free to use by any
 <!-- #### Vaccination data -->
 
 
-Information on COVID-19 doses administered and vaccination coverage:
+<!-- Information on COVID-19 doses administered and vaccination coverage: -->
+
+
+Cumulative number and percent of people who have received a COVID-19 vaccine in Canada by vaccination status, age group, sex, and jurisdiction: 
 
 - https://health-infobase.canada.ca/covid-19/vaccination-coverage 
-
-Cumulative number and percent of people who have received a COVID-19 vaccine in Canada by vaccination status, age group, sex, and jurisdiction. Updated weekly.
-
 - Direct link: https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv
 
 
@@ -329,18 +411,18 @@ Cumulative number and percent of people who have received a COVID-19 vaccine in 
 <!-- https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001    -->
 
 
-Provisional weekly death counts, by selected grouped causes of death    
+Provisional weekly death counts, by selected grouped causes of death:    
 
 - [Statistics Canada, Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)   
 - Direct link: https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip
 
 
+##### Notes
 
 
 <font size=-1>
 
 
-Notes:
 <!-- (from to [Statistics Canada, Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001):  -->
 
 
@@ -371,11 +453,41 @@ The total, all causes of death and the number of deaths for which information on
 
 
 
-
 ```{r include=FALSE}
 knitr::knit_exit()
 ```
 
-```{r extra tests}
+Any other codes/text, which you dont want to be shown (yet) in the complied App, can be placed here. For example debugging pane or extra statistical analysis tab
+
+# Statistical Analysis
+
+### Correlations
+
+```{r Correlations}
+
+
+# dt0 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" & `Cause of death (ICD-10)` == choicesCauses [16]]  %$% # CAUSE="Blank (NA)"
+
+renderPrint({
+  dt0 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" & `Cause of death (ICD-10)` == choicesCauses [16]]  %$% # CAUSE="Blank (NA)"
+  res <- dt0 %$%  cor.test(val_norm1, numtotal_fully, method="kendall")
+})
+# cor = 0.7553008, p-value = 0.000118 # pearson
+# tau = 0.9894737 # kendall
+# rho = 0.9984962 # spearman
 
 ```
+
+# Debug 
+
+## ...
+
+### Input values
+
+
+
+```{r print input}
+renderPrint( input )
+renderPrint( input$date )
+```
+
