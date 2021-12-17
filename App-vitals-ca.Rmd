@@ -34,21 +34,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 
-# Search criteria: {.sidebar data-width=220}
-<!-- ## Search criteria {data-height=1000} -->
-
-
-<font size=-1>
-
-Today: `r format(Sys.time(), '%d %B %Y')`
-
-<!-- 
-Data Sources (Loaded on `r format(Sys.time(), '%d %B, %Y')`: <br>
-- Death Causes data: [Statistics Canada CANSIM Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001) <br>
-- Vaccination data: https://health-infobase.canada.ca/covid-19/vaccination-coverage
--->
-</font>
-
 
 ```{r -globals, include=F}
 knitr::opts_chunk$set(echo = F)
@@ -75,6 +60,23 @@ dt %>% names
 choicesGEO <-  dt$GEO %>% unique(); choicesGEO
 choicesCauses <- dt$`Cause of death (ICD-10)` %>% unique(); choicesCauses
 ```
+
+
+# Search criteria: {.sidebar data-width=220}
+<!-- ## Search criteria {data-height=1000} -->
+
+
+
+
+Data for `r format(dateToday, '%d %B %Y')`   
+Cached on `r format(dateCached, '%d %B %Y')`
+<!-- Live data is here () -->
+
+<!-- 
+Data Sources : <br>
+- Death Causes data: [Statistics Canada CANSIM Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001) <br>
+- Vaccination data: https://health-infobase.canada.ca/covid-19/vaccination-coverage
+-->
 
 
 
@@ -152,8 +154,8 @@ dtAll <- dtVacAllAges[dt, on=c("GEO", "Date")]
 in0 <- list(
   # remove province with low count
   state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut"), 
-  # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ),
-  cause = choicesCauses[c(1,2,5:9, 12, 15:17)],
+  # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ), # Start with largest
+  cause = choicesCauses[c(1,2,5, 12, 15:17)], # 5:9, # Start with largest
   national = F,
   vaccination=T,
   alternative_view=F,
@@ -267,15 +269,16 @@ renderPlot( r.g() )
 
 ###  Interactive plot
 
-Plot shows data for one region only (the first on the list). Dashed lines show the vaccination rate, when selected in menu.
+<font size=-1>
+Plot below shows data for one region  (the first on the list). Dashed lines show the vaccination rate, when this option is selected in menu.
 
-#### How use interactive plot:
+##### How use to interactive plot:
 
 - Select/deselect any line by clicking on line description on right (Double-click  reverts the selection).
 - Zoom on any section by drugging mouse of the region of interest in the  plot (Double-click on the plot restores original plot).
 - Hover over a lines to see data details
-
-
+- For more options, use the buttons in the upper right corner of the plot image. You can move, change, reset and save plot image using the buttons there
+</font>
 
 
 ```{r ggplotly}
@@ -291,13 +294,14 @@ renderPlotly( {
   g <-ggplot(dt0[GEO==region]) +
     geom_line(aes(Date, rate, 
                   col = `Cause of death (ICD-10)`)) +
-    labs(        title = "Canadian Vital Statistics data (Table 13-10-0810-01)"  ,         x = NULL,        y = "Deaths per million / week"  )
+    labs(        title = "Deaths statistics"  ,         x = NULL,        y = "Deaths per million a week"  )
   
   if (input$vaccination==T) {
     
     g <-  g +
       geom_line(aes(Date, 100*numtotal_fully/population), col = "red", linetype=2) +
-      geom_line(aes(Date, 100*numtotal_atleast1dose/population), col = "red", linetype=3)
+      geom_line(aes(Date, 100*numtotal_atleast1dose/population), col = "red", linetype=3) +
+      labs(        title = "Vaccination and Deaths Statistics"  ,         x = NULL,        y = "Deaths per million a week"  )
   }
   plotly::ggplotly( g ) 
 })
@@ -307,16 +311,77 @@ renderPlotly( {
 
 ```
 
-###  Table
+###  Interactive Table
 
+
+Table below shows the raw data that is extracted from Open Canada databases using the selection criteria chosen in the menu.
+
+##### How use to interactive table:
+
+- Move / reorganize columns by drugging column names.  Change the number of rows to be shown using "Show entries" pull-down menu
+- Filter by typing in the  boxes under the column names. Sort by clicking on the column name.
+- Export table or its selection in one of  available formats using the buttons provided.
 
 ```{r datatable}
 
-# if ( !shiny::isRunning() )  {
-#   DT::datatable (r.dt0)
-# } else {
-renderDataTable( r.dt0() %>% DT::datatable (filter = "top") )
-# }
+renderDataTable( r.dt0() %>% DT::datatable (
+  filter = "top",  rownames=F,   
+  extensions =  c('ColReorder', 'Buttons'),
+  options = list(
+    dom = 'Blfrtip',
+    colReorder = TRUE,
+    lengthMenu = list(c(10,25,100,-1), c(10,25,100,"All")),
+    buttons = c('copy', 'csv', 'excel', 'pdf', 'print') 
+  ) )
+)
+
+if (F) {
+  d7.datatable <- function(x){
+    DT::datatable(x,
+                  extensions = 'Buttons',
+                  options = list(dom = 'Blfrtip',
+                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                                 lengthMenu = list(c(10,25,50,-1),
+                                                   c(10,25,50,"All"))))
+  }
+  
+  datatable(    iris, 
+    extensions = c('Select', 'Buttons'), 
+    options = list(
+      select = list(style = 'os', items = 'row'),
+      dom = 'Blfrtip',
+      rowId = 0,
+      buttons = c('selectAll', 'selectNone', 'selectRows', 'selectColumns', 'selectCells')
+    ),
+    selection = 'none'
+  )
+  
+  #You can click and drag the table header to move a certain column to a different place using the ColReorder extension.
+  
+  datatable(iris2, extensions = 'ColReorder', options = list(colReorder = TRUE))
+  
+  # fix some left 2 columns and right 1 column
+  datatable(
+    m, extensions = 'FixedColumns',
+    options = list(
+      dom = 't',
+      scrollX = TRUE,
+      fixedColumns = list(leftColumns = 2, rightColumns = 1)
+    )
+  )
+  
+  
+  datatable(m, extensions = 'Scroller', options = list(
+    deferRender = TRUE,
+    scrollY = 200,
+    scroller = TRUE
+  ))
+  
+  
+  # https://yihui.shinyapps.io/DT-rows/
+}
+
+
 ```
 
 
