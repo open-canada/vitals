@@ -20,7 +20,9 @@
 # RStudio files
 .Rproj.user/
 
+#
 rsconnect/
+_TESTS_BACKUPS/
 
 # produced vignettes
 vignettes/*.html

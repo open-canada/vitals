@@ -1,20 +1,23 @@
 # cansim13100810-correlations-with-vaccinations.R 
 
-if (T) { # 0. global settings ----
-    require(magrittr); library(ggplot2); library(lubridate)
+#0. Global settings ----
+
+if (T) {  
+    packages <- c("magrittr","ggplot2","stringr", "forcats")
+    lapply(packages, library, character.only = TRUE)
+    library(lubridate,  quietly=T); options(lubridate.week.start =  1)
     library(data.table); options(datatable.print.class=TRUE)
+    
     dateToday <- format(Sys.time(), '%d %B, %Y') %>% dmy; dateToday
     "%wo%" <- function(x, y) setdiff(x,y) 
     `%ni%` <-  Negate(`%in%`)
 }
 
-# 1. Read CANSIM Table: 13-10-0810-01 data -----
+# 1. Read cashed Table 13-10-0810-01 merged with GEO -----
 
 # Canadian Vital Statistics Death (CVSD) Database
-
 # Leading causes of death, total population 
 # Provisional weekly death counts, by selected grouped causes of death
-
 # Table: 13-10-0810-01
 # Release date: 2021-11-08
 
@@ -22,61 +25,75 @@ if (T) { # 0. global settings ----
 # https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip
 
 
-if (F) {
+if (F) { # 1.a Save cached from live CANSIM data ----
+    
     # Read StatCan data directly from StatCan site. 
     # NB: Works only if StatCan site is up and running.
-    # You can test it by clicking in the links above.
+    # You can test if it is running by clicking here: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
     
     library(cansim) # (See https://cran.r-project.org/web/packages/cansim) 
     dt <- cansim::get_cansim("13-10-0810-01") %>%  setDT(dt)
+    # Quick view of the data
+    dt
+    dt %>% names 
+    # Remove unneeded columns and simplify values
+    # dt[, (names(dt)[c(1,3:20,24)]):=NULL]
+    dt <- dt[, c("Date", "GEO", "val_norm", "Cause of death (ICD-10)")]
     dt[, Date := ymd(Date)]
-    dt <- dt[Date >= ymd("2019-09-01")]
-    saveRDS(dt, paste0("13100810-", dateToday, ".Rds")) # save locally as compressed file
-    fwrite(dt, paste0("13100810-after-20190901.csv"))
+    dt$GEO %>% unique() %>% sort
+    dt[, GEO := gsub(", place of occurrence", "", GEO)]
+    
+    saveRDS(dt, paste0("13100810-", dateToday, ".Rds")) # save locally as compressed Rds file
+    fwrite(dt, paste0("13100810-", dateToday, ".csv"), sep = "\t")
+    fwrite(dt[Date >= ymd("2019-09-01")], paste0("13100810-", dateToday, "-after-20150901.csv"), sep = "\t")
 }
 
-# Read cached 13-10-0810-01 data  
+if  (F)  { # 1.b Read from https://github.com/open-canada/datasets/statcan ----
+    
+    # downloader::download("https://github.com/open-canada/cansim-examples/raw/main/13100810-20211206.Rds", "13100810-20211206b.Rds") # order way
+    curl::curl_download("https://github.com/open-canada/datasets/raw/main/statcan/13100810.Rds", "13100810.Rds")
+    dt <- readRDS("13100810.Rds") 
+    
+    # Or load csv (for just last two years)
+    dt <- fread ("https://github.com/open-canada/datasets/raw/main/statcan/13100810.csv") 
+}
 
-# Load all data (since 2010)
-# downloader::download("https://github.com/open-canada/cansim-examples/raw/main/13100810-20211206.Rds", "13100810-20211206b.Rds") # order way
-curl::curl_download("https://github.com/open-canada/datasets/raw/main/statcan/13100810-20211206.Rds", "13100810-20211206a.Rds")
-dt <- readRDS("13100810-20211206.Rds") 
+# 1.c Read local cached copy ----
 
-# Or load just last two years
-dt <- fread ("https://github.com/open-canada/datasets/raw/main/statcan/13100810-after-20190901.csv") 
+dateCached <- ymd("20211218")
+dt <- readRDS(paste0("13100810-", dateCached, ".Rds"))
+# dt[, GEO := gsub(", place of occurrence", "", GEO)]
+dt %>% setDT
 
+dateMax <- dt$Date %>% max (na.rm=T) %>% ymd; dateMax
+dt[c(1,.N)]
+dt %>% names
 
-# Quick view of the data
-dt
-dt %>% names 
-
-# Remove unneeded columns and simplify values
-dt[, (names(dt)[c(1,3:20,24)]):=NULL]
-dt[, Date := ymd(Date)]
-dt <- dt[Date >= ymd("2019-09-01")]
-dt$GEO %>% unique() %>% sort
-dt[, GEO := gsub(", place of occurrence", "", GEO)]
-
-# Get familiar with causes names:
-
-choicesGEO <-  dt$GEO %>% unique(); choicesGEO # Ordered by location, used for displaying
-dt[, GEO:=fct_relevel(GEO, choicesGEO)]
+choicesGEO <-  dt$GEO %>% unique(); choicesGEO
 choicesCauses <- dt$`Cause of death (ICD-10)` %>% unique(); choicesCauses
 
+dt <- dt[Date >= ymd("2019-09-01")]
 
-# 2. Add population, compute rates per million----
+# 2. Merge with population, compute rates per million----
 
-dtGeo <- data.table(
-    GEO = c(  "Ontario", "Quebec", "British Columbia", "Alberta",
-              "Manitoba", "Saskatchewan", "Nova Scotia", "New Brunswick",
-              "Newfoundland and Labrador", "Prince Edward Island", "Northwest Territories", "Nunavut", "Yukon", "Canada"  ),
-    population = c( 14826276, 8604495, 5214805, 4442879, 1383765, 1179844, 992055, 789225, 
-                    520553, 164318, 45504, 39403, 42986, 38246108 )
-)
+if (T) {
+    dtGeo <- data.table(
+        GEO = c(  "Ontario", "Quebec", "British Columbia", "Alberta",
+                  "Manitoba", "Saskatchewan", "Nova Scotia", "New Brunswick",
+                  "Newfoundland and Labrador", "Prince Edward Island", "Northwest Territories", "Nunavut", "Yukon", "Canada"  ),
+        population = c( 14826276, 8604495, 5214805, 4442879, 1383765, 1179844, 992055, 789225, 
+                        520553, 164318, 45504, 39403, 42986, 38246108 )
+    )
+    fwrite(dtGeo, "dtGeoCanada.csv", sep = "\t")
+} else {
+    dtGeo <- fread("dtGeoCanada.csv")
+}
+
 dtGeo[, GEO:=fct_relevel(GEO, choicesGEO)]
 
 dt <- dtGeo[dt, on="GEO"]
-# dt [, rate:=round(1000000*val_norm/population)]
+dt [, rate:=round(1000000*val_norm/population)]
+
 
 # 3. Merge it with Vaccination data -----
 
@@ -115,38 +132,118 @@ in0 <- list(
     date = c("2019-10-01", as.character(dateToday))
 ); input <- in0
 
-# 5. Visualize data ----
 
-
-dt0 <- dtAll[ Date >= input$date[1] &  Date <= input$date[2] & GEO %in% input$state & as.character(`Cause of death (ICD-10)`) %in% input$cause  ]
-
-
-# Plot GEO vertically - allows comparison across Causes
-
-g3 <- ggplot(dt0) +    guides(col = "none") +
-    geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
-    facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
-    labs( title = NULL, x = NULL, y = NULL,
-          caption = "Source: Statistics Canada - Table 13-10-0810-01"  )
-g3
-
-g4 <-  ggplot(dt0) +   guides(col="none") +
+if (F) {
     
-    geom_line(aes(Date, numtotal_fully), col = "red") +
-    geom_line(aes(Date, numtotal_atleast1dose), col = "red", linetype=2) + 
-    facet_grid( GEO ~ . , scales = "free") +
-    labs( title = NULL,         x = NULL,        y = NULL, 
-          caption = "Source: https://health-infobase.canada.ca/covid-19/vaccination-coverage/"  )
-
-g <- ggpubr::ggarrange(g3, g4, ncol = 2, widths=c(5,1))
-g
-
-# Plot Causes vertically - allows comparison across GEO
-
-# g1 <- ggplot(dt0) +  theme(legend.position = "bottom") +
-#     geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
-#     facet_grid(`Cause of death (ICD-10)` ~ GEO, scales = "free") +
-#     labs(  title = NULL, x = NULL, y = NULL,
-#            caption = "Source: Statistics Canada - Table 13-10-0810-01"    )
-# g1
-
+    # 5. Visualize data ----
+    
+    
+    dt0 <- dtAll[ Date >= input$date[1] &  Date <= input$date[2] & GEO %in% input$state & as.character(`Cause of death (ICD-10)`) %in% input$cause  ]
+    
+    
+    # Plot GEO vertically - allows comparison across Causes
+    
+    g3 <- ggplot(dt0) +    guides(col = "none") +
+        geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+        facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
+        labs( title = NULL, x = NULL, y = NULL,
+              caption = "Source: Statistics Canada - Table 13-10-0810-01"  )
+    g3
+    
+    g4 <-  ggplot(dt0) +   guides(col="none") +
+        
+        geom_line(aes(Date, numtotal_fully), col = "red") +
+        geom_line(aes(Date, numtotal_atleast1dose), col = "red", linetype=2) + 
+        facet_grid( GEO ~ . , scales = "free") +
+        labs( title = NULL,         x = NULL,        y = NULL, 
+              caption = "Source: https://health-infobase.canada.ca/covid-19/vaccination-coverage/"  )
+    
+    g <- ggpubr::ggarrange(g3, g4, ncol = 2, widths=c(5,1))
+    g
+    
+    
+    # 6. Correlation analysis ----
+    
+    # 6a Smooth data with convolution and compute derivatives ----
+    
+    convolution_window =3 #5
+    difference_window=1
+    setkey(dtAll,Date)
+    dtAll[, val_norm_smoothed:= frollmean(val_norm, convolution_window, align = "right", fill=0),  by=.(GEO, `Cause of death (ICD-10)`)]
+    
+    dtAll[ , diff_death:= val_norm1 - shift(val_norm1, difference_window), by=.(GEO, `Cause of death (ICD-10)`)]
+    dtAll[ , diff_fully := numtotal_fully - shift(numtotal_fully, difference_window), by=.(GEO, `Cause of death (ICD-10)`)]
+    
+    
+    dt0 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" &
+                     `Cause of death (ICD-10)` == choicesCauses [16]]  # CAUSE="Blank (NA)"
+    
+    # 6b cor.test ----
+    
+    # .. on raw smoothed values -----
+    
+    dt0 %$% 
+        cor.test(val_norm_smoothed, numtotal_fully, method="kendall")
+    
+    # cor = 0.7553008, p-value = 0.000118 # pearson
+    # tau = 0.9894737 # kendall
+    # rho = 0.9984962 # spearman
+    
+    # .. on difference values -----
+    
+    dt0 %$% # CAUSE="Blank (NA)"
+        cor.test(diff_death, diff_fully, method="kendall")
+    
+    # 6c Plot correlations
+    
+    
+    library("heatmaply")
+    
+    heatmaply(mtcars)
+    
+    
+    heatmaply_cor(
+        cor(mtcars),
+        xlab = "Features",
+        ylab = "Features",
+        k_col = 2,
+        k_row = 2
+    )
+    
+    
+    r <- cor(mtcars)
+    ## We use this function to calculate a matrix of p-values from correlation tests
+    ## https://stackoverflow.com/a/13112337/4747043
+    cor.test.p <- function(x){
+        FUN <- function(x, y) cor.test(x, y)[["p.value"]]
+        z <- outer(
+            colnames(x), 
+            colnames(x), 
+            Vectorize(function(i,j) FUN(x[,i], x[,j]))
+        )
+        dimnames(z) <- list(colnames(x), colnames(x))
+        z
+    }
+    p <- cor.test.p(mtcars)
+    
+    heatmaply_cor(
+        r,
+        node_type = "scatter",
+        point_size_mat = -log10(p), 
+        point_size_name = "-log10(p-value)",
+        label_names = c("x", "y", "Correlation")
+    )
+    
+    
+    heatmaply(
+        mtcars, 
+        scale = "column",
+        # normalize(mtcars),
+        # percentize(mtcars),
+        xlab = "Features",
+        ylab = "Cars", 
+        
+        main = "Data transformation using 'scale'"
+    )
+    
+}
