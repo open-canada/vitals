@@ -43,12 +43,15 @@ knitr::opts_chunk$set(echo = F)
 #0. Global settings ----
 
 if (T) {  
-    packages <- c("magrittr","ggplot2","stringr", "forcats")
-    lapply(packages, library, character.only = TRUE)
-    library(lubridate,  quietly=T); options(lubridate.week.start =  1)
-    library(data.table); options(datatable.print.class=TRUE)
-    
-    dateToday <- format(Sys.time(), '%d %B, %Y') %>% dmy; dateToday
+    # packages <- c("magrittr","ggplot2","stringr", "forcats")
+    # lapply(packages, library, character.only = TRUE)
+  library(lubridate,  quietly=T); options(lubridate.week.start =  1)
+  library(data.table); options(datatable.print.class=TRUE)
+  library(plotly); library(DT); 
+  library(forcats) 
+  library(ggpubr)
+  
+  dateToday <- format(Sys.time(), '%d %B, %Y') %>% dmy; dateToday
     "%wo%" <- function(x, y) setdiff(x,y) 
     `%ni%` <-  Negate(`%in%`)
 }
@@ -172,6 +175,27 @@ dtVacAllAges <-
 
 # dtAll <- dtVacAllAges[dt, on=.(prename=GEO, week_end=Date)]
 dtAll <- dtVacAllAges[dt, on=c("GEO", "Date")]
+
+
+# 4.a Set parameters: static ----
+
+in0 <- list(
+  # remove province with low count
+  state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut"), 
+  # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ), # Start with largest
+  cause = choicesCauses[c(1,2,5, 12, 15:16)], # 5:9, # Start with largest
+  live=F,
+  national = F,
+  vaccination=T,
+  alternative_view=F,
+  date = c("2019-12-01", as.character(dateToday))
+)
+
+if ( !shiny::isRunning() ) { # DOES NOT WORK ...ssometimes
+  cat("Relax - Shiny is NOT Running :)")
+  input <- in0
+}
+
 ```
 
 
@@ -193,29 +217,11 @@ Data Sources : <br>
 
 
 
-```{r shiny_input_in0}
-
-# 4.a Set parameters: static ----
-
-
-in0 <- list(
-  # remove province with low count
-  state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut"), 
-  # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ), # Start with largest
-  cause = choicesCauses[c(1,2,5, 12, 15:16)], # 5:9, # Start with largest
-  national = F,
-  vaccination=T,
-  alternative_view=F,
-  date = c("2019-12-01", as.character(dateToday))
-)
-
-if ( !shiny::isRunning() ) { # DOES NOT WORK ...ssometimes
-  cat("Relax - Shiny is NOT Running :)")
-  input <- in0
-}
+```{r shiny_input}
 
 # 4.b Set parameters: interactive ----
 
+checkboxInput("live", h5("Read live data instead of cached (may take time)"),  in0$live) 
 
 checkboxInput("alternative_view", h5("Reverse axes"),  in0$alternative_view) 
 checkboxInput("vaccination", h5("Include vaccination"),  in0$vaccination)
@@ -243,8 +249,14 @@ dateRangeInput("date", h4("Change date range"), weekstart=1, start = in0$date[1]
 
 
 
+r.dtAll  <- reactive({
+  dtAll
+})
+
+
+
 r.dt0  <- reactive({
-  dt0 <- dtAll[ Date >= input$date[1] &  Date <= input$date[2] & GEO %in% input$state & 
+  dt0 <- r.dtAll()[ Date >= input$date[1] &  Date <= input$date[2] & GEO %in% input$state & 
                   as.character(`Cause of death (ICD-10)`) %in% input$cause  ]
   dt0
 })
@@ -356,7 +368,7 @@ plotly::renderPlotly( {
 plotly::renderPlotly( {
   
   dt0 <- r.dt0()
-  cause1 <- dt$`Cause of death (ICD-10)`%>% unique %>% .[1] 
+  cause1 <- dt0$`Cause of death (ICD-10)`%>% unique %>% .[1] 
   # Interactive plot can visualize only data for one cause
   g <-
     dt0[`Cause of death (ICD-10)` == cause1] %>% 
@@ -450,7 +462,7 @@ meta() %>%
   )
 ``` 
 
-## ....
+## .... Upper Row {.tabset .tabset-fade }
 
 
 <!-- title: "Open Canada Vital Statistics Tracker" -->
@@ -463,7 +475,7 @@ The Open Canada Vital Statistics Tracker App is developed by the R4GC Community.
 The code is under MIT license and is free to use by anyone.
 All the data is under Open Government License - Canada (http://open.canada.ca/en/open-government-licence-canada).
 
-For official information related to Cases  following vaccination,  see COVID-19 Daily Epidemiology Update at [https://health-infobase.canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9).
+For official information related to *Cases  following vaccination*,  see COVID-19 Daily Epidemiology Update at [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9).
 The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://canada.ca/coronavirus) or or [covid-19.Ontario.ca](https://covid-19.ontario.ca/) 
 
 <!-- It is free to use by anyone under the  MIT License.  -->
@@ -540,11 +552,16 @@ The total, all causes of death and the number of deaths for which information on
 
 
 
-```{r include=FALSE}
+### References
+
+
+```{r STOP_HERE, include=FALSE}
 knitr::knit_exit()
 ```
 
 Any other codes/text, which you dont want to be shown (yet) in the complied App, can be placed here. For example debugging pane or extra statistical analysis tab
+
+
 
 # Statistical Analysis
 

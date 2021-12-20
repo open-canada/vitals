@@ -13,7 +13,7 @@ if (T) {
     `%ni%` <-  Negate(`%in%`)
 }
 
-# 1. Read cashed Table 13-10-0810-01 merged with GEO -----
+# 1. Read CANSIM Table 13-10-0810-01, merged it with GEO -----
 
 # Canadian Vital Statistics Death (CVSD) Database
 # Leading causes of death, total population 
@@ -246,4 +246,90 @@ if (F) {
         main = "Data transformation using 'scale'"
     )
     
+    
+}
+
+# 9. Collection of  other Open data from StatCan ----
+
+
+library(cansim)
+o <- search_cansim_cubes("Vital") %>% setDT
+o 
+fwrite(o, "cansim-Vitals.csv")
+
+o <- search_cansim_cubes("Vaccin") %>% setDT
+o 
+fwrite(o, "cansim-Vaccin.csv")
+
+o <- search_cansim_cubes("Hospital") %>% setDT
+o 
+fwrite(o, "cansim-Hospital.csv")
+
+
+o <- search_cansim_cubes("Covid") %>% setDT
+o 
+fwrite(o, "cansim-Covid.csv")
+
+# from BOOK list
+
+dt <- cansim::get_cansim("13-10-0810-01") %>%  setDT(dt)
+
+# Provisional weekly death counts, by age group and sex
+dt <- cansim::get_cansim("13-10-0768-01") %>%  setDT(dt)
+
+
+
+
+in0 <- list(
+    cansim="13-10-0768-01"
+); 
+input <- in0
+input$cansim =   "13-10-0768-01"
+input$cansim =  "13-10-0783-01"
+
+input$cansim =   "13-10-0427-01"
+input$cansim =   "13-10-0395-01"
+
+input$cansim =   "13-10-0415-01"
+input$cansim =   "13-10-0418-01"
+input$cansim =   "13-10-0415-01"
+input$cansim =   "13-10-0768-01"
+
+
+Crude birth rate, age-specific fertility rates and total fertility rate (live births)
+Table: 13-10-0418-01 (formerly: CANSIM 102-4505)
+
+Live births, by month
+Table: 13-10-0415-01 (formerly: CANSIM 102-4502)
+
+Live births, by age of mother
+Table: 13-10-0416-01 (formerly: CANSIM 102-4503)
+
+
+dt <- cansim::get_cansim(input$cansim ) %>%  setDT(dt)
+
+
+dt[, Date := ymd(Date)]
+dt$Date %>% max(na.rm = T)
+dt$Date %>% unique()
+dt %>% names 
+dt$Date %>% min(na.rm = T)
+saveRDS(dt, paste0(input$cansim, ".Rds")) 
+
+
+
+# Quick view of the data
+# dt
+
+# Remove unneeded columns and simplify values
+# dt[, (names(dt)[c(1,3:20,24)]):=NULL]
+dt <- dt[, c("Date", "GEO", "val_norm", "Cause of death (ICD-10)")]
+dt <- dt[, c("Date", "GEO", "val_norm", "Cause of death (ICD-10)")]
+
+dt$GEO %>% unique() %>% sort
+dt[, GEO := gsub(", place of occurrence", "", GEO)]
+
+saveRDS(dt, paste0("13100810-", dateToday, ".Rds")) # save locally as compressed Rds file
+fwrite(dt, paste0("13100810-", dateToday, ".csv"), sep = "\t")
+fwrite(dt[Date >= ymd("2019-09-01")], paste0("13100810-", dateToday, "-after-20150901.csv"), sep = "\t")
 }
