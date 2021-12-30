@@ -230,3 +230,70 @@ dt <- dt[, c("Date", "GEO", "val_norm", "Cause of death (ICD-10)")]
 
 # Provisional weekly death counts, by selected grouped causes of death
 # https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
+
+
+
+if (F) {
+  
+  # . Other StatCan data ----
+  # ... by age group and sex1 -----
+  id <- "13-10-0768-01" # Age
+  dtAge <- readRDS(paste0(id, ".Rds")) %>% setDT()
+  dtAge <- dtAge[, c("Date", "GEO", "val_norm", "Age at time of death", "Sex")]
+  
+  # ... estimates of the number of deaths, expected number of deaths and excess mortality, by age group and sex ----
+  
+  # Used in Provisional deaths and excess mortality in Canada dashboard: https://www150.statcan.gc.ca/n1/pub/71-607-x/71-607-x2021028-eng.htm
+  
+  id <- "13-10-0792-01" # Age
+  dtAge <- readRDS(paste0(id, ".Rds")) %>% setDT()
+  dtAge <- dtAge[, c("Date", "GEO", "val_norm", "Age at time of death", "Sex")]
+  
+  dtAge$GEO %>%
+    unique() %>%
+    sort()
+  
+  dtAge[, GEO := gsub(", place of occurrence", "", GEO)]
+  dtAge[, `Age at time of death` := gsub("Age at time of death", "", `Age at time of death`) ]
+  # dtAge[, GEO:=str_remove_overlap(GEO)][]
+  
+  dtTimeStamp <- dtAge[.1][, lapply(.SD, function(x) NA), .SDcols = names(dtAge)][, Date := dateToday]
+  dtAge <- rbindlist(list(dtAge, dtTimeStamp))
+  
+  dtAge <- readRDS(paste0(id, ".Rds")) %>% setDT()
+  if (is.na(dtAge[.N]$GEO)) {
+    dateCached <- dtAge[.N]$Date %>% ymd()
+    dtAge <- dtAge[1:(.N - 1)]
+  }
+  
+  setnames(dtAge, old = c("Age at time of death", "Sex"), new = c("age", "sex"))
+  
+  dtAge[, GEO := fct_relevel(GEO, choicesGEO)]
+  
+  dtAge$sex %>% unique() # factor, all others are char
+  dtVac$sex %>% unique()
+  dtAge$sex %>% str()
+  dtVac$sex %>% str()
+  
+  dtAge$age %>% unique()
+  dtVac$age %>% unique()
+  dtAge$age %>% str()
+  dtVac$age %>% str()
+  
+  
+  g1 <- dtAge[Date >= ymd("2019-12-01") & GEO %in% (input$state %wo% "Canada") & sex != "Both sexes" & age != "all ages"] %>%
+    ggplot() +
+    theme(legend.position = "bottom") +
+    # guides(col="none") +
+    geom_line(aes(Date, val_norm, col = sex)) +
+    facet_grid(GEO ~ age, scales = "free") +
+    # facet_grid(age ~ GEO, scales = "free") +
+    labs(
+      title = NULL, x = NULL, y = "Deaths in a million / week",
+      caption = "Source: Statistics Canada - Table 13-10-0768-01"
+    )
+  g1
+  
+  ggsave("ts-age2.png", width = 1800, height = 1500, units = "px")
+  
+}

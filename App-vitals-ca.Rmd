@@ -8,100 +8,42 @@ output:
     social: menu
     # social: [ "twitter", "facebook", "linkedin", "pinterest" ]
     # source_code: embed
-    source_code: https\://open-canada.github.io/Apps/vitals
+    source_code: https://github.com/open-canada/vitals
     vertical_layout: fill
 runtime: shiny
-resource_files:
-- 13100810-2021-12-18.Rds
+# resource_files:
+# - 13100810-cached.Rds
 ---
 
 
-```{r -meta, include=F}
-library(metathis)
-meta() %>%
-  meta_description(
-    "Open Canada Vital Statistics Tracker App enables interactive visualization of data from 'Statistics Canada, Canadian Vital Statistics - Death  (CVSD)' database'"
-  ) %>%
-  meta_name("github-repo" = "open-canada/vitals") %>%
-  meta_viewport() %>%
-  meta_social(
-    title = "Open Canada Vital Statistics Tracker App",
-    url = "https://open-canada.github.io/Apps/vitals",
-    # image = "https://github.com/open-canada/r4gc/raw/main/images/rCanada-octogon.png",
-    image_alt = "o-Canada Vitals Logo",
-    og_type = "app",
-    og_author = c("R4GC Community"),
-  )   %>%
-  meta_general(
-    # keywords = "open canada, statistics, vital databases, cases, deaths, births, covidcanada, covid", # This does not work
-    application_name = "Canadian Vital Statistics - Death  (CVSD) database data tracker",
-    theme_color = "#4285f4",
-    description = "",
-    robots = "index,follow",
-    generator = "R-Shiny",
-    subject = "Open Canada projects",
-    rating = "General",
-    referrer = "no-referrer"
-  )
-``` 
+<!-- Great interactive charts: https://jkunst.com/flexdashboard-highcharter-examples/pokemon/ -->
 
-<!--
-MIT License
-
-Copyright (c) 2021 open-canada
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
--->
+```{r 00_vital_meta.Rmd, child = '00_vital_meta.Rmd'}
+```
 
 
 ```{r -globals, include=F}
 knitr::opts_chunk$set(echo = F)
 source ("01_vitals_ca_LTE.R")
 
-dtVac <- readRDS("vaccination-coverage-byAgeAndSex-overTimeDownload-2021-12-07.Rds")
-
-dtVac[.N]
-dtVac %>% names
-dtVac <- dtVac[, c(2, 4:7,9)]
-
-dtVac[, week_end := ymd(week_end)]
-setnames(dtVac, old=c("prename", "week_end"), new=c("GEO", "Date"))
-
-dtVac %>% names
-colValues <- c("numtotal_atleast1dose","numtotal_fully"  )
-dtVac[, (colValues):=lapply(.SD, as.numeric), .SDcols=colValues]
-
-dtVac$GEO  %>% unique() 
-# dtVac[, prename:=fct_reorder(prename, numtotal_fully, min)]
-dtVac[, GEO:=fct_relevel(GEO, choicesGEO)]
-
-dtVac$age %>% unique
-
-dtVacAllAgesAllSexes <- # because causes don report age ad sex
-  dtVac [sex == "All sexes", lapply(.SD, sum, na.rm=T), by=c("GEO", "Date"), .SD=colValues]
-
-# dtAll <- dtVacAllAgesAllSexes[dt, on=.(prename=GEO, week_end=Date)]
-dtAll <- dtVacAllAgesAllSexes[dt, on=c("GEO", "Date")]
-
-dtAll[, GEO:=fct_relevel(GEO, choicesGEO)]
-
-
+if (F) {
+  dtCached 
+  dateToday
+  dateMax
+  dateCached
+  choicesGEO
+  choicesCauses
+  dtVac
+}
+if (T) {
+  # For faster/memory efficient processing declare these as global 
+  # in OOP, these would part of the class
+  dt <- data.table()
+  dtAll <- data.table()
+  dt0 <- data.table()
+  region1 <- ""
+  cause1 <- ""
+}
 
 # 4.a Set parameters: static ----
 
@@ -110,11 +52,12 @@ in0 <- list(
   state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut"), 
   # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ), # Start with largest
   cause = choicesCauses[c(1,2,5, 12, 15:16)], # 5:9, # Start with largest
-  live=F,
-  age=F,
-  national = F,
+  # live=F,
+  # age=F,
+  # national = F,
   vaccination=T,
   alternative_view=F,
+  per_million = T,
   date = c("2019-12-01", as.character(dateToday))
 )
 
@@ -127,78 +70,135 @@ if ( !shiny::isRunning() ) { # DOES NOT WORK when Shiny is running?
 
 
 # Search criteria: {.sidebar data-width=210}
-<!-- ## Search criteria {data-height=1000} -->
+
+<font size=-1>
 
 
 
 
-Data for `r format(dateToday, '%d %B %Y')`   
-<!-- Cached on `r format(dateCached, '%d %B %Y')` -->
-<!-- Live data is here () -->
 
-<!-- 
-Data Sources : <br>
-- Death Causes data: [Statistics Canada CANSIM Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001) <br>
-- Vaccination data: https://health-infobase.canada.ca/covid-19/vaccination-coverage
--->
-
+Data Source: [Statistics Canada Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)
 
 
 ```{r shiny_input}
+renderText(paste0("Data loaded on: ", ifelse(input$read_from=="Cached Data" , dateCached %>% as.character(), dateToday%>% as.character() )))
+renderText(paste0("Last record in data: ", r.dt0()$Date %>% max(na.rm = T)))
 
 # 4.b Set parameters: interactive ----
 
 
 
-# radioButtons("live", NULL,
-#              choices = c("Use Live Data*", "Use Cached Data" ),
-#              selected = "Cached Data", inline=T) 
-# # h6("Using Live Data is only possible when the connecting serves is running and takes more time")
-# h6("* May take long to download")
-# 
-# # checkboxInput("live", h5("Use Live (not Cached) Data"),  in0$live) 
+radioButtons("read_from", NULL, # "Read data from ",
+             choices = c("Use Live", "Cached Data" ),
+             selected = "Cached Data" , inline=T)
+# checkboxInput("live", h5("Read data from source instead of cache (slower)"),  in0$live)
 
 
-checkboxInput("alternative_view", h5("Reverse axes"),  in0$alternative_view) 
-checkboxInput("vaccination", h5("Include vaccination"),  in0$vaccination)
+checkboxInput("alternative_view", "Reverse axes",  in0$alternative_view) 
 
 
-# checkboxInput("live", h5("Read data from source instea of cache (slower)"),  in0$live)
 # checkboxInput("age", h5("Include age information"),  in0$age)
 # h6("* Not Available for death causes")
-# checkboxInput("per_million", h5("Show per million"),  in0$per_million)
-# checkboxInput("compare2past", h5("Compare to past years"),  in0$compare2past)
+checkboxInput("per_million", "Show per million",  in0$per_million)
 
-selectInput('state', h5("Choose Regions:"), multiple=T, choices = choicesGEO, selected = in0$state, selectize=F, size=10 )
-selectInput('cause', h5("Choose Death Causes:"), multiple=T, choices = choicesCauses, selected = in0$cause, selectize=F, size=10    )
+checkboxInput("vaccination", "Show vaccination data",  in0$vaccination)
 
-dateRangeInput("date", h4("Change date range"), weekstart=1, start = in0$date[1], end = in0$date[2])
+
+selectInput('state', h5("Choose Regions:"), multiple=T, choices = choicesGEO, selected = in0$state, selectize=F, size=5 )
+selectInput('cause', h5("Choose Death Causes:"), multiple=T, choices = choicesCauses, selected = in0$cause, selectize=F, size=5    )
+
+
+# hr()
+
+# radioButtons("compare_by", NULL, #"Track by ",
+#              choices = c("Track by Cause", "Province" ),
+#              selected = "Province", inline=T)
+
+
+
+# checkboxInput("average", "Average over three weeks",  in0$smooth)
+# checkboxInput("compare2past", "Compare to past years",  in0$compare2past)
+
+dateRangeInput("date", h5("Change date range"), weekstart=1, start = in0$date[1], end = in0$date[2])
 
 ```
 
 
-#  Deaths by Cause
-
-## ........ {.tabset .tabset-fade }
+</font>
 
 
-<!-- ### Plot -->
-### Multi-dimensional plot
 
-```{r r.dt0 r.dtAll}
+```{r r.dtAll r.dt0 }
 
 # .reactive <- function(A) { # does not work :(   
 #   if (!shiny::isRunning()) A else reactive(A)
 # }
 
 
-
 r.dtAll  <- reactive({
-  dtAll # TBA if reading from source
   
-  dtAll [, rate:=round(1000000*val_norm/population)]
-  dtAll [, numtotal_atleast1dose:=round(100*numtotal_atleast1dose/population)]
-  dtAll [, numtotal_fully:=round(100*numtotal_fully/population)]
+  
+  if (input$read_from=="Cached Data") {
+    dt = copy(dtCached)
+  } else {
+    # req(r.dtFile1())
+    # req(input$read_from)
+    # r.dtFile1()  %>% select(input$columns1)   %>%
+    #          mutate_if(is.factor, as.character) 
+
+    dt <- cansim::get_cansim("13-10-0810-01") %>%  setDT(dt)
+    # Quick view of the data
+    dt
+    dt %>% names 
+    # Remove unneeded columns and simplify values
+    # dt[, (names(dt)[c(1,3:20,24)]):=NULL]
+    dt <- dt[, c("Date", "GEO", "val_norm", "Cause of death (ICD-10)")]
+    dt[, Date := ymd(Date)]; 
+    dateMax <- dt$Date %>% max; dateMax # "2021-10-02"
+    dateLive <- dateToday
+    dt$GEO %>% unique() %>% sort
+    dt[, GEO := gsub(", place of occurrence", "", GEO)]
+    
+    # dt <- dtGeo[dt, on="GEO"]
+    dt[, GEO:=fct_relevel(GEO, choicesGEO)]
+    setnames(dt, "val_norm", "value")
+    setcolorder(dt, c("Date",  "GEO", "Cause of death (ICD-10)", "value"))
+  }
+  
+  
+  if (input$per_million==T) {
+    dt <- dtGeo[dtCached, on="GEO"]
+    dt [, GEO:=fct_relevel(GEO, choicesGEO)]
+    dt [, value:=round(1000000*value/population)]
+    setcolorder(dt, c("Date",  "GEO", "population", "Cause of death (ICD-10)", "value"))
+  } 
+  
+  # if (input$average==T) {
+  #   convolution_window <- 3 
+  #   dt[, value := frollmean(value, convolution_window, align = "right", fill = 0), by = .(GEO, `Cause of death (ICD-10)`)]
+  # }
+  # 
+  # if (input$clumpAllOtherCauses==T) {
+  #   
+  # }
+  
+  # dt <- dt[!is.na(val_norm)]
+  
+  if (input$vaccination==F) {
+    dtAll = dt 
+  } else {
+    dtVacAllAgesAllSexes <- # because causes don report age ad sex
+      dtVac [sex == "All sexes", lapply(.SD, sum, na.rm=T), by=c("GEO", "Date"), .SD=colValues]
+    
+    # dtAll <- dtVacAllAgesAllSexes[dt, on=.(prename=GEO, week_end=Date)]
+    dtAll <- dtVacAllAgesAllSexes[dt, on=c("GEO", "Date")]
+    dtAll[, GEO:=fct_relevel(GEO, choicesGEO)]
+    
+    # dtAll [, numtotal_atleast1dose:=round(100*numtotal_atleast1dose/population)]
+    # dtAll [, numtotal_fully:=round(100*numtotal_fully/population)]
+  }
+  
+  
 })
 
 
@@ -215,7 +215,13 @@ r.dt0  <- reactive({
 ```
 
 
+# Deaths by Cause
 
+## ........ {.tabset .tabset-fade }
+
+
+<!-- ### Plot -->
+### Multi-dimensional plot
 
 ```{r r.g}
 
@@ -227,9 +233,9 @@ r.g <- reactive({
   if (input$alternative_view == T) {
     g1 <-  ggplot(dt0) +  theme(legend.position = "bottom") + 
       # guides(col="none") +
-      geom_step(aes(Date, rate, col = `Cause of death (ICD-10)`)) +
+      geom_step(aes(Date, value, col = `Cause of death (ICD-10)`)) +
       facet_grid(`Cause of death (ICD-10)` ~ GEO , scales = "free") +
-      labs(        title = NULL,         x = NULL,         y = "Deaths in a million / week", 
+      labs(        title = NULL,         x = NULL,         y = "Deaths per week", 
                    caption = "Source: Statistics Canada - Table 13-10-0810-01"     )
     
     if (input$vaccination==T) {
@@ -252,9 +258,9 @@ r.g <- reactive({
     
     g1 <-  ggplot(dt0) +  guides(col="none")  + 
       # guides(col="none") +
-      geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+      geom_step(aes(Date, value, col = `Cause of death (ICD-10)`)) +
       facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
-      labs(        title = NULL,         x = NULL,        y = "Deaths / week", 
+      labs(        title = NULL,         x = NULL,        y = "Deaths per week", 
                    caption = "Source: Statistics Canada"     )
     
     if (input$vaccination==T) {
@@ -283,55 +289,9 @@ renderPlot( r.g() )
 ```
 
 
-
-
-###  Interactive time-series 
-
-
-```{r r.dt0_wideGeo1 dygraphs}
-
-
-
-r.dt0_wideGeo1 <- reactive({
-  dt0 <- r.dt0()
-  region1 <- dt0$GEO %>% unique %>% .[1]
-  dt0_wideGeo1 <- dt0[Date >= "2020-01-01" & GEO==region1, !c("GEO", "val_norm"), with=T] %>% dcast(... ~ `Cause of death (ICD-10)`,value.var="rate")
-  dt0_wideGeo1
-  
-})
-
-# r.dt0_wideCause1 <- reactive({
-#   dt0 <- r.dt0()
-#   cause1 <- dt0$`Cause of death (ICD-10)`%>% unique %>% .[1] 
-#   
-#   dt0_wideCause1 <- dt0[Date >= "2020-01-01" & `Cause of death (ICD-10)`, !c("GEO", "Cause of death (ICD-10)"), with=T] %>% dcast(... ~ `Cause of death (ICD-10)`,value.var="rate")
-#   dt0_wideCause1
-# })
-
-dygraphs::renderDygraph ({
-  dt0_wideGeo1 <- r.dt0_wideGeo1 () 
-  
-  setcolorder(dt0_wideGeo1, "Date"); 
-  dts  <- as.xts.data.table(dt0_wideGeo1)
-  
-  dygraph.title( dts)
-})
-
-# dygraphs::renderDygraph ({
-#   dygraph.title( r.dt0_wideCause1 () )
-# })
-
-```
-
-
-<!-- ```{r STOP_HERE_0, include=FALSE} -->
-<!-- knitr::knit_exit() -->
-<!-- ``` -->
-
-
 ###  Interactive plot 
 
-Plot on the top shows data for all causes in  one region  (the first in the list of selected region).
+Plot on the top shows data for all causes in  one region  (the first in the list of selected regions).   
 Plot on the bottom shows data for  all regions in one cause  (the first in the list of selected causes).
 <!-- Plots below shows data by cause and by region. -->
 <!-- Dashed lines show the vaccination rate, when this option is selected in menu. -->
@@ -353,10 +313,10 @@ plotly::renderPlotly( {
   
   dt0 <- r.dt0()
   # Interactive plot can visualize only data for one region
-  region <- dt0$GEO %>% unique %>% .[1]
-  g <-ggplot(dt0[GEO==region]) +
-    geom_line(aes(Date, rate,   col = `Cause of death (ICD-10)`)) +
-    labs(        title = "Deaths statistics"  ,         x = NULL,        y = "Deaths in a million (per week)"  )
+  region1 <- dt0$GEO %>% unique %>% .[1]
+  g <-ggplot(dt0[GEO==region1]) +
+    geom_line(aes(Date, value,   col = `Cause of death (ICD-10)`)) +
+    labs(        title = paste0("Region: ", region1)  ,         x = NULL,        y = "Deaths per week"  )
   
   # if (F) {
   # # if (input$vaccination==T) {
@@ -377,8 +337,9 @@ plotly::renderPlotly( {
   g <-
     dt0[`Cause of death (ICD-10)` == cause1] %>% 
     ggplot() +
-    geom_line(aes(Date, rate,  col = GEO)) +
-    labs(        title = "Deaths statistics"  ,         x = NULL,        y = "Deaths in a million (per week)"  )
+    geom_line(aes(Date, value,  col = GEO)) +
+    labs(        title = paste0("Cause: ", cause1)  ,         
+                 x = NULL,        y = "Deaths per week"  )
   
   # if (input$vaccination==T) {
   #   g <-  g +
@@ -393,10 +354,63 @@ plotly::renderPlotly( {
 
 ```
 
-###  Interactive Table
 
 
-Table below shows the raw data that is extracted from Open Canada databases using the selection criteria chosen in the menu.
+###  Interactive time-series 
+
+Plot shows time-series for all causes in  one region  (the first in the list of the selected regions).   
+
+```{r r.dt0_wideGeo1 dygraphs}
+
+
+
+r.dt0_wideGeo1 <- reactive({
+  dt0 <- r.dt0()
+  region1 <<- dt0$GEO %>% unique %>% .[1]
+  
+  # dt0_wideGeo1 <- dt0[Date >= "2020-01-01" & GEO==region1, !c("GEO"), with=T] %>% dcast(... ~ `Cause of death (ICD-10)`)
+  dt0_wideGeo1 <- dt0[GEO == region1, !c("GEO"), with = T] %>% dcast( Date ~ `Cause of death (ICD-10)`, value.var = "value")
+  # dt0_wideGeo1 <- dt0[Date >= "2020-01-01" & GEO == region1, !c("GEO"), with = T] %>% dcast( ... ~ `Cause of death (ICD-10)`, value.var = "value")
+  dt0_wideGeo1
+  
+})
+
+dygraphs::renderDygraph ({
+  dt0_wideGeo1 <- r.dt0_wideGeo1 () 
+  
+  # setcolorder(dt0_wideGeo1, "Date"); 
+  dts  <- as.xts.data.table(dt0_wideGeo1)
+  
+  dygraph.title( dts, region1)
+})
+
+
+# r.dt0_wideCause1 <- reactive({
+#   dt0 <- r.dt0()
+#   cause1 <<- dt0$`Cause of death (ICD-10)`%>% unique %>% .[1]
+# 
+#   dt0_wideCause1 <- dt0[`Cause of death (ICD-10)`, !c("Cause of death (ICD-10)"), with=T] %>% dcast(Date ~ GEO, value.var="value")
+#   dt0_wideCause1
+# })
+
+# dygraphs::renderDygraph ({
+#   dygraph.title( r.dt0_wideCause1 () )
+# })
+
+```
+
+
+<!-- ```{r STOP_HERE_0, include=FALSE} -->
+<!-- knitr::knit_exit() -->
+<!-- ``` -->
+
+
+
+###  Interactive table
+
+
+Table below shows  data extracted using the selection criteria chosen in the menu. 
+NB: It can take long to display large quantities of data.
 
 ##### How use to interactive table:
 
@@ -413,7 +427,7 @@ DT::renderDataTable(
     options = list(
       dom = 'Blfrtip',
       colReorder = TRUE,
-      lengthMenu = list(c(10,25,100,-1), c(10,25,100,"All")),
+      # lengthMenu = list(c(10,25,100,-1), c(10,25,100,"All")),
       buttons = c('copy', 'csv', 'excel', 'pdf', 'print') 
     ) )
 )
@@ -422,46 +436,6 @@ DT::renderDataTable(
 ```
 
 
-
-
-
-### Source data
-
-#### COVID-19 pandemic and vaccination data
-
-Preliminary dataset on confirmed cases of COVID-19, Public Health Agency of Canada
-Direct link: https://www150.statcan.gc.ca/n1/pub/13-26-0003/2020001/COVID19-eng.zip
-Release date: May 22, 2020,  Updated on: November 12, 2021
-User Guide and Data Dictionary for Preliminary COVID-19 Data: https://www150.statcan.gc.ca/n1/pub/13-26-0002/132600022020001-eng.htm
-
-
-
-#### Provisional weekly death counts
-
-Provisional weekly death counts, by selected grouped causes of death    
-Frequency: Weekly     
-Table: 13-10-0810-01    
-URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
-
-Provisional weekly estimates of the number of deaths, expected number of deaths and excess mortality, by age group and sex    
-Frequency: Weekly
-Release date: Every Monday (Last visited: 2021-12-06 ) 
-Table: 13-10-0792-01   
-URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310079201
-
-
-Provisional weekly death counts, by age group and sex       
-Frequency: Weekly     
-Table: 13-10-0768-01     
-URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
-
-
-Leading causes of death, total population (age standardization using 2011 population)1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-Frequency: Annual
-Table: 13-10-0801-01 (formerly CANSIM 102-0564)
-https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310080101
-
-Release date: 2020-11-26
 
 
 
@@ -487,6 +461,7 @@ A place-holder for additional Vital Statistics  data
 
 ### Plot
 
+UNDER DEVELOPMENT
 
 
 ```{r eval=FALSE, include=FALSE}
@@ -503,127 +478,16 @@ setnames(dtAge, old=c("Age at time of death", "Sex"), new=c("age", "sex"))
 
 ```
 
-# Info {data-icon="fa-info-circle"}
 
 
-## .... Upper Row {.tabset .tabset-fade }
+```{r 99_vital_info.Rmd, child = '99_vital_info.Rmd'}
+```
 
 
-<!-- title: "Open Canada Vital Statistics Tracker" -->
-<!-- subtitle: "Open Source Tool for Visualizing Open Data" -->
-
-
-### About the App
-
-The Open Canada Vital Statistics Tracker App is developed by the R4GC Community. 
-The code is under MIT license and is free to use by anyone.
-All the data is under Open Government License - Canada (http://open.canada.ca/en/open-government-licence-canada).
-
-URL:
-Source: 
-Released:
-
-For official information related to *Cases  following vaccination*,  see COVID-19 Daily Epidemiology Update at [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9).
-The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://canada.ca/coronavirus) or or [covid-19.Ontario.ca](https://covid-19.ontario.ca/) 
-
-<!-- It is free to use by anyone under the  MIT License.  -->
-
-<!-- The Open Canada Vital Statistics Tracker  -->
-<!-- #subtitle: "Open Source Tool for Visualizing Open Data" -->
-
-
-### Data Sources 
-
-
-#### COVID-19 pandemic and vaccination data
-
-
-<!-- Information on COVID-19 doses administered and vaccination coverage: -->
-
-Suggested citation:
-Public Health Agency of Canada. Canadian COVID-19 vaccination coverage report. Ottawa: Public Health Agency of Canada; December 23, 2021. https://health-infobase.canada.ca/covid-19/vaccination-coverage/
-
-"Cumulative number and percent of people who have received a COVID-19 vaccine in Canada by vaccination status, age group, sex, and jurisdiction": 
-
-- https://health-infobase.canada.ca/covid-19/vaccination-coverage/
-- Direct link: https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv
-
-
-
-
-#### Vital Statistics - Death Database
-
-<!-- Leading causes of death, total population (age standardization using 2011 population) -->
-<!-- Provisional weekly death counts, by selected grouped causes of death   -->
-<!-- Frequency: Weekly   -->
-<!-- Table: 13-10-0810-01   -->
-<!-- https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001    -->
-
-
-"Provisional weekly death counts, by selected grouped causes of death":    
-
-- [Statistics Canada, Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)   
-- Direct link: https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip
-
-
-##### Notes
-
-
-<font size=-1>
-
-
-<!-- (from to [Statistics Canada, Table 13-10-0810-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001):  -->
-
-
-Footnote 3   
-During the production of each month's death statistics, data from previous months/years may be revised to reflect any updates or changes that have been received from the provincial and territorial vital statistics offices.
-
-Footnote 4   
-Data for the reference years 2020 and 2021 are provisional due to the shortened duration of data collection.
-
-Footnote 14   
-The cause of death tabulated is the underlying cause of death. This is defined as (a) the disease or injury which initiated the train of events leading directly to death, or (b) the circumstances of the accident or violence which produced the fatal injury. The underlying cause is selected from the conditions listed on the medical certificate of cause of death.
-
-Footnote 16   
-The causes of death list included in this table is based on the 10 leading causes of death in 2018 and COVID-19 deaths. The list for leading causes of death is based on the list that was developed and that is being used by the National Center for Health Statistics of the United States in their annual report on leading causes of death.
-
-
-Footnote 17    
-"Other causes of death" is a residual to other deaths listed in this table. "Information unavailable" is a category which includes deaths for which the medical certificate of cause of death (for Provinces and Territories sending death certificates to Statistics Canada for coding) or the underlying cause of death code (for Provinces coding causes of death) has not yet been received at Statistics Canada.
-
-Footnote 18    
-Starting with the 2013 reference year, a new automated coding system was used to select the underlying cause of death. In 2017, an updated version of this coding system was implemented. For more information or to obtain documentation regarding the impact of these changes, please contact Statistics Canada's Statistical Information Service (toll-free 1-800-263-1136; 514-283-8300; STATCAN.infostats-infostats.STATCAN@Canada.ca).
-
-Footnote 19    
-The total, all causes of death and the number of deaths for which information on the causes of death is unavailable are based on the estimates presented in table 13-10-0792-01.
-
-
-</font>
-
-
-<!-- ### References -->
-### Additional information
-
-#### Cases following vaccination
-
-According to the official COVID-19 Daily Epidemiology Update ( [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)) (15 Dec 2021)
-
-
-
-<!-- Suggested citation -->
-<!-- Public Health Agency of Canada. Canadian COVID-19 vaccination safety report. Ottawa: Public Health Agency of Canada; December 24, 2021. https://health-infobase.canada.ca/covid-19/vaccine-safety/ -->
-
-
-Reported side effects following COVID-19 vaccination in Canada
-https://health-infobase.canada.ca/covid-19/vaccine-safety/
-
-
-#### 
 
 ```{r STOP_HERE, include=FALSE}
 knitr::knit_exit()
 ```
-
 Any other codes/text, which you dont want to be shown (yet) in the complied App, can be placed here. For example debugging pane or extra statistical analysis tab
 
 
@@ -632,14 +496,27 @@ Any other codes/text, which you dont want to be shown (yet) in the complied App,
 
 ## ...
 
-### Input values
+### Debug window
 
 
 
-```{r print input}
+#### Input
+```{r print input1}
+# renderPrint( paste0("Shiny is Running: ", shiny::isRunning() ) )
 renderPrint( input )
 renderPrint( input$date )
+renderPrint( paste0("region1 ", region1))
+renderPrint( paste0("cause1 ", cause1))
+
+# cat("r.dtAll()")
+# renderPrint( r.dtAll() %>% print )
+cat("r.dt0()")
+renderPrint( r.dt0() %>% print )
+cat("r.dt0_wideGeo1()")
+renderPrint( r.dt0_wideGeo1() %>% print )
 ```
+
+
 
 
 

@@ -59,7 +59,12 @@ if (F) {
 }
 
 
-
+setcolorder.fromLast <- function( dt, neworder) {
+  # TBD - useful for cast.
+  
+  # setcolorder.fromLast(dtCached, c("Cause of death (ICD-10)", "value"))
+  # setcolorder(dtCached, c("Date",  "GEO", "Cause of death (ICD-10)", "value"))
+}
 
 ### Automatically finding / removing common parts in strings 
 
@@ -147,6 +152,7 @@ str_find_overlap <- function(str1, str2, ignore.case = FALSE) { # , verbose = FA
 
 
 datatable.title <- function(dt, title=NULL) {
+  # https://rstudio.github.io/DT/options.html
     dt %>% DT::datatable (
       filter = "top",  
       caption = title,
@@ -165,12 +171,16 @@ dygraph.input <- function(dts, input, group="1st group") {
   dygraph.title (dts, input$name, group="1st group")
 }
 
-dygraph.title <- function(dts, title, group="1st group") {
+dygraph.title <- function(dts, title=NULL, group="1st group") {
   dygraph(dts, main = title, group = group) %>%
     # dySeries(input$var1, color = input$color1, strokePattern = input$stroke1,  axis = input$axis1 )  %>% 
     dyOptions(fillGraph = F, stepPlot = F, drawGrid = T, drawPoints = TRUE, pointSize = 2) %>%
     dyHighlight(highlightCircleSize = 5,highlightSeriesBackgroundAlpha = 0.2, hideOnMouseOut = FALSE) %>%
-    dyAnnotation("2021-5-1", text = "A", tooltip = "Fully Vaccinated Rate 3%") %>%
+    dyAxis("y", label="Deaths / week") %>%
+    dyAnnotation("2021-5-1", text = "3%", tooltip = "Fully Vaccinated Rate 3%") %>%
+    dyAnnotation("2021-4-6", text = "2%", tooltip = "Fully Vaccinated Rate 2%") %>%
+    dyAnnotation("2021-6-10", text = "10%", tooltip = "Fully Vaccinated Rate 10%") %>%
+    dyAnnotation("2021-2-18", text = "1%", tooltip = "Fully Vaccinated Rate 1%") %>%
     dyRangeSelector() 
 }
 
