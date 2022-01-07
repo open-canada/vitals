@@ -1,0 +1,285 @@
+---
+title: "Open Canada Data Opener"
+github-repo: open-canada/vitals
+url: https\://o-canada.shinyapps.io/vitals/data.Rmd
+license: MIT 
+# favicon: "R4GC.ico"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    social: menu
+    source_code: https://github.com/open-canada/vitals
+    vertical_layout: fill
+runtime: shiny
+---
+
+
+```{r -globals, include=F}
+knitr::opts_chunk$set(echo = F)
+source ("00_common.R")
+library(dplyr)
+library(ckanr)
+library(cansim)
+
+```
+
+# Statistics Canada 
+
+
+## >> COL 1 ..... {.tabset}
+
+
+### Search 
+
+sdfsdfsdf
+
+```{r STOP_HERE, include=FALSE}
+knitr::knit_exit()
+
+      labs(title = NULL,  x = NULL,         
+           y = ifelse(input$per_million,  "Deaths in million / week", "Deaths / week"), 
+           caption = "Source: Statistics Canada - Table 13-10-0810-01"     )
+```
+
+
+```{r r.dt0}
+
+textInput("stat.search", "Search keyword", "vital", width="100%")
+cat("Try: Vital, Covid, Hospital, Vaccin")
+
+
+checkboxInput("saveSearch", "Save search results in .csv file")
+
+r.dt0  <- reactive({
+  
+  req(input$run)
+  dt0 <- search_cansim_cubes(input$stat.search) %>% setDT()
+
+  
+  if (input$saveSearch)
+    fwrite(dt0, paste0("cansim-", input$stat.search, ".csv"))
+  
+  dt0
+})
+
+renderDataTable({
+  datatable.title( r.dt0() )
+})
+```
+
+
+
+
+### Visualize 
+
+```{r r.dt}
+
+textInput("stat.table", "Enter Table #", "13-10-0810-01", width="100%")
+cat("Try: 13-10-0768-01, 1310076801, 13-10-0792-01")
+
+"13-10-0768-01"
+"13-10-0792-01"
+"13-10-0783-01"
+
+"13-10-0783-01"
+
+"13-10-0427-01"
+"13-10-0395-01"
+
+"13-10-0415-01"
+"13-10-0418-01"
+"13-10-0415-01"
+
+
+r.dt  <- reactive({
+  req(input$run)
+  dt <- cansim::get_cansim(input$stat.table) %>% setDT(dt)
+  dt[, Date := ymd(Date)]; 
+  
+  dt$Date %>% max(na.rm = T)
+  dt$Date %>% min(na.rm = T)
+  dt %>% names()
+  dt$Date %>% unique()
+  dt$Characteristics %>% unique()
+  
+  dt
+})
+
+# . Select columns ----
+
+renderUI({
+  selectInput( "columns1", "Columns to keep (Click 'Del' to remove):", r.dt() %>% names, c("Date", "val_norm", "Characteristics"),
+               multiple = T)  
+})
+
+r.dt1 <- reactive({
+  req(r.dt())
+  # req(input$file1)
+  
+  r.dt()  %>% select(input$columns1)   %>%
+             mutate_if(is.factor, as.character) 
+
+  # fread(input$file1$datapath, stringsAsFactors = T) [ , ..input$columns1]
+})
+
+
+
+
+
+# . "Choose the task to perform", -----
+radioButtons("perform", "Choose the task to perform:",
+             choices = c("View", 
+                         # "Clean", 
+                         "Search", "Deduplicate", "Link" ),
+             selected = "View", inline=T) 
+
+# 
+# 
+# renderUI({
+#   if (input$perform == "Search") {
+#     textInput("typedTime",            
+#               "Word(s) for fuzzy search:",       
+#               width="100%")
+#   }
+# })
+# 
+# 
+# renderUI({
+#   if  (input$perform == "Deduplicate" | input$perform == "Link")
+#     selectInput( "columns1.toblock", "Choose Columns to block:",
+#                  r.dt1() %>% names,
+#                  NULL,
+#                  multiple = T)  
+# })
+
+
+
+actionButton("run", "Run!", class = "btn-success",width = "100%")
+
+hr()
+
+# . "Tuning parameters" ----
+
+
+h4("Tuning parameters")
+
+
+
+
+
+
+```
+
+
+
+### Subset and Save
+
+
+```{r}
+
+renderDataTable({
+  datatable.title( r.dt1() )
+})
+
+```
+
+
+### Summarize
+
+#### Stats
+```{r}
+
+
+renderPrint({  
+  # summary( r.dt1()  ) 
+  
+  summary( r.dt1() %>%
+             mutate_if(is.character, as.factor) %>%
+             mutate_if(is.integer, as.factor)
+  )
+  
+  
+})
+```
+
+#### Structure
+```{r}
+renderPrint({  str(r.dt1())  })
+
+  # dt$Date %>% max(na.rm = T)
+  # dt$Date %>% min(na.rm = T)
+  # dt %>% names()
+  # dt$Date %>% unique()
+  # dt$Characteristics %>% unique()
+  
+
+```
+
+
+
+## >> Col 2 ............................ {.tabset}
+
+
+
+
+# Open Ontario 
+
+
+
+
+## .sidebar ...... {.sidebar}
+
+
+```{r}
+ckanr_setup(url = "https://data.ontario.ca/")
+res <- resource_search(q = "name:Vaccin", as = "table") 
+res$count #7
+r <- res$results %>% setDT
+```
+
+## .... Upper Row {.tabset .tabset-fade }
+
+### Search
+
+
+```{r}
+
+r <- res$results
+
+
+fwrite(res$results, "on-vaccine.csv", sep="\t")
+
+res$results$package_id
+
+res$results$id # = res$results$resource_id
+r$original_url
+r$name
+r$name_translated
+
+r$description
+r$description_translated
+
+r$created
+r$publically_available_date
+r$data_range_start
+r$data_range_end
+
+
+
+
+res <-resource_show(id ="274b819c-5d69-4539-a4db-f2950794138c")
+res$url
+destfile <- "Hospitalizations by vaccination status.csv"
+curl::curl_download(res$url, destfile)
+
+```
+
+### Visualize
+
+
+
+
+```{r , include=FALSE}
+knitr::knit_exit()
+```
+

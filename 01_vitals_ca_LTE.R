@@ -41,7 +41,7 @@ if (F) { # 1.a Read and cache live CANSIM data ----
   # dt[1, cached := dateToday]
   
   
-  dt <- dt[!is.na(val_norm)]
+  # dt <- dt[!is.na(val_norm)]
   
   dtTimeStamp <- dt[1][ , lapply(.SD, function(x) NA), .SDcols=names(dt)] [, Date:=dateToday]
   dt <- rbind(dt, dtTimeStamp)
@@ -63,7 +63,7 @@ if  (F)  { # 1.b Read from https://github.com/open-canada/datasets/statcan ----
   dt <- fread ("https://github.com/open-canada/datasets/raw/main/statcan/13100810.csv") 
 }
 
-# 1.c Read local cached copy ----
+# * 1.c Read local cached copy ----
 
 
 dtCached <- readRDS(paste0("13100810-cached.Rds"))
@@ -252,9 +252,15 @@ if (F) {
   
   # Plot GEO vertically - allows comparison across Causes
   
+  periods <- c(
+    ymd("2020-01-24"),
+    ymd("2020-06-30")
+  )
+  
   g3 <- ggplot(dt0) +
     guides(col = "none") +
     geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+    geom_vline(xintercept=periods, linetype=4)
     facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
     labs(
       title = NULL, x = NULL, y = NULL,
@@ -262,8 +268,9 @@ if (F) {
     )
   g3
 
+  # compare2past -----
 
-  
+
   
   if (input$compare2past) {
     
@@ -275,6 +282,8 @@ if (F) {
 
     g3 <- ggplot(dt0[]) +
       guides(col = "none") +
+      
+      geom_smooth(method=lm, alpha=0.25, color="black", fill="black")
       geom_step(data=dt0[year(Date)>2019], mapping=aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
       facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
       labs(

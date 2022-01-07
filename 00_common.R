@@ -4,13 +4,13 @@
 # source ("00_common.R")
 #0. Global settings ----
 if (T) {  
-  # packages <- c("magrittr","ggplot2","stringr", "forcats") # forcats, DOES NOT WORK WHEN DEPLOYING IN RSCONNECT!
-  # lapply(packages, library, character.only = TRUE)
   library(magrittr); library(ggplot2)
   library(lubridate,  quietly=T); options(lubridate.week.start =  1)
   library(data.table); options(datatable.print.class=TRUE)
   library(dygraphs)
-  library(plotly); library(DT); library(heatmaply);  library(ggpubr)
+  library(plotly); library(DT); 
+  library(heatmaply);  
+  library(ggpubr)
   library(stringr); library(forcats) 
   
   options(digits = 3)
@@ -26,7 +26,7 @@ if (T) {
 
 
 #Found in: stackoverflow:
-# Efficient rows deletion from data.table
+# Efficient (in place) rows deletion from data.table 
 
 #' Title
 #'
@@ -58,6 +58,17 @@ if (F) {
   dt %>% dt.rmRow(nrow(dt))
 }
 
+
+colsSelect <- function (dt, range)  {
+  dt[, range, with=F]
+  # Note also other ways to select columns in data.table
+  # dt[, ..range]
+  # dt[,.SD, .SDcols=range] 
+}
+
+colsRm <- function (dt, range)  {
+  dt[, (range) := NULL] 
+}
 
 setcolorder.fromLast <- function( dt, neworder) {
   # TBD - useful for cast.
@@ -167,10 +178,6 @@ datatable.title <- function(dt, title=NULL) {
 }
 
 
-dygraph.input <- function(dts, input, group="1st group") {
-  dygraph.title (dts, input$name, group="1st group")
-}
-
 dygraph.title <- function(dts, title=NULL, group="1st group") {
   dygraph(dts, main = title, group = group) %>%
     # dySeries(input$var1, color = input$color1, strokePattern = input$stroke1,  axis = input$axis1 )  %>% 
@@ -205,8 +212,7 @@ if (F) {
   library("heatmaply")
   
   heatmaply(mtcars)
-  
-  
+
   heatmaply_cor(
     cor(mtcars),
     xlab = "Features",
@@ -214,10 +220,8 @@ if (F) {
     k_col = 2,
     k_row = 2
   )
-  
 
   r <- cor(mtcars)
-  
   p <- cor.test.p(mtcars)
   
   heatmaply_cor(
@@ -228,7 +232,6 @@ if (F) {
     label_names = c("x", "y", "Correlation")
   )
   
-  
   heatmaply(
     mtcars, 
     scale = "column",
@@ -236,11 +239,8 @@ if (F) {
     # percentize(mtcars),
     xlab = "Features",
     ylab = "Cars", 
-    
     main = "Data transformation using 'scale'"
   )
-  
-  
   
 }
 

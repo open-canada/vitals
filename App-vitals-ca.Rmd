@@ -2,6 +2,8 @@
 title: "Open Canada Vital Statistics Tracker"
 github-repo: open-canada/vitals
 url: https\://open-canada.github.io/Apps/vitals
+license: MIT 
+# favicon: "rCanada.ico"
 output:
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -45,19 +47,22 @@ if (T) {
   cause1 <- ""
 }
 
-# 4.a Set parameters: static ----
+# * 4.a Set parameters: static ----
 
 in0 <- list(
-  # remove provincecount
+  read_from="Cached Data",
   state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut"), 
   # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ), # Start with largest
-  cause = choicesCauses[c(1,2,5, 12, 15:16)], # 5:9, # Start with largest
+  cause = choicesCauses[c(1,2,5, 7, 12, 15:16)], # 5:9, # Start with largest
   # live=F,
   # age=F,
-  # national = F,
+  average = F,
   vaccination=T,
   alternative_view=F,
   per_million = T,
+  keep_scale = T,
+  compare2past = F,
+  
   date = c("2019-12-01", as.character(dateToday))
 )
 
@@ -81,6 +86,11 @@ Data Source: [Statistics Canada Table 13-10-0810-01](https://www150.statcan.gc.c
 
 
 ```{r shiny_input}
+
+dateCached = ymd("2021-12-17")
+dateReleased = ymd("2021-12-06"); 
+# dateCached = dateReleased
+
 renderText(paste0("Data loaded on: ", ifelse(input$read_from=="Cached Data" , dateCached %>% as.character(), dateToday%>% as.character() )))
 renderText(paste0("Last record in data: ", r.dt0()$Date %>% max(na.rm = T)))
 
@@ -101,6 +111,11 @@ checkboxInput("alternative_view", "Reverse axes",  in0$alternative_view)
 # h6("* Not Available for death causes")
 checkboxInput("per_million", "Show per million",  in0$per_million)
 
+checkboxInput("average", "Average over three weeks",  in0$average)
+
+checkboxInput("keep_scale", "Keep the same scale",  T)
+
+
 checkboxInput("vaccination", "Show vaccination data",  in0$vaccination)
 
 
@@ -116,7 +131,7 @@ selectInput('cause', h5("Choose Death Causes:"), multiple=T, choices = choicesCa
 
 
 
-# checkboxInput("average", "Average over three weeks",  in0$smooth)
+
 # checkboxInput("compare2past", "Compare to past years",  in0$compare2past)
 
 dateRangeInput("date", h5("Change date range"), weekstart=1, start = in0$date[1], end = in0$date[2])
@@ -128,7 +143,7 @@ dateRangeInput("date", h5("Change date range"), weekstart=1, start = in0$date[1]
 
 
 
-```{r r.dtAll r.dt0 }
+```{r *r.dtAll r.dt0 }
 
 # .reactive <- function(A) { # does not work :(   
 #   if (!shiny::isRunning()) A else reactive(A)
@@ -173,13 +188,13 @@ r.dtAll  <- reactive({
     setcolorder(dt, c("Date",  "GEO", "population", "Cause of death (ICD-10)", "value"))
   } 
   
-  # if (input$average==T) {
-  #   convolution_window <- 3 
-  #   dt[, value := frollmean(value, convolution_window, align = "right", fill = 0), by = .(GEO, `Cause of death (ICD-10)`)]
-  # }
-  # 
+  if (input$average==T) {
+    convolution_window <- 3
+    dt[, value := frollmean(value, convolution_window, align = "right", fill = 0), by = .(GEO, `Cause of death (ICD-10)`)]
+  }
+
   # if (input$clumpAllOtherCauses==T) {
-  #   
+  # 
   # }
   
   # dt <- dt[!is.na(val_norm)]
@@ -201,6 +216,9 @@ r.dtAll  <- reactive({
   
 })
 
+```
+
+```{r *r.dt0}
 
 r.dt0  <- reactive({
   
@@ -210,6 +228,26 @@ r.dt0  <- reactive({
     # r.dtAll()[ 
    
   dt0 <- r.dtAll()[eval(q)]
+})
+
+r.dtSummary  <- reactive({
+  dt0 <- r.dt0()
+  dtS <- dt0 [ , .(
+
+    # weeks=as.integer( max(Date) - min(Date)) / 7,
+    # periodName=paste(input$date1, input$date2),
+    MIN=min(value, na.rm = T),
+    MEAN=mean(value, na.rm = T) %>% round(1), 
+        MAX=max(value, na.rm = T),
+    # SD=sd(value, na.rm = T) %>% round(1), 
+    # skew=skewness(value, na.rm = T)%>% round(1),  
+    # kurtosis=kurtosis(value, na.rm = T)%>% round(1),
+    
+    # intercept=lm(value ~ as.integer( Date - min(Date)),  na.action=na.omit)$coefficients[1] %>% round(1),
+    Dynamics=( lm(value ~ as.integer( Date - min(Date)),  na.action=na.omit)$coefficients[2] * 7 ) %>% round(1)
+  ),  
+  by=.(`Cause of death (ICD-10)`,GEO)]
+  dtS
 })
 
 ```
@@ -223,19 +261,22 @@ r.dt0  <- reactive({
 <!-- ### Plot -->
 ### Multi-dimensional plot
 
-```{r r.g}
+```{r *r.g}
 
 r.g <- reactive({
   
   dt0 <- r.dt0()
   dt0$vaccination <- factor("Vaccination", levels=c("Vaccination", "Dummy") )
   
-  if (input$alternative_view == T) {
+  if (input$alternative_view == F) {
     g1 <-  ggplot(dt0) +  theme(legend.position = "bottom") + 
       # guides(col="none") +
-      geom_step(aes(Date, value, col = `Cause of death (ICD-10)`)) +
-      facet_grid(`Cause of death (ICD-10)` ~ GEO , scales = "free") +
-      labs(        title = NULL,         x = NULL,         y = "Deaths per week", 
+      geom_line(aes(Date, value, col = `Cause of death (ICD-10)`)) +
+      facet_grid(`Cause of death (ICD-10)` ~ GEO , 
+                 scales = ifelse (input$keep_scale, "fixed", "free")
+                 ) +
+      labs(        title = NULL,         x = NULL,         
+                   y = ifelse(input$per_million,  "Deaths in million / week", "Deaths / week"), 
                    caption = "Source: Statistics Canada - Table 13-10-0810-01"     )
     
     if (input$vaccination==T) {
@@ -244,8 +285,9 @@ r.g <- reactive({
         # geom_line(aes(Date, numtotal_partially), col = "red", linetype=3) +
         geom_line(aes(Date, numtotal_atleast1dose), col = "red", linetype=2) +   
         facet_grid( vaccination ~ GEO , scales = "free") +
-        labs(      title = "Canadian Vaccination and Vital Statistics data",         x = NULL,        y = "(%)", 
-                   caption = "Source: https://health-infobase.canada.ca/covid-19/vaccination-coverage"  )
+        labs(title = NULL,  x = NULL,         
+             y = "(%)",
+             caption = "Source: https://health-infobase.canada.ca/covid-19/vaccination-coverage")
       # a <- max(1, input$cause %>% length - 4)
       a=5
       
@@ -258,10 +300,13 @@ r.g <- reactive({
     
     g1 <-  ggplot(dt0) +  guides(col="none")  + 
       # guides(col="none") +
-      geom_step(aes(Date, value, col = `Cause of death (ICD-10)`)) +
-      facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
-      labs(        title = NULL,         x = NULL,        y = "Deaths per week", 
-                   caption = "Source: Statistics Canada"     )
+      geom_line(aes(Date, value, col = `Cause of death (ICD-10)`)) +
+      facet_grid(GEO ~ `Cause of death (ICD-10)`, 
+                 scales = ifelse (input$keep_scale, "fixed", "free")
+                 ) +
+      labs(title = NULL,  x = NULL,         
+           y = ifelse(input$per_million,  "Deaths in million / week", "Deaths / week"), 
+           caption = "Source: Statistics Canada - Table 13-10-0810-01" )
     
     if (input$vaccination==T) {
       
@@ -305,9 +350,6 @@ Plot on the bottom shows data for  all regions in one cause  (the first in the l
 
 
 ```{r ggplotly}
-# if (input$vaccination==F) {
-#   plotly::ggplotly( r.g() )
-# }
 
 plotly::renderPlotly( {
   
@@ -316,15 +358,23 @@ plotly::renderPlotly( {
   region1 <- dt0$GEO %>% unique %>% .[1]
   g <-ggplot(dt0[GEO==region1]) +
     geom_line(aes(Date, value,   col = `Cause of death (ICD-10)`)) +
-    labs(        title = paste0("Region: ", region1)  ,         x = NULL,        y = "Deaths per week"  )
+    labs(        
+      title = paste0(region1)  ,         
+      x = NULL,
+      y = ifelse(input$per_million,  "Deaths in million / week", "Deaths / week")  
+      )
   
-  # if (F) {
-  # # if (input$vaccination==T) {
-  #   g <-  g +
-  #     geom_line(aes(Date, numtotal_fully), col = "red", linetype=2) +
-  #     geom_line(aes(Date, numtotal_atleast1dose), col = "red", linetype=3) +
-  #     labs(        title = region  ,         x = NULL,        y = "Vaccinatrion rate (%) | Deaths in a million (per week)"  )
-  # }
+  if (input$vaccination==T) {
+    g <-  g +
+      geom_line(aes(Date, numtotal_fully), col = "red", linetype=2) +
+      geom_line(aes(Date, numtotal_atleast1dose), col = "red", linetype=3) +
+      labs(        
+        title = region  ,         
+        x = NULL,        
+        y = ifelse(input$per_million,  "Vaccinatrion rate (%) | Deaths in million per week", "Vaccinatrion rate (%) | Deaths per week")  
+      )
+  }
+  
   plotly::ggplotly( g ) 
 })
 
@@ -338,15 +388,23 @@ plotly::renderPlotly( {
     dt0[`Cause of death (ICD-10)` == cause1] %>% 
     ggplot() +
     geom_line(aes(Date, value,  col = GEO)) +
-    labs(        title = paste0("Cause: ", cause1)  ,         
-                 x = NULL,        y = "Deaths per week"  )
+    labs(        
+      title = paste0(cause1)  ,         
+      x = NULL,        
+      y = ifelse(input$per_million,  "Deaths in million / week", "Deaths / week") 
+      )
   
-  # if (input$vaccination==T) {
-  #   g <-  g +
-  #     geom_line(aes(Date, numtotal_fully, col = GEO), linetype=2) +
-  #     geom_line(aes(Date, numtotal_atleast1dose, col = GEO), linetype=3) +
-  #     labs(        title = cause1  ,         x = NULL,        y = "Vaccinatrion rate (%) | Deaths in a million (per week)"  )
-  # }
+  if (input$vaccination==T) {
+    g <-  g +
+      geom_line(aes(Date, numtotal_fully, col = GEO), linetype=2) +
+      geom_line(aes(Date, numtotal_atleast1dose, col = GEO), linetype=3) +
+      labs(        
+        title = cause1,         
+        x = NULL,        
+        y = ifelse(input$per_million,  "Vaccinatrion rate (%) | Deaths in million per week", "Vaccinatrion rate (%) | Deaths per week")   
+      )
+  }
+  
   plotly::ggplotly( g ) 
 })
 
@@ -381,7 +439,19 @@ dygraphs::renderDygraph ({
   # setcolorder(dt0_wideGeo1, "Date"); 
   dts  <- as.xts.data.table(dt0_wideGeo1)
   
-  dygraph.title( dts, region1)
+  # dygraph.title( dts, region1)
+  
+   dygraph(dts, main = region1) %>%
+    # dySeries(input$var1, color = input$color1, strokePattern = input$stroke1,  axis = input$axis1 )  %>% 
+    dyOptions(fillGraph = F, stepPlot = F, drawGrid = T, drawPoints = TRUE, pointSize = 2) %>%
+    dyHighlight(highlightCircleSize = 5,highlightSeriesBackgroundAlpha = 0.2, hideOnMouseOut = FALSE) %>%
+    dyAxis("y", label=ifelse(input$per_million,  "Deaths in million / week", "Deaths / week")) %>%
+    dyAnnotation("2021-6-10", text = "10%", tooltip = "Fully Vaccinated Rate 10%") %>%
+    dyAnnotation("2021-5-1", text = "3%", tooltip = "Fully Vaccinated Rate 3%") %>%
+    dyAnnotation("2021-4-6", text = "2%", tooltip = "Fully Vaccinated Rate 2%") %>%
+    dyAnnotation("2021-2-18", text = "1%", tooltip = "Fully Vaccinated Rate 1%") %>%
+    dyRangeSelector() 
+  
 })
 
 
@@ -419,19 +489,90 @@ NB: It can take long to display large quantities of data.
 - Export table or its selection in one of  available formats using the buttons provided.
 
 ```{r datatable}
+hr()
 
-DT::renderDataTable( 
-  r.dt0() %>% DT::datatable (
-    filter = "top",  rownames=F,   
-    extensions =  c('ColReorder', 'Buttons'),
-    options = list(
-      dom = 'Blfrtip',
-      colReorder = TRUE,
-      # lengthMenu = list(c(10,25,100,-1), c(10,25,100,"All")),
-      buttons = c('copy', 'csv', 'excel', 'pdf', 'print') 
-    ) )
+radioButtons("show_table", "Show",
+             choices = c("Summary", "Raw Data" ),
+             selected = "Summary" , inline=T)
+
+
+DT::renderDataTable(
+  if (input$show_table == "Summary" )  {
+    r.dtSummary() %>% datatable.title("Summary (Deaths in a million per week)")
+  } else {
+    r.dt0() %>% datatable.title("Weekly statistics (Deaths in a million per week)")
+  }
+  
 )
 
+
+# r.dt0() %>% DT::datatable (
+#       filter = "top",  rownames=F,
+#       extensions =  c('ColReorder', 'Buttons'),
+#       options = list(
+#         dom = 'Blfrtip',
+#         colReorder = TRUE,
+#         # lengthMenu = list(c(10,25,100,-1), c(10,25,100,"All")),
+#         buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+#       ) )
+
+
+```
+
+
+
+
+
+
+<!-- # Statistical Analysis  -->
+
+
+#### Statistical summary
+
+```{r Summary}
+
+```
+
+#### Correlations
+
+```{r Correlations}
+
+
+# dt0 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" & `Cause of death (ICD-10)` == choicesCauses [16]]  %$% # CAUSE="Blank (NA)"
+
+renderPrint({
+  dt00 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" & `Cause of death (ICD-10)` == choicesCauses [16]]  # CAUSE="Blank (NA)"
+  res <- dt00 %$%  cor.test(value, numtotal_fully, method="kendall")
+})
+# cor = 0.7553008, p-value = 0.000118 # pearson
+# tau = 0.9894737 # kendall
+# rho = 0.9984962 # spearman
+
+
+# 
+# 
+# setkey(dt0.wide,"Date")
+# 
+# r <- cor(dt0.wide[, !("Date"), with=T])
+# p <- cor.test.p(dt0.wide)
+# 
+# heatmaply(dt0.wide)
+# 
+# 
+# # Statistical Analysis
+# 
+# 
+# # http://www.sthda.com/english/wiki/correlation-test-between-two-variables-in-r
+# 
+# 
+# res <- cor.test(x, y, method=c("pearson", "kendall", "spearman"))
+# # If your data contain missing values, use the following R code to handle missing values by case-wise deletion.
+# # cor(x, y,  method = "pearson", use = "complete.obs")
+# 
+# # Extract the p.value
+# res$p.value
+# # Extract the correlation coefficient
+# res$estimate
 
 ```
 
@@ -480,6 +621,9 @@ setnames(dtAge, old=c("Age at time of death", "Sex"), new=c("age", "sex"))
 
 
 
+
+
+
 ```{r 99_vital_info.Rmd, child = '99_vital_info.Rmd'}
 ```
 
@@ -518,37 +662,3 @@ renderPrint( r.dt0_wideGeo1() %>% print )
 
 
 
-
-
-<!-- # Statistical Analysis 
-
-
-### Correlations
-
-```{r Correlations}
-
-
-# dt0 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" & `Cause of death (ICD-10)` == choicesCauses [16]]  %$% # CAUSE="Blank (NA)"
-
-renderPrint({
-  dt00 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" & `Cause of death (ICD-10)` == choicesCauses [16]]  # CAUSE="Blank (NA)"
-    res <- dt00 %$%  cor.test(val_norm, numtotal_fully, method="kendall")
-})
-# cor = 0.7553008, p-value = 0.000118 # pearson
-# tau = 0.9894737 # kendall
-# rho = 0.9984962 # spearman
-
-
-
-
-setkey(dt0.wide,"Date")
-
-r <- cor(dt0.wide[, !("Date"), with=T])
-p <- cor.test.p(dt0.wide)
-
-heatmaply(dt0.wide)
-
-```
-
-
--->
