@@ -44,19 +44,20 @@
 The Open Canada Vital Statistics Tracker App is  designed so as to allow one to efficiently track and analyze   Canadian Vital Statistics - Death database (CVSD) data, specifically in relationship to COVID-19 pandemic and vaccination.
 
 Using the App, one can  efficiently , in  interactive manner using the menu, visualize and compare vital (deaths) statistics by province and by causes of death.
-Use the pull-down menus to select the date range, province(s), and death cause(s) of particular interest. 
+
+
 
 When enabled in menu, the App also allows one to correlate and visually compare death statistics with the rate of vaccination in each province. Dashed line shows "at least one dose" vaccinated, solid line shows "fully vaccinated".
 
-The following visualization tools are provided:  
+Use the pull-down menus on the left to select 
+the data of interest from the source Open Canada portal. Use a variety of [App Tools] to analyze the selected data.
 
-- Multi-dimensional plot: suitable  for printing
-- Interactive plot: allows interactive visualization and analysis
-- Interactive time-series: allows to zoom along the timeline
-- Interactive table: allows filtering, subsetting and exporting the  data as an .csv file
+<!-- the date range, province(s), and death cause(s) of particular interest.  -->
 
 By default, the App uses cached CVSD data for faster operation. To read data directly from the Statistics Canada CVSD portal, please check "Use Live" option in the menu. Please note however that this works only if the portal is up and running, which you can check by clicking [here](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001).
 
+
+For more App features, please see [App Tools]
 
 
 #### Dislaimer
@@ -71,6 +72,55 @@ For references related to safety and efficacy of vaccine please see [Additional 
 For  details about the CVSD data (Sources, Methodology, Accuracy) please visit the [Statistics Canada, Canadian Vital Statistics - Death database (CVSD) site](https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3233). See also [Data Sources] for direct links to the databases and  additional notes provided for those databases.
 
 
+
+
+### App Tools
+
+
+
+
+The following visualization tools are provided in this App.  
+
+<!-- - [Overview]: shows multi-dimensional plot  which you can save or copy by right-clicking on the image  -->
+- Overview: shows multi-dimensional plot  which you can save or copy by right-clicking on the image 
+
+<!-- - Interactive plot: allows interactive visualization and analysis -->
+- [By cause] and [By province] analysis: is an interactive time-series plot that allows one to zoom on the data along the timeline and see the values behind the data by hovering over the curves.
+
+- [By cause (alt.)] and [By province (alt.)] analysis: is another type an interactive visualization of data by cause and by province. See below how to use it.
+
+
+NB: In "By cause" and "By province" analysis, the plots show the data only for the first selected item in menu (for the  region and  death cause shown on top of the selected items)
+
+
+<!-- (Interactive time-series( allows to zoom along the timeline -->
+
+- [Summary]: is an interactive table that provides a statistical summary of the selected data such as: lowest / highest / average weekly results and  weekly average dynamics (i.e. how much result change weekly over time) computed as a slope of the linear model regression line. Positive "dynamics" means that values grow with time, "0" dynamics means that data are stable and  negative "dynamics" means the value decline with time.
+
+- Full table: is an another interactive table that shows  raw data extracted from the source Open Canada portal using the selected criteria. It allows one to browse, filter, subset, and export the selected data as an .csv, pdf, Excel file, or to a printer or clipboard.
+
+<!-- Table below shows  data extracted using the selection criteria chosen in the menu.  -->
+NB: It can take long to display large quantities of data.
+
+
+##### How use to interactive plot:
+
+- Select/deselect any line by clicking on line description on right (Double-click  reverts the selection).
+- Zoom on any section by drugging mouse of the region of interest in the  plot (Double-click on the plot restores original plot).
+- Hover over a line to see data details.
+- For more options, use the buttons in the upper right corner of the plot image. You can move, change, reset and save plot image using the buttons there.
+- Dashed lines show the vaccination rate, when this option is selected in menu.
+
+
+##### How use to interactive table:
+
+- Move / reorganize columns by drugging column names.  Change the number of rows to be shown using "Show entries" pull-down menu
+- Filter by typing in the  boxes under the column names. Sort by clicking on the column name.
+- Export table or its selection in one of  available formats using the buttons provided.
+
+NB: Finally, please note that when  data are loaded or processed (which can take some time depending on the size of the selected data), the error messages may appear on the screen. Simply ignore them, or use this time to read  App documentation and provided references.
+
+<!-- Thank you -->
 
 ### Data Sources
 
