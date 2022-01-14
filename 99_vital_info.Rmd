@@ -41,14 +41,9 @@
 
 #### Description
 
-The Open Canada Vital Statistics Tracker App is  designed so as to allow one to efficiently track and analyze   Canadian Vital Statistics - Death database (CVSD) data, specifically in relationship to COVID-19 pandemic and vaccination.
-
-Using the App, one can  efficiently , in  interactive manner using the menu, visualize and compare vital (deaths) statistics by province and by causes of death.
-
-
-
+The Open Canada Vital Statistics Tracker App is  designed so as to allow one to efficiently track and analyze data from the  Canadian Vital Statistics - Death  (CVSD) database, specifically in relationship to COVID-19 pandemic and vaccination.
+Using the App, one can in  interactive manner (using the menu and various options), visualize and compare vital (deaths) statistics by province and by causes of death.
 When enabled in menu, the App also allows one to correlate and visually compare death statistics with the rate of vaccination in each province. Dashed line shows "at least one dose" vaccinated, solid line shows "fully vaccinated".
-
 Use the pull-down menus on the left to select 
 the data of interest from the source Open Canada portal. Use a variety of [App Tools] to analyze the selected data.
 
@@ -57,7 +52,7 @@ the data of interest from the source Open Canada portal. Use a variety of [App T
 By default, the App uses cached CVSD data for faster operation. To read data directly from the Statistics Canada CVSD portal, please check "Use Live" option in the menu. Please note however that this works only if the portal is up and running, which you can check by clicking [here](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001).
 
 
-For more App features, please see [App Tools]
+For more information on how to use the App, please see [App Tools].
 
 
 #### Dislaimer
@@ -69,7 +64,8 @@ The authoritative source for COVID-19 information is [Canada.ca/coronavirus](htt
 For references related to safety and efficacy of vaccine please see [Additional information] section.
 
 
-For  details about the CVSD data (Sources, Methodology, Accuracy) please visit the [Statistics Canada, Canadian Vital Statistics - Death database (CVSD) site](https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3233). See also [Data Sources] for direct links to the databases and  additional notes provided for those databases.
+For  details about the CVSD data (Sources, Methodology, Accuracy) please visit the [Statistics Canada, Canadian Vital Statistics - Death database (CVSD) site](https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3233).   
+See also [Data Sources] for direct links to the databases and  additional notes provided for those databases.
 
 
 
@@ -82,7 +78,7 @@ For  details about the CVSD data (Sources, Methodology, Accuracy) please visit t
 The following visualization tools are provided in this App.  
 
 <!-- - [Overview]: shows multi-dimensional plot  which you can save or copy by right-clicking on the image  -->
-- Overview: shows multi-dimensional plot  which you can save or copy by right-clicking on the image 
+- Overview shows multi-dimensional (with facets) plot  which you can save or copy by right-clicking on the image. 
 
 <!-- - Interactive plot: allows interactive visualization and analysis -->
 - [By cause] and [By province] analysis: is an interactive time-series plot that allows one to zoom on the data along the timeline and see the values behind the data by hovering over the curves.
@@ -103,7 +99,14 @@ NB: In "By cause" and "By province" analysis, the plots show the data only for t
 NB: It can take long to display large quantities of data.
 
 
-##### How use to interactive plot:
+
+##### How to use menues:
+
+- Use SHIFT + mouse click to add/remove item from the selection menu
+- Alternatively, use DEL button to delete the item from the menu list
+- Note that some images may become illegible if two many items are selected in the menus.
+
+##### How to use interactive plots:
 
 - Select/deselect any line by clicking on line description on right (Double-click  reverts the selection).
 - Zoom on any section by drugging mouse of the region of interest in the  plot (Double-click on the plot restores original plot).
@@ -112,13 +115,18 @@ NB: It can take long to display large quantities of data.
 - Dashed lines show the vaccination rate, when this option is selected in menu.
 
 
-##### How use to interactive table:
+##### How to use interactive tables:
 
 - Move / reorganize columns by drugging column names.  Change the number of rows to be shown using "Show entries" pull-down menu
 - Filter by typing in the  boxes under the column names. Sort by clicking on the column name.
 - Export table or its selection in one of  available formats using the buttons provided.
 
-NB: Finally, please note that when  data are loaded or processed (which can take some time depending on the size of the selected data), the error messages may appear on the screen. Simply ignore them, or use this time to read  App documentation and provided references.
+NB: Finally, please note that when  data are loaded or processed (which can take some time depending on the size of the selected data), the error messages may appear on the screen. Simply ignore them, or use this time to read  [Additional information] or browse the [Source Code](https://github.com/open-canada/vitals).
+
+
+##### Other notes:
+
+- Some provinces have population less then a million, therefore the *per capita* data (per million) for these provinces should be treated as an scaled up to a million  to allow *per capita* comparison with other provinces.
 
 <!-- Thank you -->
 
@@ -153,17 +161,19 @@ URL: https://health-infobase.canada.ca/covid-19/vaccination-coverage/
 #### Statistics Canada, Canadian Vital Statistics - Death database (CVSD)
 
 
-The CVSD database contains demographic and medical (cause of death) information annually and monthly from all provincial and territorial vital statistics registries on all deaths in Canada.
-Information from this database is also used in the calculation of statistics, such as cause-specific death rates and life expectancy.
+Quoting from [(CVSD)](https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3233]:  
+"This is an administrative survey that collects  demographic and medical (cause of death) information annually and monthly from all provincial and territorial vital statistics registries on all deaths in Canada.
+The data are used to calculate basic indicators (such as counts and rates) on deaths of residents of Canada. Information from this database is also used in the calculation of statistics, such as cause-specific death rates and life expectancy."
 
-In general, the CVSD database is updated weekly and lags about three months (e.g., the data released in the end of December provide statistics for up to end of September). 
-The data are gathered from each province  independently from each other, which is why the differences in the last reported days and in various statistics metrics are observed, and then  automatically  combined into the national CVSD database.  
+In general, the monthly updated CVSD surveys are updated the first Monday on the month and show the lag of about two and half months (e.g., the data released in the December provide statistics for up to end of September). 
+The data from each province are combined into the national CVSD database automatically and  independently from each other, which is why the differences in the last reported days and in the dynamics of various statistics metrics are observed.
+
 The following subsets of the  CVSD database are used in this App.
 
 ##### Data used in the App
 
 Provisional weekly death counts, by selected grouped causes of death    
-Frequency: Weekly (Every Monday)    
+Frequency: Weekly    
 Table: 13-10-0810-01    
 URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
 
@@ -171,13 +181,13 @@ URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
 
 
 Provisional weekly death counts, by age group and sex       
-Frequency: Weekly   (Every Monday)  
+Frequency: Weekly    
 Table: 13-10-0768-01     
 URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
 
 
 Provisional weekly estimates of the number of deaths, expected number of deaths and excess mortality, by age group and sex    
-Frequency: Weekly  (Every Monday)
+Frequency: Weekly 
 Table: 13-10-0792-01   
 URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310079201
 
@@ -340,95 +350,25 @@ The authoritative source for COVID-19 information is [Canada.ca/coronavirus](htt
 
 For the information on the safety and efficacy of COVID-19 vaccination, please see:
 
-<!-- https://health-infobase.canada.ca/covid-19/. -->
-<!-- ,  quotes from which are also provided  in [Additional information]. -->
+
+
+- 'Reported side effects following COVID-19 vaccination in Canada', 
+Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, 
+https://health-infobase.canada.ca/covid-19/vaccine-safety/ 
 
 
 
-<!-- #### Cases following vaccination -->
+- 'Cases following vaccination',
+COVID-19 Daily Epidemiology Update, Public Health Agency of Canada,       [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9) 
+
+
+-  Side Effect Reporting, Drug Health Product Register,  Voluntary Reporting,  
+URL: https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary. Tel: 1-866-234-2345.       
+
+
+- COVID Vaccine Adverse Event Reports from VAERS -- Vaccine Adverse Event Reporting System co-managed by the Centers for Disease Control and Prevention (CDC) and the U.S. Food and Drug Administration (FDA):  Report at [https://vaers.hhs.gov ](https://vaers.hhs.gov/reportevent.html), Search at [https://openvaers.com](https://openvaers.com/covid-data/covid-reports). 
 
 
 
-
-- 'Reported side effects following COVID-19 vaccination in Canada',    
-Canadian COVID-19 vaccination safety report, Public Health Agency of Canada,  https://health-infobase.canada.ca/covid-19/vaccine-safety/
-
-
-- 'Cases following vaccination',   
-COVID-19 Daily Epidemiology Update, Public Health Agency of Canada,  [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)
-
-- 'COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room', 
-Piero Olliaro, Els Torreele, Michel Vaillant,    
-The Lancet, VOLUME 2, ISSUE 7, E279-E280, JULY 01, 2021:  https://doi.org/10.1016/S2666-5247(21)00069-0 
-
-
-
-<!-- 
-
-- Efficacy and Safety of the mRNA-1273 SARS-CoV-2 Vaccine
-COVE Study Group,
-N Engl J Med 2021; 384:403-416, 
-https://www.nejm.org/doi/full/10.1056/nejmoa2035389 
-
-- Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine, C4591001 Clinical Trial Group, 
-N Engl J Med 2020; 383:2603-2615, 
-https://www.nejm.org/doi/full/10.1056/nejmoa2034577
-
-- Thacker P D. Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635, 
-https://www.bmj.com/content/375/bmj.n2635
-
-
-
-#1
-Efficacy and Safety of the mRNA-1273 SARS-CoV-2 Vaccine
-List of authors.
-Lindsey R. Baden, M.D., Hana M. El Sahly, M.D., Brandon Essink, M.D., Karen Kotloff, M.D., Sharon Frey, M.D., Rick Novak, M.D., David Diemert, M.D., Stephen A. Spector, M.D., Nadine Rouphael, M.D., C. Buddy Creech, M.D., John McGettigan, M.D., Shishir Khetan, M.D., et al., for the COVE Study Group*
-February 4, 2021
-N Engl J Med 2021; 384:403-416
-DOI: 10.1056/NEJMoa2035389
-https://www.nejm.org/doi/full/10.1056/nejmoa2035389 
-
-#2
-Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine
-List of authors.
-Fernando P. Polack, M.D., Stephen J. Thomas, M.D., Nicholas Kitchin, M.D., Judith Absalon, M.D., Alejandra Gurtman, M.D., Stephen Lockhart, D.M., John L. Perez, M.D., Gonzalo Pérez Marc, M.D., Edson D. Moreira, M.D., Cristiano Zerbini, M.D., Ruth Bailey, B.Sc., Kena A. Swanson, Ph.D., et al., for the C4591001 Clinical Trial Group*
-https://www.nejm.org/doi/full/10.1056/nejmoa2034577
-
-
-RESULTS
-The trial enrolled 30,420 volunteers who were randomly assigned in a 1:1 ratio to receive either vaccine or placebo (15,210 participants in each group). More than 96% of participants received both injections, and 2.2% had evidence (serologic, virologic, or both) of SARS-CoV-2 infection at baseline. Symptomatic Covid-19 illness was confirmed in 185 participants in the placebo group (56.5 per 1000 person-years; 95% confidence interval [CI], 48.7 to 65.3) and in 11 participants in the mRNA-1273 group (3.3 per 1000 person-years; 95% CI, 1.7 to 6.0); vaccine efficacy was 94.1% (95% CI, 89.3 to 96.8%; P<0.001). 
-
-
-Absolute difference = 185 cases - 11 cases per 15,210, yielding a difference of 174 cases / 15,210. 
-This is 1.1% absolute difference of cases between the vaccinated and unvaccinated . 
-This is a 1.1% effectiveness rate which they reported as 94.1% relative effectiveness rate.
-
-
-EFFICACY ASSESSMENTS
-The primary end point was the efficacy of the mRNA-1273 vaccine in preventing a first occurrence of symptomatic Covid-19 with onset at least 14 days after the second injection in the per-protocol population, among participants who were seronegative at baseline. End points were judged by an independent adjudication committee that was unaware of group assignment. Covid-19 cases were defined as occurring in participants who had at least two of the following symptoms: fever (temperature ≥38°C), chills, myalgia, headache, sore throat, or new olfactory or taste disorder, or as occurring in those who had at least one respiratory sign or symptom (including cough, shortness of breath, or clinical or radiographic evidence of pneumonia) *and* at least one nasopharyngeal swab, nasal swab, or saliva sample (or respiratory sample, if the participant was hospitalized) that was positive for SARS-CoV-2 by reverse-transcriptase–polymerase-chain-reaction (RT-PCR) test. 
-
-NB: The  definition of COVID-19 used is in this study is different from that used in WHO (which is evidence of infection)
-
-#2
-https://www.nejm.org/doi/full/10.1056/nejmoa2034577
-
-
-RESULTS
-A total of 43,548 participants underwent randomization, of whom 43,448 received injections: 21,720 with BNT162b2 and 21,728 with placebo. There were 8 cases of Covid-19 with onset at least 7 days after the second dose among participants assigned to receive BNT162b2 and 162 cases among those assigned to placebo; BNT162b2 was 95% effective in preventing Covid-19 (95% credible interval, 90.3 to 97.6).
-
-
-Absolute difference = 162 cases - 8 cases per 21,720 yielding a difference of 154 cases / 21,720.
-This is 0.7% absolute difference of cases between the vaccinated and unvaccinated . 
-This is a 0.7% effectiveness rate which they reported as 95% relative effectiveness rate.
-
-NB: Additional note: the presented result is wrt to the COVID-19 definition used by paper authors (which uses conjuction of two conditions: symptoms and pcr test), not wrt to COVID-19 definition used by WHO 
-
-#3. 
-Thacker P D. Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635 doi:10.1136/bmj.n2635.
-https://www.bmj.com/content/375/bmj.n2635
-
-
-"In several cases Ventavia lacked enough employees to swab all trial participants who reported covid-like symptoms, to test for infection. Laboratory confirmed symptomatic covid-19 was the trial’s primary endpoint, the employee noted. (An FDA review memorandum released in August this year states that across the full trial swabs were not taken from 477 people with suspected cases of symptomatic covid-19.)"
-
--->
+<!-- [5]   Need help? Have ideas or feedback ? Want to contribute - Please [contact the R4GC community](https://open-canada.github.io/r4gc/index.html#contacts) -->
 

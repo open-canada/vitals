@@ -9,7 +9,7 @@ if (T) {
   library(data.table); options(datatable.print.class=TRUE)
   library(dygraphs)
   library(plotly); library(DT); 
-  library(heatmaply);  
+  # library(heatmaply);  
   library(ggpubr)
   library(stringr); library(forcats) 
   
@@ -18,8 +18,16 @@ if (T) {
   # options(scipen = 999)
   
   dateToday <- format(Sys.time(), '%d %B, %Y') %>% dmy; dateToday
+  
   "%wo%" <- function(x, y) setdiff(x,y) 
   `%ni%` <-  Negate(`%in%`)
+  
+  theme_set(theme_bw())
+  # theme_set(theme_minimal())
+  # library(ggthemes); 
+  # theme_set(theme_economist())
+  # theme_set(theme_economist_white())
+  
 }
 
 
@@ -161,21 +169,27 @@ str_find_overlap <- function(str1, str2, ignore.case = FALSE) { # , verbose = FA
 # }
 # 
 
+# Consider also: paged_table(dt), reactable() and https://gt.rstudio.com/
 
 datatable.title <- function(dt, title=NULL) {
   # https://rstudio.github.io/DT/options.html
-    dt %>% DT::datatable (
-      filter = "top",  
-      caption = title,
-      rownames=F,   
-      extensions =  c('ColReorder', 'Buttons'),
-      options = list(
-        dom = 'Blfrtip',
-        colReorder = TRUE,
-        lengthMenu = list(c(10,25,100,-1), c(10,25,100,"All")),
-        buttons = c('copy', 'csv', 'excel', 'pdf', 'print') 
-      ) )
+  dt %>% DT::datatable (
+    filter = "top",  
+    caption = title,
+    rownames=F,   
+    extensions =  c('ColReorder', 'Buttons'),
+    options = list(
+      dom = 'Blfrtip',
+      # paging = FALSE, 
+      scrollX = TRUE, scrollY = "600px",
+      
+      colReorder = TRUE,
+      lengthMenu = list(c(10,25,100,-1), c(10,25,100,"All")),
+      buttons = c('copy', 'csv', 'excel', 'pdf', 'print') 
+    ) )
 }
+
+
 
 
 dygraph.title <- function(dts, title=NULL, group="1st group") {
@@ -212,7 +226,7 @@ if (F) {
   library("heatmaply")
   
   heatmaply(mtcars)
-
+  
   heatmaply_cor(
     cor(mtcars),
     xlab = "Features",
@@ -220,7 +234,7 @@ if (F) {
     k_col = 2,
     k_row = 2
   )
-
+  
   r <- cor(mtcars)
   p <- cor.test.p(mtcars)
   

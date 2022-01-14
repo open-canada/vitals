@@ -1,0 +1,114 @@
+- 'Cases following vaccination',
+COVID-19 Daily Epidemiology Update, Public Health Agency of Canada,       [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9) 
+<br><br>
+<font size=-1>
+<!-- Cases reported since the start of the vaccination campaign*, as of December 18, 2021 -->
+*"[As of December 18, 2021] Since the start of the vaccination campaign on December 14, 2020, PHAC received case-level vaccine history data for 78.0% (n=1,214,966) of COVID-19 cases aged 12 years or older. [...] Compared to unvaccinated cases, fully vaccinated cases were 79% less likely to be hospitalized and 71% less likely to die as a result of their illness"*
+
+</font>
+<br><br>
+
+<!-- Of these cases: -->
+
+<!-- - 727,925 (76.8%) were unvaccinated at the time of their episode date -->
+<!-- - 43,471 (4.6%) were not yet protected by the vaccine, as their episode date occurred less than 14 days after their first dose -->
+<!-- - 53,171 (5.6%) were only partially vaccinated, as their episode date occurred either 14 days or more after their first dose or less than 14 days after their second dose -->
+<!-- - 122,843 (13.0%) were fully vaccinated, as their episode date occurred 14 days or more after their second dose -->
+
+
+
+<!-- **Table 2 (excerpt): Deaths associated unvaccinated, partially vaccinated and fully vaccinated confirmed cases reported to PHAC, as of December 18, 2021**    -->
+
+
+
+
+
+```{r, echo = FALSE, results=F, cache=FALSE}
+date = "December 18, 2021"
+
+
+
+date = "December 25, 2021"
+
+
+dtPHAC <- data.table(cols, Deaths, date=date) %>%  transpose() %>% setnames(cols) # %>% .[2]
+
+
+dtPHAC <-
+  data.table(
+    date = "December 18, 2021",
+    cols = c(
+      "Unvaccinated
+(n=727,925)",
+"Cases not yet protected
+(n=43,471)",
+"Partially vaccinated
+(n=53,171)",
+"Fully vaccinated
+(n=122,843)",
+"Total cases
+(n=947,410)"
+    ),
+Deaths =c("8,013 (75.6%)",	"759 (7.2%)",	"744 (7.0%)",	"1,077 (10.2%)"	,"10,593 (100%)")
+  ) %>% rbind(
+    data.table(
+      date = "December 25, 2021",
+      cols = c( 
+        "Unvaccinated
+(n=728,415)",
+"Cases not yet protected
+(n=43,754)",
+"Partially vaccinated
+(n=54,772)",
+"Fully vaccinated
+(n=219,445)",
+"Total cases
+(n=1,046,386)" 
+      ), 
+Deaths = c("8,076 (75.4%)", "761 (7.1%)", "748 (7.0%)", "1,131 (10.6%)	", "10,716 (100%)")
+    )
+  )
+
+
+
+# https://stackoverflow.com/questions/42024921/why-does-kable-not-print-when-used-within-a-function-in-rmarkdown
+
+
+
+cat("\n\n")
+
+knitr::kable(dtPHAC, caption="Source: PHAC (December 18, 2021)")
+
+cat("\n\n")
+
+knitr::kable(dtPHAC, format = "markdown", caption="Source: PHAC (December 18, 2021)")
+
+cat("\n\n")
+
+# format = "markdown"
+# # kableExtra::kable_styling(latex_options = c("hold_position"))
+# print( knitr::kable(dtPHAC)) 
+# 
+# print( knitr::kable(dtPHAC, "latex"))
+# 
+# print(xtable::xtable(dtPHAC), type="latex", comment=FALSE)
+
+
+```
+
+<!-- *Data extracted on December 31, 2021 for cases from December 14, 2020 up until December 18, 2021* -->
+
+
+
+<!-- *"Fully vaccinated individuals diagnosed with COVID-19 were significantly protected from severe outcomes. Compared to unvaccinated cases, fully vaccinated cases were 79% less likely to be hospitalized and 71% less likely to die as a result of their illness "* -->
+
+<!-- **Table 3. Risk of severe outcomes among fully vaccinated cases compared to unvaccinated cases as of December 18, 2021 (Adjusted for 10-year age groups and month of episode date)** -->
+
+
+<!-- Severe Outcome |	Adjusted* Odds Ratio (95% CI) -->
+<!-- ---------------|--------------------------- -->
+<!-- Hospitalizations	| 0.21 (0.2 - 0.22) -->
+<!-- Deaths |	0.29 (0.26 - 0.31) -->
+
+
+</font>

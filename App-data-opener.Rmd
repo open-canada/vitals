@@ -9,7 +9,7 @@ output:
     orientation: columns
     social: menu
     source_code: https://github.com/open-canada/vitals
-    vertical_layout: fill
+    vertical_layout: fill # scroll 
 runtime: shiny
 ---
 
@@ -90,6 +90,7 @@ cat("Try: 13-10-0768-01, 1310076801, 13-10-0792-01")
 "13-10-0418-01"
 "13-10-0415-01"
 
+"13-26-0003" #Preliminary dataset on confirmed cases of COVID-19
 
 r.dt  <- reactive({
   req(input$run)

@@ -46,13 +46,14 @@ if (F) { # 1.a Read and cache live CANSIM data ----
   dtTimeStamp <- dt[1][ , lapply(.SD, function(x) NA), .SDcols=names(dt)] [, Date:=dateToday]
   dt <- rbind(dt, dtTimeStamp)
   
+  saveRDS(dt, paste0("13100810-20220110.Rds")) # save locally as compressed Rds file
   
   saveRDS(dt, paste0("13100810-cached.Rds")) # save locally as compressed Rds file
   fwrite(dt, paste0("13100810-cached.csv"), sep = "\t")
-  fwrite(dt[Date >= ymd("2019-09-01")], paste0("13100810-after-20150901-cached.csv"), sep = "\t")
+  fwrite(dt[Date >= ymd("2019-09-01")], paste0("13100810-after-20190901-20220110.csv"), sep = "\t")
 }
 
-if  (F)  { # 1.b Read from https://github.com/open-canada/datasets/statcan ----
+if  (F)  { # 1.b Read cached from github.com/open-canada/datasets/statcan ----
   
   # downloader::download("https://github.com/open-canada/cansim-examples/raw/main/13100810-20211206.Rds", "13100810-20211206b.Rds") # order way
   curl::curl_download("https://github.com/open-canada/datasets/raw/main/statcan/13100810.Rds", "13100810.Rds")
@@ -65,11 +66,12 @@ if  (F)  { # 1.b Read from https://github.com/open-canada/datasets/statcan ----
 
 # * 1.c Read local cached copy ----
 
+dtCached <- readRDS(paste0("13100810-20220110.Rds"))
 
-dtCached <- readRDS(paste0("13100810-cached.Rds"))
+# dtCached <- readRDS(paste0("13100810-cached.Rds"))
 dtCached
-dateCached <- "2021-12-23" %>% ymd
-dtCached <- dtCached[1:(.N-1)]
+dateCached <- "2022-01-10" %>% ymd
+# dtCached <- dtCached[1:(.N-1)]
 # if ( is.na(dt[.N]$GEO) ) { # CAUSES PROBLEM !!
 #   dateCached <- dt[.N]$Date %>% ymd
 # 
@@ -82,6 +84,7 @@ dtCached <- dtCached[1:(.N-1)]
 
 dateMax <- dtCached$Date %>% max (na.rm=T) %>% ymd; dateMax
 dtCached %>% names
+dtCached[, GEO := gsub(", place of occurrence", "", GEO)]
 
 choicesGEO <-  dtCached$GEO %>% unique(); choicesGEO
 choicesCauses <- dtCached$`Cause of death (ICD-10)` %>% unique(); choicesCauses
@@ -91,27 +94,40 @@ choicesCauses <- dtCached$`Cause of death (ICD-10)` %>% unique(); choicesCauses
 # 2. Merge with population, compute rates per million----
 
   dtGeo <- data.table(
-    GEO = c(  "Ontario", "Quebec", "British Columbia", "Alberta",  "Manitoba", "Saskatchewan", "Nova Scotia", "New Brunswick",  "Newfoundland and Labrador", "Prince Edward Island", "Northwest Territories", "Nunavut", "Yukon", "Canada"  ),
-    population = c( 14826276, 8604495, 5214805, 4442879, 1383765, 1179844, 992055, 789225,   520553, 164318, 45504, 39403, 42986, 38246108 )
+    GEO = c(  "Ontario", "Quebec", "British Columbia", "Alberta",
+              "Manitoba", "Saskatchewan", 
+              "Nova Scotia", "New Brunswick",  "Newfoundland and Labrador", "Prince Edward Island",
+              "Northwest Territories", "Nunavut", "Yukon", "Canada"  ),
+    population = c( 14826276, 8604495, 
+                    5214805, 4442879, 
+                    1383765, 1179844, 
+                    992055, 789225,  520553, 164318, 
+                    45504, 39403, 42986, 38246108 )
   )
 
-
+# We do it now in if input$per_million)
 # dtCached <- dtGeo[dtCached, on="GEO"]
 dtCached[, GEO:=fct_relevel(GEO, choicesGEO)]
 # dtCached [, rate:=round(1000000*val_norm/population)]
+
+dtCached <- dtCached[, c("Date", "GEO", "val_norm", "Cause of death (ICD-10)")]
+dtCached[, Date := ymd(Date)]; 
+dateMax <- dtCached$Date %>% max; dateMax # "2021-10-02"
 
 setnames(dtCached, "val_norm", "value")
 setcolorder(dtCached, c("Date",  "GEO", "Cause of death (ICD-10)", "value"))
 
 # 3. Read Vaccination data -----
 
-# Read live  or cached data
-# dtVac <- fread("https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv")
-# fwrite(dtVac, "vaccination-coverage-byAgeAndSex-overTimeDownload.csv")
-# saveRDS(dtVac, "vaccination-coverage-byAgeAndSex-overTimeDownload.Rds")
-#
+# Read cached or live data
+
 # downloader::download("https://github.com/open-canada/cansim-examples/raw/main/vaccination-coverage-byAgeAndSex-overTimeDownload-2021-12-07.Rds", "vaccination-coverage-byAgeAndSex-overTimeDownload-2021-12-07.Rds")
 
+if (F) {
+  dtVac <- fread("https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv")
+  fwrite(dtVac, "vaccination-coverage-byAgeAndSex-overTimeDownload.csv")
+  saveRDS(dtVac, "vaccination-coverage-byAgeAndSex-overTimeDownload.Rds")
+}
 
 dtVac <- readRDS("vaccination-coverage-byAgeAndSex-overTimeDownload-2021-12-07.Rds")
 
@@ -123,7 +139,10 @@ dtVac[, week_end := ymd(week_end)]
 setnames(dtVac, old=c("prename", "week_end"), new=c("GEO", "Date"))
 
 dtVac %>% names
-colValues <- c("numtotal_atleast1dose","numtotal_fully"  )
+setnames(dtVac, 
+            c("numtotal_atleast1dose","numtotal_fully" ),
+            c("dose1_rate", "dose2_rate"))
+colValues <- c("dose1_rate", "dose2_rate")
 dtVac[, (colValues):=lapply(.SD, as.numeric), .SDcols=colValues]
 
 dtVac$GEO  %>% unique() 
@@ -132,21 +151,42 @@ dtVac[, GEO:=fct_relevel(GEO, choicesGEO)]
 
 dtVac <- dtGeo[dtVac, on="GEO"]
 
-dtVac [, numtotal_atleast1dose:=round(100*numtotal_atleast1dose/population)]
-dtVac [, numtotal_fully:=round(100*numtotal_fully/population)]
+dtVac [, dose1_rate:=round(100*dose1_rate/population)]
+dtVac [, dose2_rate:=round(100*dose2_rate/population)]
+
+dtVacAllAgesAllSexes <- 
+  dtVac [sex == "All sexes", lapply(.SD, sum, na.rm=T), by=c("GEO", "Date"), .SD=colValues]
+
+
+# 4.a Set parameters: static ----
+
+in0 <- list(
+  read_from="Cached Data",
+  state = choicesGEO %wo% c("Yukon", "Northwest Territories", "Nunavut"), 
+  # state <- choicesGEO %in% c("Canada", "Quebec" , "Ontario", "Alberta", "British Columbia" ), # Start with largest
+  cause = choicesCauses[c(1,2,5, 7, 12, 15:16)], # 5:9, # Start with largest
+  # live=F,
+  # age=F,
+  average = F,
+  vaccination=T,
+  vax="Total",
+  lm=F,
+  alternative_view=F,
+  per_million = T,
+  keep_scale = T,
+  compare2past = F,
+  
+  date = c("2019-12-01", as.character(dateToday))
+)
+
+if ( !shiny::isRunning() ) { # DOES NOT WORK when Shiny is running?
+  cat("Relax - Shiny is NOT Running :)")
+  input <- in0
+}
+
 
 if (F) {
   
-  
-  # 4.a Set parameters: static ----
-  
-  in0 <- list(
-    state = c("Canada"),
-    # state = c( "Quebec" , "Ontario", "Alberta", "British Columbia" ),
-    cause = choicesCauses[c(2, 5, 12, 15:17)], # Largest groups
-    date = c("2019-10-01", as.character(dateToday))
-  )
-  input <- in0
   
   
   # ```{r r.dt0 r.dtAll} -----
