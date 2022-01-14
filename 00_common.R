@@ -67,15 +67,15 @@ if (F) {
 }
 
 
-colsSelect <- function (dt, range)  {
-  dt[, range, with=F]
-  # Note also other ways to select columns in data.table
-  # dt[, ..range]
-  # dt[,.SD, .SDcols=range] 
+colsSelect <- function (dt, cols)  {
+  dt[, cols, with=F]
+  # Note also other ways to select column(s) in data.table
+  # dt[, ..cols] # FOR ONE COLUMN ONLY
+  # dt[,.SD, .SDcols=cols] 
 }
 
-colsRm <- function (dt, range)  {
-  dt[, (range) := NULL] 
+colsRm <- function (dt, cols)  {
+  dt[, (cols) := NULL] 
 }
 
 setcolorder.fromLast <- function( dt, neworder) {

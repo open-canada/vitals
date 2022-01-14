@@ -213,7 +213,7 @@ if (F) {
   #   
   # }
   
-  # dt <- dt[!is.na(val_norm)]
+
   
   if (input$vaccination==F) {
     dtAll = dt 
@@ -250,7 +250,6 @@ if (F) {
   
   dt0_wideGeo1
   
- 
   
   setcolorder(dt0_wideGeo1, "Date")
   dts <- as.xts.data.table(dt0_wideGeo1)
@@ -258,7 +257,57 @@ if (F) {
   dygraph.title(dts, region1)
   
   
-  # ```{r Correlations} -----
+  
+  # 5. Visualize data ----
+  
+  
+  # Plot GEO vertically - allows comparison across Causes
+  
+  periods <- c(
+    ymd("2020-01-24"),
+    ymd("2020-06-30")
+  )
+  
+  g3 <- ggplot(dt0) +
+    guides(col = "none") +
+    geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+    geom_vline(xintercept=periods, linetype=4)
+    facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
+    labs(
+      title = NULL, x = NULL, y = NULL,
+      caption = "Source: Statistics Canada - Table 13-10-0810-01"
+    )
+  g3
+
+  # 6. compare2past -----
+
+
+  
+  if (input$compare2past) {
+    
+    dtCached[, yy:=year(Date)]
+    dtCached[, ww:=week(Date)]
+    
+    dt0[, yy:=year(Date)]
+    dt0[, ww:=week(Date)]
+
+    g3 <- ggplot(dt0[]) +
+      guides(col = "none") +
+      
+      geom_smooth(method=lm, alpha=0.25, color="black", fill="black")
+      geom_step(data=dt0[year(Date)>2019], mapping=aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+      facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
+      labs(
+        title = NULL, x = NULL, y = NULL,
+        caption = "Source: Statistics Canada - Table 13-10-0810-01"
+      )
+    g3
+    
+  }
+  
+  
+  
+  # 7. Correlations}-----
   
   
   # dt0 <- dtAll[Date >= "2021-05-01" & GEO=="Canada" & `Cause of death (ICD-10)` == choicesCauses [16]]  %$% # CAUSE="Blank (NA)"
@@ -284,55 +333,7 @@ if (F) {
   
   heatmaply_cor(r)
   
-
   
-  
-  # 5. Visualize data ----
-  
-  
-  # Plot GEO vertically - allows comparison across Causes
-  
-  periods <- c(
-    ymd("2020-01-24"),
-    ymd("2020-06-30")
-  )
-  
-  g3 <- ggplot(dt0) +
-    guides(col = "none") +
-    geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
-    geom_vline(xintercept=periods, linetype=4)
-    facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
-    labs(
-      title = NULL, x = NULL, y = NULL,
-      caption = "Source: Statistics Canada - Table 13-10-0810-01"
-    )
-  g3
-
-  # compare2past -----
-
-
-  
-  if (input$compare2past) {
-    
-    dtCached[, yy:=year(Date)]
-    dtCached[, ww:=week(Date)]
-    
-    dt0[, yy:=year(Date)]
-    dt0[, ww:=week(Date)]
-
-    g3 <- ggplot(dt0[]) +
-      guides(col = "none") +
-      
-      geom_smooth(method=lm, alpha=0.25, color="black", fill="black")
-      geom_step(data=dt0[year(Date)>2019], mapping=aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
-      facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
-      labs(
-        title = NULL, x = NULL, y = NULL,
-        caption = "Source: Statistics Canada - Table 13-10-0810-01"
-      )
-    g3
-    
-  }
   
   
 }
