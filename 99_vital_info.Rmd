@@ -2,7 +2,7 @@
 # Info {data-icon="fa-info-circle"}
 
 
-## .... Upper Row {.tabset .tabset-fade }
+## Supplement to Open Canada Vitals Statistics Tracker {.tabset .tabset-fade }
 
 
 <!-- title: "Open Canada Vital Statistics Tracker" -->
@@ -77,6 +77,8 @@ See also [Data Sources] for direct links to the databases and  additional notes 
 
 The following visualization tools are provided in this App.  
 
+#### Time-series tools
+
 <!-- - [Overview]: shows multi-dimensional plot  which you can save or copy by right-clicking on the image  -->
 - Overview shows multi-dimensional (with facets) plot  which you can save or copy by right-clicking on the image. 
 
@@ -85,19 +87,24 @@ The following visualization tools are provided in this App.
 
 - [By cause (alt.)] and [By province (alt.)] analysis: is another type an interactive visualization of data by cause and by province. See below how to use it.
 
+#### Statistics tools
 
-NB: In "By cause" and "By province" analysis, the plots show the data only for the first selected item in menu (for the  region and  death cause shown on top of the selected items)
 
 
-<!-- (Interactive time-series( allows to zoom along the timeline -->
+- [Tables]  allow  one to view, filter, subset, and export the various statistical data as an .csv, pdf, Excel file, or to a printer or clipboard. This includes:   
 
-- [Summary]: is an interactive table that provides a statistical summary of the selected data such as: lowest / highest / average weekly results and  weekly average dynamics (i.e. how much result change weekly over time) computed as a slope of the linear model regression line. Positive "dynamics" means that values grow with time, "0" dynamics means that data are stable and  negative "dynamics" means the value decline with time.
+  - Summary Table, which shows Totals, Weekly average (Mean), Standard Deviation (SD), and  regression slope (Weekly dynamics),
+  - Correlations Table, which shows correlation coefficients between the selected deaths causes and time
+  - Raw death and vaccination (when selected) data for the selected causes and regions. 
 
-- Full table: is an another interactive table that shows  raw data extracted from the source Open Canada portal using the selected criteria. It allows one to browse, filter, subset, and export the selected data as an .csv, pdf, Excel file, or to a printer or clipboard.
+- [Correlations] allows one to compute  and  visualize correlations between selected death causes and/or vaccination and time, using different correlation methods.
+
+<!-- - [Summary]: is an interactive table that provides a statistical summary of the selected data such as: lowest / highest / average weekly results and  weekly average dynamics (i.e. how much result change weekly over time) computed as a slope of the linear model regression line. Positive "dynamics" means that values grow with time, "0" dynamics means that data are stable and  negative "dynamics" means the deaths numbers decline with time. -->
+<!-- ...is an another interactive table that shows  raw data extracted from the source Open Canada portal using the selected criteria.  -->
+
+
 
 <!-- Table below shows  data extracted using the selection criteria chosen in the menu.  -->
-NB: It can take long to display large quantities of data.
-
 
 
 ##### How to use menues:
@@ -121,14 +128,21 @@ NB: It can take long to display large quantities of data.
 - Filter by typing in the  boxes under the column names. Sort by clicking on the column name.
 - Export table or its selection in one of  available formats using the buttons provided.
 
-NB: Finally, please note that when  data are loaded or processed (which can take some time depending on the size of the selected data), the error messages may appear on the screen. Simply ignore them, or use this time to read  [Additional information] or browse the [Source Code](https://github.com/open-canada/vitals).
+
 
 
 ##### Other notes:
 
 - Some provinces have population less then a million, therefore the *per capita* data (per million) for these provinces should be treated as an scaled up to a million  to allow *per capita* comparison with other provinces.
 
-<!-- Thank you -->
+-  In "By cause" and "By province" analysis, the plots show the data only for the first selected item in menu (for the  region and  death cause shown on top of the selected items)
+
+<!-- - NB: It can take long to display large quantities of data. -->
+
+
+
+- Finally, please note that when  data are loaded or processed (which can take some time depending on the size of the selected data), the error messages may appear on the screen. Simply ignore them, or use this time to read  [Additional information] or browse the [Source Code](https://github.com/open-canada/vitals).
+
 
 ### Data Sources
 
@@ -158,11 +172,11 @@ URL: https://health-infobase.canada.ca/covid-19/vaccination-coverage/
 
 
 
-#### Statistics Canada, Canadian Vital Statistics - Death database (CVSD)
+#### Statistics Canada, Canadian Vital Statistics - Death database [(CVSD)](https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3233]
 
-
-Quoting from [(CVSD)](https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3233]:  
-"This is an administrative survey that collects  demographic and medical (cause of death) information annually and monthly from all provincial and territorial vital statistics registries on all deaths in Canada.
+Quoting from offcial site,
+<!-- [(CVSD)](https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3233]:   -->
+"This [CVSD database] is an administrative survey that collects  demographic and medical (cause of death) information annually and monthly from all provincial and territorial vital statistics registries on all deaths in Canada.
 The data are used to calculate basic indicators (such as counts and rates) on deaths of residents of Canada. Information from this database is also used in the calculation of statistics, such as cause-specific death rates and life expectancy."
 
 In general, the monthly updated CVSD surveys are updated the first Monday on the month and show the lag of about two and half months (e.g., the data released in the December provide statistics for up to end of September). 
@@ -348,27 +362,189 @@ Table: 13-10-0801-01 (formerly CANSIM 102-0564)
 The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://canada.ca/coronavirus). 
 <!-- or  [covid-19.Ontario.ca](https://covid-19.ontario.ca/)  -->
 
-For the information on the safety and efficacy of COVID-19 vaccination, please see:
+<!-- Excerpts from this source are provided below. -->
+<!-- For the information on the efficacy and safety of COVID-19 vaccination, please see: -->
 
 
+#### Official data  on efficacy of COVID-19 vaccines:
+
+
+-  'Cases following vaccination',
+COVID-19 Daily Epidemiology Update, Public Health Agency of Canada,       [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9) 
+<br>
+<font size=-1>
+**Quote:** 
+<!-- (From Daily Epidemiology Update of December 15, 2021, 7 pm EST):  -->
+*"For cases from December 14, 2020 up until November 27, 2021, fully vaccinated cases were 68% less likely to die as a result of their illness, compared to unvaccinated cases (Table 3).*  
+**Note:** 
+Using this App, one can find that in the considered period (December 14, 2020 -- November 27, 2021) over 75% (10100 / 13075) of all deaths occurred prior to May 1, 2021, when the  majority of population (over 97%)  was unvaccinated. Recomputing these numbers for the period *after May 1* (when the proportion of vaccinatated was approximately equal to the proportion of  unvaccinated) results in the  conclusion that between May and November fully vaccinated cases were *more likely* to die as a result of COVID-19, compared to unvaccinated cases. 
+ <br>
+ 
+ <!-- These numbers include data from **December 14, 2020** to  -->
+<!-- February 2 (during which over 50% (198/343) of all deaths happened and when less than 1% was fully vaccinated and  -->
+<!-- to May 1, 2021, during which less than 3 % were fully vaccinated and over 75% (= 10100 / 13075) of all deaths occurred.  -->
+<!-- Recomputing these numbers for the period starting May 1 results in fully vaccinated cases being 70-80% MORE LIKELY to  die  than unvaccinated as a result of their illness. -->
+<!-- (see calculations [here](https://github.com/open-canada/vitals/991_vaccine_efficiency-etal.Rmd)) -->
+
+</font>
+
+
+```{r eval=FALSE, include=FALSE}
+totalDeaths=13075 #total deaths of COVID
+total_vaxed=13075*0.71=9283 
+total_vunvaxed=totalDeaths-total_vaxed=3792
+
+deathByMay1 = 10100	
+vaxByMay1=3
+deathsAfterMay1=13075-10100 = 2975
+
+deathByApril6 = 9115	
+vaxByApril6=2
+dose1=0.533
+
+deathByFeb2 = 6470	
+vaxByFeb2=2
+dose1=0.167 # % in population of 38246108
+
+# Recomputed from May 1:
+
+
+```
+
+-  Hospitalizations by vaccination status, COVID-19 (coronavirus) in Ontario,
+ https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus
+
+<!-- Observation: Since mid-December, there are more vaccinated than unvaccinated in hospitals and ICU -->
+
+-  For more information on cases following vaccination, please see the Weekly epidemiology report (PDF) available on [the Government of Canada’s COVID-19 data trends page](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html)
+<font size=-1>
+<br>
+**Quote**: 
+*"Incidence among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021."*
+<br>
+</font>
+
+#### Official data  on safety of  COVID-19 vaccines:
 
 - 'Reported side effects following COVID-19 vaccination in Canada', 
 Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, 
 https://health-infobase.canada.ca/covid-19/vaccine-safety/ 
+<br>
+<font size=-1>
+**Quote:** 
+<!-- (From  [report archived on 2021-11-05](https://health-infobase.canada.ca/covid-19/vaccine-safety/archive/2021-11-05/index.html)), -->
+<!-- which is the date of the last  record in the CVSD database at the time of developing this App):     -->
+*"Table 1. Count  of reported adverse events of special interest up to and including October 22, 2021 (n = 3,793). This includes: 166 Auto-immune diseases, 1,111 heart diseases (including 64 Cardiac arrests and failures, 77 Heart Attacks, 970 Myocarditis1/Pericarditis ), 947 thrombosis and blood clots, 37 Acute kidney injury, 25 Liver injury,781 Nerves and central nervous system failures (including 594 Bell's Palsy), 487 Anaphylaxis,  and 208 deaths (some of which are still under investigation). "Cumulative serious reports: 6124 (January--October), 5038 (May-October).*   
+**Note:** 
+For comparison, the total number of deaths due to COVID-19 in the same period (May-October), which can be computed using this App, is only 2975 (or in average 8.1 deaths per week per million ).
+<!-- The weekly grows in the reported  number of  serious adverse events is also  higher than that of COVID-19 deaths ( ) -->
+<!-- , and does not include un-reported and non-serious events such as shingles, arthritis and others -->
+
+
+</font> 
+
+```{r eval=FALSE, include=FALSE}
+# Cumulative serious reports-all
+# from 08-Jan-21 to 07-Jan-22
+# 7267 / 52 /  38246108 * 1000000 = 3.6
+# from 30-Apr-21 to 22-Oct-21
+# 5038 /  25 /  38246108 * 1000000 =  5.3
+
+# Cumulative serious reports-all	
+# Cumulative number of doses administered-all
+# 07-Jan-22
+7267/68523350*1000000 #  106
+# 22-Oct-21
+6124 / 57419174 *10^6 #[1] 106.6543
+# 16-Jul-21
+3646 / 42785355 *10^6 # 85.21607
+# 30-Apr-21
+1086 /	12168261 *10^6 # 89.24858
+```
+
+- Recalls and safety alerts, Government of Canada: [https://recalls-rappels.canada.ca/](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna+OR+pfizer&archived=1) 
+<br>
+<font size=-1>
+**Quote**: *"Health Canada updates Pfizer-BioNTech and Moderna COVID-19 vaccine labels to include information on myocarditis and pericarditis"* and *"...to reflect very rare reports of Bell's Palsy"* <br>
+**Note:** The listed  three complications  count for less than third of reported serious complications. 
+
+</font>
+
+
+-  Side Effect Reporting, Drug Health Product Register,  Voluntary Reporting,
+URL: https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary. Tel: 1-866-234-2345.
+<br>
+<font size=-1>
+**Note:** In Canada, Voluntary Reporting can only be done by a medical doctor. 
+Reporting of events that did not happen at the time of vaccination can take several months.
+<!-- , which results in reducing the number of filed reports and creates a delay in filing the reports, in particular when  reporting  events that did not happen immediately after vaccination  -->
+</font>
 
 
 
-- 'Cases following vaccination',
-COVID-19 Daily Epidemiology Update, Public Health Agency of Canada,       [https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9) 
 
+#### Additional sources:
 
--  Side Effect Reporting, Drug Health Product Register,  Voluntary Reporting,  
-URL: https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary. Tel: 1-866-234-2345.       
+<font size=-1>
 
-
-- COVID Vaccine Adverse Event Reports from VAERS -- Vaccine Adverse Event Reporting System co-managed by the Centers for Disease Control and Prevention (CDC) and the U.S. Food and Drug Administration (FDA):  Report at [https://vaers.hhs.gov ](https://vaers.hhs.gov/reportevent.html), Search at [https://openvaers.com](https://openvaers.com/covid-data/covid-reports). 
+<!-- - COVID Vaccine Adverse Event Reports at VAERS ( Vaccine Adverse Event Reporting System co-managed by the Centers for Disease Control and Prevention (CDC) and the U.S. Food and Drug Administration (FDA): -->
 
 
 
-<!-- [5]   Need help? Have ideas or feedback ? Want to contribute - Please [contact the R4GC community](https://open-canada.github.io/r4gc/index.html#contacts) -->
+-  USA COVID Vaccine Adverse Event Reports:
+[https://vaers.hhs.gov ](https://vaers.hhs.gov/reportevent.html) (browse reports at
+[https://openvaers.com](https://openvaers.com/covid-data/covid-reports))
+<br>
+**Note:** 
+  VAERS lists many adverse events that are not reported yet in Canada (such as shingles,   arthritis, menstrual problems etc.)
+ <br>
 
+
+  <!-- - https://reinfocovid.ca/  -->
+  <!-- - Canadian Covid Care Alliance: "The Pfizer 6 month data shows that Pfizer's COVID-19 inoculations cause more illness than they prevent": https://www.canadiancovidcarealliance.org/ -->
+  
+
+- 'COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room', 
+The Lancet, VOLUME 2, ISSUE 7, E279-E280 (JULY 01, 2021):  https://doi.org/10.1016/S2666-5247(21)00069-0 
+<br>
+ **Note:**  Explains why the efficacy of COVID-19 vaccines is not 95% as reported by vaccine manufacturers but less than 1%.
+
+
+- US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed
+Using the Proper Scientific Endpoint “All Cause Severe Morbidity”. Trends Int Med. 2021; 1(1): 1-6 (25 August 2021).  https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf 
+
+  
+-  Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635 (02 November 2021) doi:10.1136/bmj.n2635.
+https://www.bmj.com/content/375/bmj.n2635 
+
+- Why are we vaccinating children against COVID-19?, Toxicology Reports, Volume 8, 2021, Pages 1665-1684,
+ISSN 2214-7500 (14 September 2021) https://doi.org/10.1016/j.toxrep.2021.08.010  
+
+<!--   - Concerns regarding the efficacy and safety for BNT162b2 mRNA -->
+<!-- coronavirus disease (COVID-19) vaccine through six months.  -->
+<!-- (January 10, 2022) 1-10. -->
+<!-- https://www.canadiancovidcarealliance.org/wp-content/uploads/2022/01/Final-CCCA-Critique-Thomas-COVID-19-Vaccines-6-months-NEJM-Jan-10-22.pdf   -->
+
+<!--  - Public Health Ontario -->
+<!-- ENHANCED EPIDEMIOLOGICAL SUMMARY -->
+<!-- Myocarditis and Pericarditis Following -->
+<!-- Vaccination with COVID-19 mRNA Vaccines in -->
+<!-- Ontario: December 13, 2020 to September 4, -->
+<!-- 2021 -->
+<!-- (https://www.publichealthontario.ca/-/media/documents/ncov/epi/covid-19-myocarditis-pericarditis-vaccines-epi.pdf). -->
+
+- CUMULATIVE ANALYSIS OF POST-AUTHORIZATION ADVERSE EVENT REPORTS OF PF-07302048 (BNT162B2) RECEIVED THROUGH 28-FEB-2021.
+ Prepared by Pfizer: 
+https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf
+ 
+
+
+**Note: 
+The above references expose the lack of evidence and scientific integrity in the reports produced by the vaccine manufecturers. 
+   The final document was released by Pfizer under the court order on 17 November  2021. It  provides data that was collected, but not disclosed prior to 17 November 2021,  by the vaccine manufacture on  real world adverse events that occurred in the first 2.5 months after Emergency Use Authorization.  It lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”) **
+    <!-- This document should be incriminating for any agency who saw it and called these inoculations “safe". -->
+
+</font>
+
+<hr>
+Back to: Open Canada Vital Statistics Tracker (https://open-canada.github.io/Apps/vitals)
