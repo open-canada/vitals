@@ -1,8 +1,8 @@
 # https://open-canada.github.io/vitals/
 
-  [Vitals Statistics Tracker App](https://open-canada.github.io/Apps/vita) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf)| [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) | 
+  [Vitals Statistics Tracker App](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf)| [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) | 
 
-## Welcome to Open Canada Vital Statistics Application and Resources Portal!
+## Open Canada Vital Statistics Application Resources
 
 ### Learn facts:
 
