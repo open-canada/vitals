@@ -1,0 +1,97 @@
+## Statistical analysis of official data sources related to vaccine efficacy and safety (NEW EVIDENCE SINCE OCTOBER 2021)
+
+### GC Sources:
+
+[ 1 ] ‘Cases following vaccination’, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html
+
+Quote: "For cases from December 14, 2020 up until November 27, 2021, fully vaccinated cases were 68% less likely to die as a result of their illness, compared to unvaccinated cases (Table 3)."
+
+Analysis: In the considered period (December 14, 2020 – November 27, 2021) over 75% (10100 / 13075) of all COVID deaths occurred prior to May 1, 2021, when the majority of population (over 97%) was unvaccinated. Recomputing these numbers for the period after May 1 (when the proportion of vaccinated was approximately equal to the proportion of unvaccinated) results in the opposite conclusion – the majority (over at least 75%) of people who died of COVID between May and November were fully vaccinated
+
+***
+[ 2a ] Hospitalizations by vaccination status, COVID-19 (coronavirus) in Ontario, https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus
+
+[ 2b ] For more information on cases following vaccination, please see the Weekly epidemiology report (PDF) available on the Government of Canada’s COVID-19 data trends page
+
+Quote: “Incidence among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021.”
+
+Analysis: Incidents among fully vaccinated cases continues to grow at rate higher than of unvaccinated.
+
+***
+
+[ 3 ] ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, https://health-infobase.canada.ca/covid-19/vaccine-safety/
+
+Quote: Table 1. Count of reported adverse events of special interest up to and including October 22, 2021 (n = 3,793). This includes: 166 Auto-immune diseases, 1,111 heart diseases (including 64 Cardiac arrests and failures, 77 Heart Attacks, 970 Myocarditis1/Pericarditis ), 947 thrombosis and blood clots, 37 Acute kidney injury, 25 Liver injury,781 Nerves and central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, and 208 deaths (some of which are still under investigation).”
+Cumulative serious reports, including deaths: 6124 (January–October), 5038 (May-October). 
+
+Analysis: The above numbers are almost twice as high as  the number of COVID deaths* in the same period (May-October) which is only 2975,  and much higher (by one order of magnitude) than the number of deaths from COVID alone (estimated using UK data as 13.6 % * 2975 = 404), and even much more higher (by two orders of magnitude)  when compared to the number of deaths of COVID alone for the age population (younger than 64 years) of people employed at GC (estimated using UK data as 22% *13.6 % * 2975 = 89).  Note  that most people who received vaccine since May are less than 64 years of age, meaning that they have extremely small chance of having complications from COVID, and yet  many of them  have already  lost their lives or quality of live because of vaccines.
+
+Furthermore, the above number (5038) does not count for “non-serious” events and not reported yet events, which can be still very debilitating for many families (such as shingles, arthritis, heart pains, and menstrual irregularities – reported among GC employees and members of their families), which can be estimated as an order or two orders of magnitude higher than the number of reported serious events.
+
+It is also noted that the above number of adverse events (5038) is quoted from the reports for up to November 6 2021 (to allow comparison with death statistics which are reported with two months delay). Since that time, the number of adverse events from vaccination continues to grow at the rate faster than that of vaccination and faster than that of deaths* with COVID, having reached 7378 at the time of writing this note.
+
+* According to the StatCan and UK Statistics data (See below), most (over 75%) deaths reported as “COVID deaths” are co-mobility deaths and occurred in 64+ age group.
+
+***
+
+[ 4 ] Recalls and safety alerts, Government of Canada: https://recalls-rappels.canada.ca/
+
+Quote: “Health Canada updates Pfizer-BioNTech and Moderna COVID-19 vaccine labels to include information on myocarditis and pericarditis” and “…to reflect very rare reports of Bell’s Palsy”
+
+Analysis : There is a several months lag between  when severe  events are reported and when the vaccine recall alerts are posted. Furthermore, these alerts do not include  all serious problems and do not include non- serious problems described above. The recall alerts issued so far list three complications that count for less than third of reported serious complications, and less 7% of all reported adverse events, and it is estimated that many adverse events, including series ones, remain unreported yet.
+
+***
+
+[ 5 ] Statistics Canada, Canadian Vital Statistics - Death database . Provisional weekly death counts, by selected grouped causes of death.  https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001  (Dashboard: https://open-canada.github.io/vitals) 
+Analysis : Since May (i.e. since the beginning of mass vaccination, the rate of vaccinated started to rapidly increase from 3% in May  to 75% in October) rate of unreported and Ill-defined / unspecified causes of mortality has also started to rapidly increase (with correlation of over 99% with full vaccination rate using ranked based correlation metrics), reaching  historically highest numbers ( 10-30% ) from the historical average of not more than 1 %  - in all provinces. See Figure below. That is, 10-30%  of all deaths since the beginning of vaccination are now left unexplained. 
+
+Additionally, it is observed that since the introduction of the ‘COVID death’ category in 2020, the reporting of all other causes deaths started to decline, even for those causes that historically have a trend to go up (such as cancer, heart diseases, accidents), meaning that many of these deaths are now counted under the “COVID category”. This agrees with the analysis from UK data (see below) that shows that only 13.6% of COVID-reported deaths are COVID only deaths, and 78 % of these COVID only deaths happened among 64+ population, with the average age of COVID only deaths being 82 years, which is practically equal to  the life expectancy in UK.
+
+
+ 
+### Data from UK and USA 
+
+[a] Freedom of information revelation, 20 Jan 2022
+
+Sources:
+-	https://coronavirus.data.gov.uk/details/deaths
+-	FOI Ref: FOI/2021/3240, https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses?s=09
+Conclusion:  Of all reported 127,704 COVID deaths, there are only 13.6% (17,371) that are due to covid alone. Furthermore, 78% of all covid alone deaths occurred in people with 64+ of age, with the average age of death from covid being 82.5 years, which is higher than Average life expectancy in the UK.
+
+    2020 Total deaths, 9,400		 0-64, 1,549		65 and over, 7,851 
+    2021 Q1 Total deaths, 6,483		 0-64, 1,560 		65 and over, 4,923 
+    2021 Q2 Total deaths, 346 		0-64, 153 		65 and over, 193 
+    2021 Q3, Total deaths, 1,142 	0-64, 512 		65 and over, 630 
+
+Total deaths from covid alone, 17,371,  0-64 3,774		 65 and over 13,597 (78% of all covid deaths)
+Average age of death in UK from covid in 2021 82.5 years – higher than Average life expectancy in the UK.
+
+[b] Excellent natural immunity confirmed,  24 Jan 2022
+
+Source: 
+-	COVID-19 Cases and Hospitalizations by COVID-19 Vaccination Status and Previous COVID-19 Diagnosis — California and New York, May–November 2021, https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm 
+Conclusion:  Natural immunity with or without vaccine provided robust protection against hospitalization in the age of delta, with Natural immunity without vaccine being better than Natural immunity with vaccine.
+
+ 
+### Other sources:
+
+•	USA COVID Vaccine Adverse Event Reports: https://vaers.hhs.gov (browse reports at https://openvaers.com)
+
+Note: VAERS lists many adverse events that are not reported yet in Canada (such as shingles, arthritis, menstrual problems etc.)
+
+•	‘COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room’, The Lancet, VOLUME 2, ISSUE 7, E279-E280 (JULY 01, 2021): https://doi.org/10.1016/S2666-5247(21)00069-0
+
+Note: Explains why the efficacy of COVID-19 vaccines is not 95%, as reported by vaccine manufacturers and quoted in many governments policies, but less than 1%, which statistically is less then by a chance
+
+•	US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint “All Cause Severe Morbidity”. Trends Int Med. 2021; 1(1): 1-6 (25 August 2021). https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf
+
+•	Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635 (02 November 2021) doi:10.1136/bmj.n2635. https://www.bmj.com/content/375/bmj.n2635
+
+•	Why are we vaccinating children against COVID-19?, Toxicology Reports, Volume 8, 2021, Pages 1665-1684, ISSN 2214-7500 (14 September 2021) https://doi.org/10.1016/j.toxrep.2021.08.010
+
+•	CUMULATIVE ANALYSIS OF POST-AUTHORIZATION ADVERSE EVENT REPORTS OF PF-07302048 (BNT162B2) RECEIVED THROUGH 28-FEB-2021. Prepared by Pfizer, Released to Public Health and Medical Professionals for Transparency (https://phmpt.org/)  under the court order on 17 November 2021: https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf
+
+The above references expose the lack of evidence and scientific integrity in the reports produced by the vaccine manufacturers. 
+
+The final document was released by Pfizer under the court order on 17 November 2021. It provides data that was collected, but not disclosed prior to 17 November 2021, by the vaccine manufacture on real world adverse events that occurred in the first 2.5 months after Emergency Use Authorization. It lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”)
+
