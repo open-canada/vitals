@@ -59,12 +59,12 @@ Sources:
 -	<https://coronavirus.data.gov.uk/details/deaths>
 -	FOI Ref: FOI/2021/3240, <https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses>
 
-Conclusion:  Of all reported in UK 127,704 COVID deaths, there are only 13.6% (17,371) that are due to COVID alone. 78% of all COVID alone deaths occurred in people with 65+ of age, with the average age of death from COVID being 82.5 years, which is statistically equal to  the average life expectancy in UK.
+Conclusion:  Of all reported in UK 127,704 COVID deaths, 13.6% (17,371)  are due to COVID alone. Additionally, it is noted that 78% of all COVID alone deaths occurred in people with 65+ of age, with the average age of death from COVID being 82.5 years, which is statistically equal to  the average life expectancy in UK.
 
-    2020 Total deaths, 9,400		    0-64, 1,549		65 and over, 7,851  /
-    2021 Q1 Total deaths, 6,483		    0-64, 1,560 	65 and over, 4,923  /
-    2021 Q2 Total deaths, 346 		    0-64, 153 		65 and over, 193 /
-    2021 Q3, Total deaths, 1,142 	    0-64, 512 		65 and over, 630 
+    2020 Total deaths, 9,400		    0-64, 1,549		65 and over, 7,851  
+    2021 Q1 Total deaths, 6,483		    0-64, 1,560 	65 and over, 4,923  
+    2021 Q2 Total deaths, 346 		    0-64, 153 		65 and over, 193 
+    2021 Q3, Total deaths, 1,142        0-64, 512 		65 and over, 630 
 
 <!-- 
 Total deaths from covid alone, 17,371,  0-64 3,774		 65 and over 13,597 (78% of all covid deaths)
@@ -78,7 +78,7 @@ Average age of death in UK from covid in 2021 82.5 years – higher than Average
 Source: 
 -	COVID-19 Cases and Hospitalizations by COVID-19 Vaccination Status and Previous COVID-19 Diagnosis — California and New York, May–November 2021, <https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm> 
 
-Conclusion:  Data from California and New York shows that *natural immunity* with or without vaccine provided significantly reduced  number of hospitalization in the age of delta. *Natural immunity without vaccine* shows higher hospitation case reduction, compared to *Natural immunity with vaccine*.
+Conclusion:  Data from California and New York show that *natural immunity* with or without vaccine provided significantly reduced  number of hospitalization in the age of delta. *Natural immunity without vaccine* resulted in less  hospitations compared to *Natural immunity with vaccine*.
 
  
 ### Other sources:
@@ -101,9 +101,8 @@ Note: Explains why the efficacy of COVID-19 vaccines is not 95%, as reported by 
 
 -	CUMULATIVE ANALYSIS OF POST-AUTHORIZATION ADVERSE EVENT REPORTS OF PF-07302048 (BNT162B2) RECEIVED THROUGH 28-FEB-2021. Prepared by Pfizer, Released to Public Health and Medical Professionals for Transparency (<https://phmpt.org/>)  under the court order on 17 November 2021: <https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf>
 
-The above references expose the lack of evidence and scientific integrity in the reports produced by the vaccine manufacturers. 
-The data from vaccine tests have never been made public --- [All vaccine manufacturers refuse to provide them](https://www.youtube.com/watch?v=YDxkloJ-4kE&t=474s)
+The above references expose the lack of evidence and scientific integrity in the reports produced by the COVID vaccine manufacturers. 
+The data from vaccine tests have never been made public --- [All vaccine manufacturers refuse to provide them](https://www.bmj.com/content/376/bmj.o102)
 
-The last document, *released by Pfizer under the court order* on 17 November 2021, provides data that was collected, but willingly not disclosed by manufacturer prior to 17 November 2021, on real world adverse events observed  in the first 2.5 months after Emergency Use Authorization. Among others, it lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”).
-
+The last document, *released by Pfizer under the court order* on 17 November 2021, provides data that was collected, but  not disclosed by the manufacturer prior to 17 November 2021, on real world adverse events observed  in the first 2.5 months after Emergency Use Authorization. Among others, it lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”).
 
