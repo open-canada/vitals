@@ -37,8 +37,9 @@ Submission to The Lancet Journal. 2022/01/16](https://open-canada.github.io/vita
 Petition to Protect the fundamental civil rights of Canadians by disallowing vaccine passport certificates nationally: <https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592>
 
 #### Report side-effect
+<!-- , which is a bit tricky, if you don't know what to write in some manadary form fields.  But when you know, it takes 10 mins to do it. -->
 
-Any Canadian can Report Vaccine Side-effect, as a consumer, i.e., without a doctor.  Heath Canada encourages everyone impacted by the vaccine to do so. They also  provide guidance on how to fill out the only form, which is a bit tricky, if you don't know what to write in some manadary form fields.  But when you know, it takes 10 mins to do it. This is how you do it:
+Any Canadian can Report Vaccine Side-effect, as a consumer, i.e., without a doctor.  Heath Canada encourages everyone impacted by the vaccine to do so. They also  provide guidance on how to fill out online form. This is how you do it:
 - See if you sympthoms are reported in the USA COVID Vaccine Adverse Event Reports (VAERS): https://openvaers.com
 - Go to <https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary>. 
 - See an example of submitted side-effort reporting form  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf). There are three places there you need to know how to fill out (In Section B: Patient ID - write your initials; In Section D: Product DIN and Product Name - paste the vaccine names as printed on your reciept)
@@ -51,7 +52,7 @@ If the opposing views are not presented, if media shows only one kind of rally p
 
 #### Join the democraatic rallies accross the country in support of restorinng human rights and truth, related to COVID and vaccines
 
-Many rallies are happening all over  the country. The biggest one is happening now in Ottawa (#ConvoyForFreedom). Join it - to experience yourself "The Wind of Change". 
+Many rallies are happening all over  the country. Join them - to experience yourself "The Wind of Change". 
 
 <center>
   **LEARN RAW FACTS -- THINK FOR YOUSELF -- ACT NOW!**
