@@ -44,34 +44,41 @@ Analysis : There is a several months lag between  when severe  events are report
 
 [ 5 ] Statistics Canada, Canadian Vital Statistics - Death database . Provisional weekly death counts, by selected grouped causes of death.  <https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001>  (Dashboard: <https://open-canada.github.io/vitals>) 
 
-Analysis : Since May (i.e. since the beginning of mass vaccination, the rate of vaccinated started to rapidly increase from 3% in May  to 75% in October) rate of unreported and Ill-defined / unspecified causes of mortality has also started to rapidly increase (with correlation of over 99% with full vaccination rate using ranked based correlation metrics), reaching  historically highest numbers ( 10-30% ) from the historical average of not more than 1 %  - in all provinces. See Figure below. That is, 10-30%  of all deaths since the beginning of vaccination are now left unexplained. 
+Analysis : Since May (i.e. since the beginning of mass vaccination of general public), when the rate of vaccinateion started to rapidly increase (from 3% in May  to 75% in October), the rate of unreported 'Information Unavailable' and Ill-defined / unspecified causes of mortality 'R99' has also started to rapidly increase, with correlation of over 90% with full vaccination rate, reaching  historically highest numbers ( 10-30% ) from the normal ten-year average (less than  more than 1 %)  in all provinces. 
+<!-- That is, 10-30%  of all deaths since the beginning of general public vaccination are now left unexplained. -->
 
-Additionally, it is observed that since the introduction of the ‘COVID death’ category in 2020, the reporting of all other causes deaths started to decline, even for those causes that historically have a trend to go up (such as cancer, heart diseases, accidents), meaning that many of these deaths are now counted under the “COVID category”. This agrees with the analysis from UK data (see below) that shows that only 13.6% of COVID-reported deaths are COVID only deaths, and 78 % of these COVID only deaths happened among 64+ population, with the average age of COVID only deaths being 82 years, which is practically equal to  the life expectancy in UK.
+Additionally, it is observed that since the introduction of the ‘COVID death’ category in 2020, the reporting of all other causes deaths started to decline, even for those causes that historically have a trend to go up (including cancer, heart diseases, accidents and others), meaning that since 2020 many of these deaths  have been counted under the “COVID category”. This agrees with the analysis from UK data (see below) that shows that only 13.6% of *COVID-reported deaths* are *COVID only deaths*, and  that *78 % of COVID only deaths*  happened among 65+ population, with is the average age of COVID only deaths being 82 years, which is statistically equal to  the average life expectancy in UK.
 
 
  
-### Data from UK and USA 
+### Data from UK 
 
-[a] Freedom of information revelation, 20 Jan 2022
+<!-- [a] Freedom of information revelation, 20 Jan 2022 -->
 
 Sources:
--	https://coronavirus.data.gov.uk/details/deaths
--	FOI Ref: FOI/2021/3240, https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses?s=09
-Conclusion:  Of all reported 127,704 COVID deaths, there are only 13.6% (17,371) that are due to covid alone. Furthermore, 78% of all covid alone deaths occurred in people with 64+ of age, with the average age of death from covid being 82.5 years, which is higher than Average life expectancy in the UK.
+-	<https://coronavirus.data.gov.uk/details/deaths>
+-	FOI Ref: FOI/2021/3240, <https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses>
 
-    2020 Total deaths, 9,400		 0-64, 1,549		65 and over, 7,851 
-    2021 Q1 Total deaths, 6,483		 0-64, 1,560 		65 and over, 4,923 
-    2021 Q2 Total deaths, 346 		0-64, 153 		65 and over, 193 
-    2021 Q3, Total deaths, 1,142 	0-64, 512 		65 and over, 630 
+Conclusion:  Of all reported in UK 127,704 COVID deaths, there are only 13.6% (17,371) that are due to covid alone. 78% of all COVID alone deaths occurred in people with 65+ of age, with the average age of death from covid being 82.5 years, which is statistically equal to  the average life expectancy in UK.
 
+    ( 2020 Total deaths, 9,400		 0-64, 1,549		65 and over, 7,851  /
+    2021 Q1 Total deaths, 6,483		 0-64, 1,560 		65 and over, 4,923  /
+    2021 Q2 Total deaths, 346 		0-64, 153 		65 and over, 193 /
+    2021 Q3, Total deaths, 1,142 	0-64, 512 		65 and over, 630 )
+
+<!-- 
 Total deaths from covid alone, 17,371,  0-64 3,774		 65 and over 13,597 (78% of all covid deaths)
 Average age of death in UK from covid in 2021 82.5 years – higher than Average life expectancy in the UK.
 
-[b] Excellent natural immunity confirmed,  24 Jan 2022
+-->
+
+### Data from USA:
+<!-- [b] Excellent natural immunity confirmed,  24 Jan 2022 -->
 
 Source: 
 -	COVID-19 Cases and Hospitalizations by COVID-19 Vaccination Status and Previous COVID-19 Diagnosis — California and New York, May–November 2021, <https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm> 
-Conclusion:  Natural immunity with or without vaccine provided robust protection against hospitalization in the age of delta, with Natural immunity without vaccine being better than Natural immunity with vaccine.
+
+Conclusion:  Data from California and New York shows that *natural immunity* with or without vaccine provided significantly reduced  number of hospitalization in the age of delta. *Natural immunity without vaccine* shows higher hospitation case reduction, compared to *Natural immunity with vaccine*.
 
  
 ### Other sources:
@@ -84,15 +91,16 @@ Note: VAERS lists many adverse events that are not reported yet in Canada (such 
 
 Note: Explains why the efficacy of COVID-19 vaccines is not 95%, as reported by vaccine manufacturers and quoted in many governments policies, but less than 1%, which statistically is less then by a chance
 
-•	US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint “All Cause Severe Morbidity”. Trends Int Med. 2021; 1(1): 1-6 (25 August 2021). https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf
+•	US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint “All Cause Severe Morbidity”. Trends Int Med. 2021; 1(1): 1-6 (25 August 2021). <https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf>
 
-•	Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635 (02 November 2021) doi:10.1136/bmj.n2635. https://www.bmj.com/content/375/bmj.n2635
+•	Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635 (02 November 2021) doi:10.1136/bmj.n2635.  <https://www.bmj.com/content/375/bmj.n2635>
 
-•	Why are we vaccinating children against COVID-19?, Toxicology Reports, Volume 8, 2021, Pages 1665-1684, ISSN 2214-7500 (14 September 2021) https://doi.org/10.1016/j.toxrep.2021.08.010
+•	Why are we vaccinating children against COVID-19?, Toxicology Reports, Volume 8, 2021, Pages 1665-1684, ISSN 2214-7500 (14 September 2021) <https://doi.org/10.1016/j.toxrep.2021.08.010>
 
-•	CUMULATIVE ANALYSIS OF POST-AUTHORIZATION ADVERSE EVENT REPORTS OF PF-07302048 (BNT162B2) RECEIVED THROUGH 28-FEB-2021. Prepared by Pfizer, Released to Public Health and Medical Professionals for Transparency (<https://phmpt.org/>)  under the court order on 17 November 2021: https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf
+•	CUMULATIVE ANALYSIS OF POST-AUTHORIZATION ADVERSE EVENT REPORTS OF PF-07302048 (BNT162B2) RECEIVED THROUGH 28-FEB-2021. Prepared by Pfizer, Released to Public Health and Medical Professionals for Transparency (<https://phmpt.org/>)  under the court order on 17 November 2021: <https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf>
 
 The above references expose the lack of evidence and scientific integrity in the reports produced by the vaccine manufacturers. 
+The data from vaccine test have never been made public. All vaccine manufacturers refuse to provide them.
 
-The final document was released by Pfizer under the court order on 17 November 2021. It provides data that was collected, but not disclosed prior to 17 November 2021, by the vaccine manufacture on real world adverse events that occurred in the first 2.5 months after Emergency Use Authorization. It lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”)
+The last document, *released by Pfizer under the court order* on 17 November 2021, provides data that was collected, but willingly not disclosed manufacturer prior to 17 November 2021 on real world adverse events that they have themselves observed  in the first 2.5 months after Emergency Use Authorization. Among others, it lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”).
 
