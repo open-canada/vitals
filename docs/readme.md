@@ -34,17 +34,18 @@ Submission to The Lancet Journal. 2022/01/16](https://open-canada.github.io/vita
 
 ### Take Action: 
 
-#### Sign a petition
+#### Sign petitions
 
-Petition to Protect the fundamental civil rights of Canadians by disallowing vaccine passport certificates nationally: <https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592>
+- Petition to Protect the fundamental civil rights of Canadians by disallowing vaccine passport certificates nationally: <https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592>
+- Proposed Memorandum of Understanding (MOU) between Canada  Unity  (CU) and the Senate of  Canada and the Governor General  of Canada: <https://canada-unity.com/mou/>
 
 #### Report side-effect
 <!-- , which is a bit tricky, if you don't know what to write in some manadary form fields.  But when you know, it takes 10 mins to do it. -->
 
 Any Canadian can Report Vaccine Side-effect, as a consumer, i.e., without a doctor.  Heath Canada encourages everyone impacted by the vaccine to do so. They also  provide guidance on how to fill out online form. This is how you do it:
-- See if you sympthoms are reported in the USA COVID Vaccine Adverse Event Reports (VAERS): https://openvaers.com
-- Go to <https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary>. 
-- See an example of submitted side-effort reporting form  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf). There are three places there you need to know how to fill out (In Section B: Patient ID - write your initials; In Section D: Product DIN and Product Name - paste the vaccine names as printed on your reciept)
+- See if your sympthoms are reported in the USA COVID Vaccine Adverse Event Reports (VAERS): <https://openvaers.com>
+- Go to the Health Canada Voluntary Side Effect reporting electronic form: <https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary>. 
+- See an example of submitted form  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf). There are three places there you need to know how to fill out (In Section B: Patient ID - write your initials; In Section D: Product DIN and Product Name - paste the vaccine names as printed on your reciept)
 - Call Heath Canada Voluntary Reporting support line: Tel. 866-234-2345, if you still have problems submitting the form, leave a message,  they normally respond within the same day.
 
 
