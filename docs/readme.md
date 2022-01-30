@@ -6,9 +6,11 @@
 
 ### Learn facts:
 
-- ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety/> (Compare the number of deaths and severe health damages already reported to that from COVID. Note the contunuing increase of reports)
-- ‘Cases following vaccination’, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html (Recalculate numbers for period after April, when mass vaccination of entire population started)
-- Open Canada Vital Statistics Tracker: [https://open-canada.github.io/Apps/vitals](https://open-canada.github.io/Apps/vital) (Note reduction of all non-COVID deaths since pandemic and the jump in the number of unexplained deaths after April)
+- ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety/>  --- Compare the number of deaths and severe health damages already reported to that from COVID. Note the contunuing increase of reports
+
+- ‘Cases following vaccination’, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html> --- Recalculate numbers for period after April, when mass vaccination of entire population started
+
+- Open Canada Vital Statistics Tracker: [https://open-canada.github.io/Apps/vitals](https://open-canada.github.io/Apps/vital) --- Note reduction of all non-COVID deaths since pandemic and the jump in the number of unexplained deaths since April
 
 <!-- 
 You can use this App to compute statistics from raw  data, such as:
