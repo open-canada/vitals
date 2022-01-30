@@ -11,24 +11,31 @@ Analysis: In the considered period (December 14, 2020 – November 27, 2021) ove
 ***
 [ 2a ] Hospitalizations by vaccination status, COVID-19 (coronavirus) in Ontario, <https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus>
 
-[ 2b ] For more information on cases following vaccination, please see the Weekly epidemiology report (PDF) available on the Government of Canada’s COVID-19 data trends page
+[ 2b ] For more information on cases following vaccination, please see the Weekly epidemiology report (PDF) available on the [Government of Canada’s COVID-19 data trends](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) page
 
-Quote: “Incidence among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021.”
+Quote: “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021.”
 
-Analysis: Incidents among fully vaccinated cases continues to grow at rate higher than of unvaccinated.
+<!-- Analysis: Incidents among fully vaccinated cases continues to grow at rate higher than of unvaccinated. -->
 
 ***
 
 [ 3 ] ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety/>
 
-Quote: Table 1. Count of reported adverse events of special interest up to and including October 22, 2021 (n = 3,793). This includes: 166 Auto-immune diseases, 1,111 heart diseases (including 64 Cardiac arrests and failures, 77 Heart Attacks, 970 Myocarditis1/Pericarditis ), 947 thrombosis and blood clots, 37 Acute kidney injury, 25 Liver injury,781 Nerves and central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, and 208 deaths (some of which are still under investigation).”
-Cumulative serious reports, including deaths: 6124 (January–October), 5038 (May-October). 
+<!-- 
+Jan 14, 2022:
+6125 ,  5038
 
-Analysis: The above numbers are almost twice as high as  the number of COVID deaths* in the same period (May-October) which is only 2975,  and much higher (by one order of magnitude) than the number of deaths from COVID alone (estimated using UK data as 13.6 % * 2975 = 404), and even much more higher (by two orders of magnitude)  when compared to the number of deaths of COVID alone for the age population (younger than 64 years) of people employed at GC (estimated using UK data as 22% *13.6 % * 2975 = 89).  Note  that most people who received vaccine since May are less than 64 years of age, meaning that they have extremely small chance of having complications from COVID, and yet  many of them  have already  lost their lives or quality of live because of vaccines.
+This report was last updated on January 28, 2022 with data up to and including January 21, 2022.
+6287 - 1087 = 5200
+-->
 
-Furthermore, the above number (5038) does not count for “non-serious” events and not reported yet events, which can be still very debilitating for many families (such as shingles, arthritis, heart pains, and menstrual irregularities – reported among GC employees and members of their families), which can be estimated as an order or two orders of magnitude higher than the number of reported serious events.
+Quote: Figure 1: Cumulative serious reports, including deaths: 	6287 (January–October), **5200** (May-October). Table 1: Count of reported adverse events of special interest up to and including October 22, 2021 (n = 3,793). This includes: 166 Auto-immune diseases, 1,111 heart diseases (including 64 Cardiac arrests and failures, 77 Heart Attacks, 970 Myocarditis1/Pericarditis), 947 thrombosis and blood clots, 37 Acute kidney injury, 25 Liver injury, 781 Nerves and central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, and 208 deaths (some of which are still under investigation). 
 
-It is also noted that the above number of adverse events (5038) is quoted from the reports for up to November 6 2021 (to allow comparison with death statistics which are reported with two months delay). Since that time, the number of adverse events from vaccination continues to grow at the rate faster than that of vaccination and faster than that of deaths* with COVID, having reached 7378 at the time of writing this note.
+Analysis: The above numbers are almost twice as high as  the number of _COVID deaths_ in the same period (May-October) which is  *2975* (which can be computed using the Vitals App),  and much higher (by one order of magnitude) than the number of deaths from _COVID alone_ (estimated using UK data as 13.6% * 2975 = 404), and even much more higher (by two orders of magnitude)  when compared to the number of deaths of _COVID alone for the age population younger than 65 years of age (estimated using UK data as 22% * 13.6% * 2975 = 89).  Note  that most people who received vaccine since May are less than 65 years of age, meaning that they have extremely small chance of having complications from COVID, and yet  many of them  have already  lost their lives or quality of live because of vaccines.
+
+Furthermore, the above number (5200) does not count for “non-serious” events and not reported yet events, which can be still very debilitating for many families (such as shingles, arthritis, heart pains, and menstrual irregularities – reported among GC employees and members of their families), which can be estimated as an order or two orders of magnitude higher than the number of reported serious events.
+
+It is also noted that the above number of adverse events (5200) is quoted from the reports for up to November 6 2021 (to allow comparison with death statistics which are reported with two months delay). Since that time, the number of adverse events from vaccination continues to grow at the rate faster than that of vaccination and faster than that of deaths* with COVID, having reached 7378 at the time of writing this note.
 
 * According to the StatCan and UK Statistics data (See below), most (over 75%) deaths reported as “COVID deaths” are co-mobility deaths and occurred in 64+ age group.
 
@@ -42,12 +49,15 @@ Analysis : There is a several months lag between  when severe  events are report
 
 ***
 
+
 [ 5 ] Statistics Canada, Canadian Vital Statistics - Death database . Provisional weekly death counts, by selected grouped causes of death.  <https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001>  (Dashboard: <https://open-canada.github.io/vitals>) 
 
-Analysis : Since May (i.e. since the beginning of mass vaccination of general public), when the rate of vaccinateion started to rapidly increase (from 3% in May  to 75% in October), the rate of unreported 'Information Unavailable' and Ill-defined / unspecified causes of mortality 'R99' has also started to rapidly increase, with correlation of over 90% with full vaccination rate, reaching  historically highest numbers ( 10-30% ) from the normal ten-year average (less than  more than 1 %)  in all provinces. 
+Analysis : Since May (i.e. since the beginning of mass vaccination of general public), when the rate of vaccination started to rapidly increase (from 3% in May  to 75% in October), the rate of unreported 'Information Unavailable' and Ill-defined / unspecified causes of mortality 'R99' has also started to rapidly increase.
+<!-- ,  reaching  historically highest numbers (10-30%) from the normal ten-year average (less than 1%)  in all provinces. -->
 <!-- That is, 10-30%  of all deaths since the beginning of general public vaccination are now left unexplained. -->
+<!-- with correlation of over 90% with full vaccination rate -->
 
-Additionally, it is observed that since the introduction of the ‘COVID death’ category in 2020, the reporting of all other causes deaths started to decline, even for those causes that historically have a trend to go up (including cancer, heart diseases, accidents and others), meaning that since 2020 many of these deaths  have been counted under the “COVID category”. This agrees with the analysis from UK data (see below) that shows that only 13.6% of *COVID-reported deaths* are *COVID only deaths*, and  that *78 % of COVID only deaths*  happened among 65+ population, with is the average age of COVID only deaths being 82 years, which is statistically equal to  the average life expectancy in UK.
+Additionally, it is observed that since the introduction of the ‘COVID death’ category in 2020, the reporting of all other causes deaths started to decline, even for those causes that historically have a trend to go up (including cancer, heart diseases, accidents and others), meaning that since 2020 many of these deaths  have been counted under the “COVID category”. This agrees with the analysis from UK data (see below) that shows that only 13.6% of *COVID-reported deaths* are *COVID only deaths*, and  that *78% of COVID only deaths*  happened among 65+ population, with is the average age of COVID only deaths being 82 years, which is statistically equal to  the average life expectancy in UK.
 
 
  
