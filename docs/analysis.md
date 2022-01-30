@@ -51,7 +51,7 @@ Additionally, it is observed that since the introduction of the ‘COVID death�
 
 
  
-### Data from UK 
+### Data from UK:
 
 <!-- [a] Freedom of information revelation, 20 Jan 2022 -->
 
@@ -59,12 +59,12 @@ Sources:
 -	<https://coronavirus.data.gov.uk/details/deaths>
 -	FOI Ref: FOI/2021/3240, <https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses>
 
-Conclusion:  Of all reported in UK 127,704 COVID deaths, there are only 13.6% (17,371) that are due to covid alone. 78% of all COVID alone deaths occurred in people with 65+ of age, with the average age of death from covid being 82.5 years, which is statistically equal to  the average life expectancy in UK.
+Conclusion:  Of all reported in UK 127,704 COVID deaths, there are only 13.6% (17,371) that are due to COVID alone. 78% of all COVID alone deaths occurred in people with 65+ of age, with the average age of death from COVID being 82.5 years, which is statistically equal to  the average life expectancy in UK.
 
-    ( 2020 Total deaths, 9,400		 0-64, 1,549		65 and over, 7,851  /
-    2021 Q1 Total deaths, 6,483		 0-64, 1,560 		65 and over, 4,923  /
-    2021 Q2 Total deaths, 346 		0-64, 153 		65 and over, 193 /
-    2021 Q3, Total deaths, 1,142 	0-64, 512 		65 and over, 630 )
+    2020 Total deaths, 9,400		    0-64, 1,549		65 and over, 7,851  /
+    2021 Q1 Total deaths, 6,483		    0-64, 1,560 	65 and over, 4,923  /
+    2021 Q2 Total deaths, 346 		    0-64, 153 		65 and over, 193 /
+    2021 Q3, Total deaths, 1,142 	    0-64, 512 		65 and over, 630 
 
 <!-- 
 Total deaths from covid alone, 17,371,  0-64 3,774		 65 and over 13,597 (78% of all covid deaths)
@@ -83,24 +83,27 @@ Conclusion:  Data from California and New York shows that *natural immunity* wit
  
 ### Other sources:
 
-•	USA COVID Vaccine Adverse Event Reports: https://vaers.hhs.gov (browse reports at <https://openvaers.com>)
+-	USA COVID Vaccine Adverse Event Reports: https://vaers.hhs.gov (browse reports at <https://openvaers.com>)
 
 Note: VAERS lists many adverse events that are not reported yet in Canada (such as shingles, arthritis, menstrual problems etc.)
 
-•	‘COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room’, The Lancet, VOLUME 2, ISSUE 7, E279-E280 (JULY 01, 2021): <https://doi.org/10.1016/S2666-5247(21)00069-0>
+-	‘COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room’, The Lancet, VOLUME 2, ISSUE 7, E279-E280 (JULY 01, 2021): <https://doi.org/10.1016/S2666-5247(21)00069-0>
 
 Note: Explains why the efficacy of COVID-19 vaccines is not 95%, as reported by vaccine manufacturers and quoted in many governments policies, but less than 1%, which statistically is less then by a chance
 
-•	US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint “All Cause Severe Morbidity”. Trends Int Med. 2021; 1(1): 1-6 (25 August 2021). <https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf>
+-	'US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint “All Cause Severe Morbidity”'. Trends Int Med. 2021; 1(1): 1-6 (25 August 2021). <https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf>
 
-•	Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635 (02 November 2021) doi:10.1136/bmj.n2635.  <https://www.bmj.com/content/375/bmj.n2635>
+-	Covid-19: Researcher blows the whistle on data integrity issues in Pfizer’s vaccine trial BMJ 2021; 375 :n2635 (02 November 2021) doi:10.1136/bmj.n2635.  <https://www.bmj.com/content/375/bmj.n2635>
 
-•	Why are we vaccinating children against COVID-19?, Toxicology Reports, Volume 8, 2021, Pages 1665-1684, ISSN 2214-7500 (14 September 2021) <https://doi.org/10.1016/j.toxrep.2021.08.010>
+-	'Why are we vaccinating children against COVID-19?', Toxicology Reports, Volume 8, 2021, Pages 1665-1684, ISSN 2214-7500 (14 September 2021) <https://doi.org/10.1016/j.toxrep.2021.08.010>
 
-•	CUMULATIVE ANALYSIS OF POST-AUTHORIZATION ADVERSE EVENT REPORTS OF PF-07302048 (BNT162B2) RECEIVED THROUGH 28-FEB-2021. Prepared by Pfizer, Released to Public Health and Medical Professionals for Transparency (<https://phmpt.org/>)  under the court order on 17 November 2021: <https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf>
+- 'Covid-19 vaccines and treatments: we must have raw data, now', BMJ 2022; 376 doi: (19 January 2022) <https://doi.org/10.1136/bmj.o102> 
+
+-	CUMULATIVE ANALYSIS OF POST-AUTHORIZATION ADVERSE EVENT REPORTS OF PF-07302048 (BNT162B2) RECEIVED THROUGH 28-FEB-2021. Prepared by Pfizer, Released to Public Health and Medical Professionals for Transparency (<https://phmpt.org/>)  under the court order on 17 November 2021: <https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf>
 
 The above references expose the lack of evidence and scientific integrity in the reports produced by the vaccine manufacturers. 
-The data from vaccine test have never been made public. All vaccine manufacturers refuse to provide them.
+The data from vaccine tests have never been made public --- [All vaccine manufacturers refuse to provide them](https://www.youtube.com/watch?v=YDxkloJ-4kE&t=474s)
 
-The last document, *released by Pfizer under the court order* on 17 November 2021, provides data that was collected, but willingly not disclosed manufacturer prior to 17 November 2021 on real world adverse events that they have themselves observed  in the first 2.5 months after Emergency Use Authorization. Among others, it lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”).
+The last document, *released by Pfizer under the court order* on 17 November 2021, provides data that was collected, but willingly not disclosed by manufacturer prior to 17 November 2021, on real world adverse events observed  in the first 2.5 months after Emergency Use Authorization. Among others, it lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”).
+
 
