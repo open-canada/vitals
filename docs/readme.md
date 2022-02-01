@@ -1,5 +1,6 @@
 ## Open Canada Vital Statistics Application Resources
-#### https://open-canada.github.io/vitals/
+
+https://open-canada.github.io/vitals/
 
  [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf)| [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |  
 
@@ -13,16 +14,19 @@
 
 <HUGE> 
 1. Vaccination rates [1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/):
+ 
   - 14 Dec 2020 - Apr 2021: Full vaccination rate <2%
   - May 2021 - Oct* 2021:  Full accination rate: increased from 2% to 75%
   
 2. **Deaths of COVID-19 (including comorbidities)** [2](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001) ([App](https://o-canada.shinyapps.io/vitals/#section-statistics)):
+                                                      
 - 14 Dec 2020 - Apr 2021: 13075
 - May 2021 - Oct* 2021: **2975**                                                  
   - Of these, Deaths of COVID-19 without comorbidities**: **404**
   - Of these, Deaths of COVID-19 without comorbidities for people <65 old**: **89**
 
 3. **Deaths of COVID-19 by vaccination status** [3](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9) (Table 2): 
+ 
 - Data extracted on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988): 
   - unvaccinated  76.1% vs. fully vaccinated **9.5%"" 
 - Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08, 2022 (n=1,341,192): 
@@ -32,6 +36,7 @@
 
                                                                       
 4. **Serious vaccine adverse reactions**  [4](https://health-infobase.canada.ca/covid-19/vaccine-safety/) (Figure 1):  
+ 
 - May 2021 - Oct* 2021: **5200** (increase from 5038 posted in last month report) 
   - Of these (Table 1): 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970 Myocarditis1/Pericarditis), 947 thrombosis, 781 central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, 166 Auto-immune diseases, 37 Acute kidney injury, 25 Liver injury, and 208 deaths (some  under investigation).    
 - Jan 2021 - Jan 2022: 7,526
