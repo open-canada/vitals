@@ -17,19 +17,18 @@ See Raw Data
 Numbers below are *quoted* from **official** Government of Canada sources
 and updated every week, unless marked by (\*), in which case they are *computed* from
 **official** sources.
-
 Data for up to October 2021 are used to allow comparison between adverse reactions
-statistics and deaths statistics, the latter being reported with about three months lag.
+statistics and deaths statistics, the latter being reported with several months delay.
 <!-- which are available up to October only. -->
 
 
-1.  Vaccination rates (Ref:
+[1]  **Vaccination rates** (Ref:
     [[1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)]) :
-<br>
+    
 14 Dec 2020 - Apr 2021: Full vaccination rate \<2%\
 May 2021 - Oct\* 2021: Full vaccination rate: increased from 2% to 75%
 
-2.  **Deaths of COVID-19 (including comorbidities)** (Ref:
+[2]  **Deaths of COVID-19 (including comorbidities)** (Ref:
     [[2](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)] - [App
     Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)):
 
@@ -40,7 +39,7 @@ May 2021 - Oct\* 2021: **2975**
 **404** 
 - Of these, Deaths of COVID-19 without comorbidities for people \<65 old: **89**
 
-3.  **Deaths of COVID-19 by vaccination status** (Ref:
+[3]  **Deaths of COVID-19 by vaccination status** (Ref:
     [[3](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
     Table 2):
 
@@ -59,7 +58,7 @@ Data extracted on January 21, 2022 for cases from December 14, 2020 up until Jan
 
 -   unvaccinated \<20% vs. fully vaccinated **\>70%** s
 
-4.  **Serious vaccine adverse reactions** (Ref:
+[4]  **Serious vaccine adverse reactions** (Ref:
     [[4](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
 
 May 2021 - Oct\* 2021: **5200** (increased from 5038 posted in last month report)
@@ -70,9 +69,9 @@ May 2021 - Oct\* 2021: **5200** (increased from 5038 posted in last month report
     (including 594 Bell's Palsy), 487 Anaphylaxis, 166 Auto-immune diseases, 37 Acute
     kidney injury, 25 Liver injury, and 208 deaths (some under investigation).
 
-All reported to date vaccine adverse reactions (Jan 2021 - Jan 2022) 
-
-- serious adverse reactions : 7,526 
+<!-- 
+All serious vaccine adverse reactions reported to date (Jan 2021 - Jan 2022): **7,526** 
+-->
 
 
 <!-- 
