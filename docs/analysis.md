@@ -1,5 +1,10 @@
 ## Statistical analysis of official data sources related to vaccine efficacy and safety (NEW EVIDENCE SINCE OCTOBER 2021)
 
+https://open-canada.github.io/vitals/
+
+ [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf)| [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |  
+
+
 ### GC Sources:
 
 [ 1 ] ‘Cases following vaccination’, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html>
@@ -29,13 +34,17 @@ This report was last updated on January 28, 2022 with data up to and including J
 6287 - 1087 = 5200
 -->
 
-Quote: Figure 1: Cumulative serious reports, including deaths: 	6287 (January–October), **5200** (May-October). Table 1: Count of reported adverse events of special interest up to and including October 22, 2021 (n = 3,793). This includes: 166 Auto-immune diseases, 1,111 heart diseases (including 64 Cardiac arrests and failures, 77 Heart Attacks, 970 Myocarditis1/Pericarditis), 947 thrombosis and blood clots, 37 Acute kidney injury, 25 Liver injury, 781 Nerves and central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, and 208 deaths (some of which are still under investigation). 
+**Quotes:** 
+
+Figure 1: **Cumulative serious reports, including deaths:** 	6287 (January–October), **5200** (May-October). 
+
+Table 1: Count of reported adverse events of special interest up to and including October 22, 2021 (n = 3,793). This includes: 166 Auto-immune diseases, 1,111 heart diseases (including 64 Cardiac arrests and failures, 77 Heart Attacks, 970 Myocarditis1/Pericarditis), 947 thrombosis and blood clots, 37 Acute kidney injury, 25 Liver injury, 781 Nerves and central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, and 208 deaths (some of which are still under investigation). 
 
 Analysis: The above numbers are almost twice as high as  the number of _COVID deaths_ in the same period (May-October) which is  *2975* (which can be computed using the Vitals App),  and much higher (by one order of magnitude) than the number of deaths from _COVID alone_ (estimated using UK data as 13.6% * 2975 = 404), and even much more higher (by two orders of magnitude)  when compared to the number of deaths of _COVID alone for the age population younger than 65 years of age (estimated using UK data as 22% * 13.6% * 2975 = 89).  Note  that most people who received vaccine since May are less than 65 years of age, meaning that they have extremely small chance of having complications from COVID, and yet  many of them  have already  lost their lives or quality of live because of vaccines.
 
 Furthermore, the above number (5200) does not count for “non-serious” events and not reported yet events, which can be still very debilitating for many families (such as shingles, arthritis, heart pains, and menstrual irregularities – reported among GC employees and members of their families), which can be estimated as an order or two orders of magnitude higher than the number of reported serious events.
 
-It is also noted that the above number of adverse events (5200) is quoted from the reports for up to November 6 2021 (to allow comparison with death statistics which are reported with two months delay). Since that time, the number of adverse events from vaccination continues to grow at the rate faster than that of vaccination and faster than that of deaths* with COVID, having reached 7378 at the time of writing this note.
+It is also noted that the above number of adverse events (5200) is quoted from the reports for up to November 6 2021 (to allow comparison with death statistics which are reported with three months delay). Since that time, the number of adverse events from vaccination continues to grow at the rate faster than that of vaccination and faster than that of deaths* with COVID, having reached 7378 at the time of writing this note.
 
 * According to the StatCan and UK Statistics data (See below), most (over 75%) deaths reported as “COVID deaths” are co-mobility deaths and occurred in 64+ age group.
 
