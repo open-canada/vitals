@@ -1,18 +1,52 @@
-# https://open-canada.github.io/vitals/
-
-  [Vitals Statistics Tracker App](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf)| [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) | 
-
 ## Open Canada Vital Statistics Application Resources
+#### https://open-canada.github.io/vitals/
 
-### Learn facts:
+ [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf)| [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |  
 
+
+
+## Learn facts from **Official** Government of Canada sources (updated every week) :
+
+<!--   COMPARE NUMBERS -->
+
+#### Summary
+
+<HUGE> 
+1. Vaccination rates [1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/):
+  - 14 Dec 2020 - Apr 2021: Full vaccination rate <2%
+  - May 2021 - Oct* 2021:  Full accination rate: increased from 2% to 75%
+  
+2. **Deaths of COVID-19 (including comorbidities)** [2](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001) ([App](https://o-canada.shinyapps.io/vitals/#section-statistics)):
+- 14 Dec 2020 - Apr 2021: 13075
+- May 2021 - Oct* 2021: **2975**                                                  
+  - Of these, Deaths of COVID-19 without comorbidities**: **404**
+  - Of these, Deaths of COVID-19 without comorbidities for people <65 old**: **89**
+
+3. **Deaths of COVID-19 by vaccination status** [3](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9) (Table 2): 
+- Data extracted on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988): 
+  - unvaccinated  76.1% vs. fully vaccinated **9.5%"" 
+- Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08, 2022 (n=1,341,192): 
+  - unvaccinated  72.8% vs. fully vaccinated **13.8%** (Note increase since December report)
+- *Recomputed for cases since May* (based on [2] and [1]):
+  - unvaccinated  <20% vs. fully vaccinated **>70%"" 
+
+                                                                      
+4. **Serious vaccine adverse reactions**  [4](https://health-infobase.canada.ca/covid-19/vaccine-safety/) (Figure 1):  
+- May 2021 - Oct* 2021: **5200** (increase from 5038 posted in last month report) 
+  - Of these (Table 1): 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970 Myocarditis1/Pericarditis), 947 thrombosis, 781 central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, 166 Auto-immune diseases, 37 Acute kidney injury, 25 Liver injury, and 208 deaths (some  under investigation).    
+- Jan 2021 - Jan 2022: 7,526
+
+                                                                     
+ </HUGE>
+  
+<!-- 
 - ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety/>  --- Compare the number of deaths and severe health damages already reported to that from COVID. Note the contunuing increase of reports
 
 - ‘Cases following vaccination’, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html> --- Recalculate numbers for period after April, when mass vaccination of entire population started
 
 - Open Canada Vital Statistics Tracker: [https://open-canada.github.io/Apps/vitals](https://open-canada.github.io/Apps/vital) --- Note reduction of all non-COVID deaths since pandemic and the jump in the number of unexplained deaths since April
 
-<!-- 
+
 You can use this App to compute statistics from raw  data, such as:
    - percentage of fully vaccinated,since  vaccination was officiall launched on December 14, 2020: eg. you 
    - total number of COVID deaths in any province for any time interval: eg. you can compute how many COVID deaths before May, when vaccination rate was less than 3%,and after May 2021
@@ -20,7 +54,10 @@ You can use this App to compute statistics from raw  data, such as:
 
 -->
 
-- COVID Statistics from Justice Centre for Constitutional Freedoms: https://www.jccf.ca/covid-stats/ ([Up to December 29, 2021 at National Level](https://www.jccf.ca/wp-content/uploads/2022/01/Covid-Statistics-canada-dec-29-2021.png))
+#### More detailed analysis 
+  
+- COVID Statistics from Justice Centre for Constitutional Freedoms: https://www.jccf.ca/covid-stats/ 
+  <!-- ([Up to December 29, 2021 at National Level](https://www.jccf.ca/wp-content/uploads/2022/01/Covid-Statistics-canada-dec-29-2021.png)) -->
 
 - [Statistical analysis of official data sources related to vaccine efficacy and safety (NEW EVIDENCE SINCE OCTOBER 2021)](https://open-canada.github.io/vitals/analysis)
 
@@ -28,11 +65,12 @@ You can use this App to compute statistics from raw  data, such as:
 Submission to The Lancet Journal. 2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
 
 
-<!-- ### Personal Declarations -->
+### Personal Declarations 
 
 - _"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and Freedoms By The State"_ by Hon. Brian Peckford (the last living First Minister who helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that forms part of it): [pdf (with links)](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf), [html (with comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
-
-### Take Action: 
+ 
+  
+## Take Action: 
 
 #### Sign petitions
 
