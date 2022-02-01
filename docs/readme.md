@@ -13,6 +13,7 @@ https://open-canada.github.io/vitals/
 #### Summary
 
 <HUGE> 
+ 
 1. Vaccination rates [1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/):
  
   - 14 Dec 2020 - Apr 2021: Full vaccination rate <2%
@@ -33,16 +34,17 @@ https://open-canada.github.io/vitals/
   - unvaccinated  72.8% vs. fully vaccinated **13.8%** (Note increase since December report)
 - *Recomputed for cases since May* (based on [2] and [1]):
   - unvaccinated  <20% vs. fully vaccinated **>70%"" 
-
-                                                                      
+                                                                  
 4. **Serious vaccine adverse reactions**  [4](https://health-infobase.canada.ca/covid-19/vaccine-safety/) (Figure 1):  
  
 - May 2021 - Oct* 2021: **5200** (increase from 5038 posted in last month report) 
+ 
   - Of these (Table 1): 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970 Myocarditis1/Pericarditis), 947 thrombosis, 781 central nervous system failures (including 594 Bell’s Palsy), 487 Anaphylaxis, 166 Auto-immune diseases, 37 Acute kidney injury, 25 Liver injury, and 208 deaths (some  under investigation).    
 - Jan 2021 - Jan 2022: 7,526
 
                                                                      
  </HUGE>
+ Note: Data upto Oct 2021 is used to allow comparison between adverse reactions and deaths statistics, which is reported with three months delay.
   
 <!-- 
 - ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety/>  --- Compare the number of deaths and severe health damages already reported to that from COVID. Note the contunuing increase of reports
