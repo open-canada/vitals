@@ -14,7 +14,7 @@ side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=volun
 See Raw Data
 ------------
 
-<font size=-2> Numbers below are *quoted* from **official** Government of Canada sources
+Numbers below are *quoted* from **official** Government of Canada sources
 and updated every week, unless marked by (\*), in which case they are *computed* from
 **official** sources.
 
@@ -22,17 +22,10 @@ Data for up to October 2021 are used to allow comparison between adverse reactio
 statistics and deaths statistics, the latter being reported with about three months lag.
 <!-- which are available up to October only. -->
 
-<!-- ## Learn facts from **Official** Government of Canada sources (updated every week) : -->
-
-</font>
-
-<!-- #### Summary -->
-
-<font colour="red">
 
 1.  Vaccination rates (Ref:
     [[1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)]) :
-
+<br>
 14 Dec 2020 - Apr 2021: Full vaccination rate \<2%\
 May 2021 - Oct\* 2021: Full vaccination rate: increased from 2% to 75%
 
@@ -80,14 +73,13 @@ May 2021 - Oct\* 2021: **5200** (increased from 5038 posted in last month report
 All reported to date vaccine adverse reactions (Jan 2021 - Jan 2022) 
 
 - serious adverse reactions : 7,526 
-- Total number of
+
 
 <!-- 
 5.  COVID-19 vaccine recalls to date [5](https://recalls-rappels.canada.ca):
 -   Reported 8 months since the start of vaccination (severe heath damage done prior to the )
 -->
 
-</font>
 
 #### Detailed analysis
 
@@ -157,7 +149,7 @@ available), than it is most likely propaganda.
 #### Join the democratic rallies across the country in support of restoring human rights and truth, related to COVID and vaccines
 
 - Many rallies are happening all over the country. Check them out! 
-See for your self who they are: "extremists" or concerned Canadian citizen, many of children, many who have been denied access to playgrounds, uniersities, sports, travel.
+See for yourself who they are: "extremists" or concerned Canadian citizen, many with children, many who have been denied access to playgrounds, universities, sports, travel, work
 
     
     <!-- Join them - to experience yourself "The Wind of Change". -->
