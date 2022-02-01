@@ -70,7 +70,7 @@ You can use this App to compute statistics from raw  data, such as:
 Submission to The Lancet Journal. 2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
 
 
-### Personal Declarations 
+#### Personal Declarations 
 
 - _"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and Freedoms By The State"_ by Hon. Brian Peckford (the last living First Minister who helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that forms part of it): [pdf (with links)](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf), [html (with comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
  
