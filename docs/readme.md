@@ -25,15 +25,15 @@ statistics and deaths statistics, the latter being reported with several months 
 [1]  **Vaccination rates** (Ref:
     [[1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)]) :
     
-14 Dec 2020 - Apr 2021: Full vaccination rate \<2%\
-May 2021 - Oct\* 2021: Full vaccination rate: increased from 2% to 75%
+- Dec 2020 - Apr 2021: High-risk population vaccination (rate: 0 --- 2%)
+- May 2021 - Oct 2021: General public  vaccination (rate: 2% --- 75%
 
 [2]  **Deaths of COVID-19 (including comorbidities)** (Ref:
     [[2](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)] - [App
     Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)):
 
-14 Dec 2020 - Apr 2021: 13075\
-May 2021 - Oct\* 2021: **2975** 
+- Dec 2020 - Apr 2021: 13075
+- *May 2021 - Oct 2021*: **2975** 
 
 - Of these, Deaths of COVID-19 without comorbidities:
 **404** 
@@ -43,21 +43,21 @@ May 2021 - Oct\* 2021: **2975**
     [[3](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
     Table 2):
 
-Data extracted on December 15, 2021 for cases from December 14, 2020 up until November
-27, 2021 (n=882,988): unvaccinated 76.1% vs. fully vaccinated **9.5%**
+- Data extracted on December 15, 2021 for cases from December 14, 2020 up until November
+27, 2021 (n=882,988): <br> unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
-Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08,
-2022 (n=1,341,192): unvaccinated 72.8% vs. fully vaccinated **13.8%** (increased since December
+- Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08,
+2022 (n=1,341,192): <br> unvaccinated 72.8% vs. fully vaccinated **13.8%** (increased since December
     report)
 
-*Recomputed for cases since May* (based on Refs [1] and [2]): unvaccinated \<20% vs. fully vaccinated **\>70%** 
+- *Recomputed for cases since May* (based on Refs [1] and [2]): <br> unvaccinated \<20% vs. fully vaccinated **\>70%** 
 
 [4]  **Serious vaccine adverse reactions** (Ref:
     [[4](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
 
-May 2021 - Oct\* 2021: **5200** (increased from 5038 posted in last month report)
+- *May 2021 - Oct 2021*: **5200** (increased from 5038 posted in last month report)
 
--   Of these (Ref: [[4](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] -
+-  Of these (Ref: [[4](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] -
     Table 1): 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970
     Myocarditis1/Pericarditis), 947 thrombosis, 781 central nervous system failures
     (including 594 Bell's Palsy), 487 Anaphylaxis, 166 Auto-immune diseases, 37 Acute
@@ -149,7 +149,7 @@ See for yourself who they are: "extremists" or concerned Canadian citizen, many 
 
 <center>
 
-**LEARN FACTS -- THINK FOR YOUSELF -- ACT NOW!**
+**LEARN RAW DATA -- THINK FOR YOUSELF -- ACT NOW!**
 
 </center>
 
