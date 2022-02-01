@@ -16,23 +16,31 @@ https://open-canada.github.io/vitals/
  
 1. Vaccination rates [1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/):
  
-  - 14 Dec 2020 - Apr 2021: Full vaccination rate <2%
-  - May 2021 - Oct* 2021:  Full accination rate: increased from 2% to 75%
-  
+
+- 14 Dec 2020 - Apr 2021: Full vaccination rate <2%
+
+-  May 2021 - Oct* 2021:  Full accination rate: increased from 2% to 75%
+
+
 2. **Deaths of COVID-19 (including comorbidities)** [2](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001) ([App](https://o-canada.shinyapps.io/vitals/#section-statistics)):
                                                       
 - 14 Dec 2020 - Apr 2021: 13075
-- May 2021 - Oct* 2021: **2975**                                                  
+
+- May 2021 - Oct* 2021: **2975**      
+                                          
   - Of these, Deaths of COVID-19 without comorbidities**: **404**
-  - Of these, Deaths of COVID-19 without comorbidities for people <65 old**: **89**
+ 
+ - Of these, Deaths of COVID-19 without comorbidities for people <65 old**: **89**
 
 3. **Deaths of COVID-19 by vaccination status** [3](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9) (Table 2): 
  
 - Data extracted on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988): 
   - unvaccinated  76.1% vs. fully vaccinated **9.5%"" 
+
 - Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08, 2022 (n=1,341,192): 
   - unvaccinated  72.8% vs. fully vaccinated **13.8%** (Note increase since December report)
 - *Recomputed for cases since May* (based on [2] and [1]):
+
   - unvaccinated  <20% vs. fully vaccinated **>70%"" 
                                                                   
 4. **Serious vaccine adverse reactions**  [4](https://health-infobase.canada.ca/covid-19/vaccine-safety/) (Figure 1):  
@@ -44,7 +52,7 @@ https://open-canada.github.io/vitals/
 
                                                                      
  </HUGE>
- Note: Data upto Oct 2021 is used to allow comparison between adverse reactions and deaths statistics, which is reported with three months delay.
+ Note: Data upto Oct 2021 is used to allow comparison between adverse reactions and deaths statistics, which are available up to October only.
   
 <!-- 
 - ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety/>  --- Compare the number of deaths and severe health damages already reported to that from COVID. Note the contunuing increase of reports
