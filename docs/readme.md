@@ -3,13 +3,13 @@ Open Canada Vital Statistics Application Resources
 
 [open-canada.github.io/vitals](https://open-canada.github.io/vitals/)
 
-[Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) \| [Analysis of
-Official Data](analysis) \| [Minister's Personal
-Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) \|
+[Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of
+Official Data](analysis) | [Minister's Personal
+Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) |
 [Report
 side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary)
-([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) \|
-[Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) \|
+([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) |
+[Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
 
 See Raw Data
 ------------
@@ -44,19 +44,13 @@ May 2021 - Oct\* 2021: **2975**
     Table 2):
 
 Data extracted on December 15, 2021 for cases from December 14, 2020 up until November
-27, 2021 (n=882,988):
-
--   unvaccinated 76.1% vs. fully vaccinated 9.5%
+27, 2021 (n=882,988): unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
 Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08,
-2022 (n=1,341,192):
-
--   unvaccinated 72.8% vs. fully vaccinated **13.8%** (Note increase since December
+2022 (n=1,341,192): unvaccinated 72.8% vs. fully vaccinated **13.8%** (increased since December
     report)
 
-*Recomputed for cases since May* (based on [2] and [1]):
-
--   unvaccinated \<20% vs. fully vaccinated **\>70%** s
+*Recomputed for cases since May* (based on Refs [1] and [2]): unvaccinated \<20% vs. fully vaccinated **\>70%** 
 
 [4]  **Serious vaccine adverse reactions** (Ref:
     [[4](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
