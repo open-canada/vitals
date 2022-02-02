@@ -8,21 +8,38 @@ Open Canada Vital Statistics Application Resources
 See Raw Data
 ------------
 
-Numbers below are *quoted* from **official** Government of Canada sources
+Numbers below are *quoted* from **official** Government of Canada (GC) sources
 and updated every week, unless marked by (\*), in which case they are *computed* from
-**official** sources.
-Data for up to October 2021 are used to allow comparison between adverse reactions
-statistics and deaths statistics, the latter being reported with several months delay.
+**official** GC sources and  **official** sources of US and UK governments.
+<!-- Data for up to October 2021 are used to allow comparison between adverse reactions
+statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
 
+[usg1] Natural immunity vs. vaccine-induced immunity (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm))
 
-[1]  **Vaccination rates** (Ref:
+- TBA
+
+[ukg1] COVID deaths vs. COVID-alone deaths (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses))
+
+- "Natural immunity with or without vaccine provided significantly reduced number of hospitalization in the age of delta". 
+- "Natural immunity without vaccine resulted in less hospitations compared to Natural immunity with vaccine".
+
+[gcA] COVID-19 cases vs. COVID-19 deaths (Source: [canada.ca]()):
+
+- About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
+
+[gcB] Hospitalizations by vaccination status (Sources: [open.ontario](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
+[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html))
+
+-  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021” (and continues to increase)
+
+[gc1]  **Vaccination rates** (Ref:
     [[1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)]) :
     
 - Dec 2020 - Apr 2021: High-risk population vaccination (rate: 0 -- 2%)
 - May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
 
-[2]  **Deaths of COVID-19 (including comorbidities)** (Ref:
+[gc2]  **Deaths of COVID-19 (including comorbidities)** (Source: GC
     [[2](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)] - [App
     Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)):
 
@@ -36,7 +53,7 @@ statistics and deaths statistics, the latter being reported with several months 
 - For comparison, since the start of pandemic other caueses of death: Cancer -- , ...
 - For comparison, Deaths from Flu without comorbidities (10-year historical average): 
 
-[3]  **Deaths of COVID-19 by vaccination status** (Ref:
+[gc3]  **Deaths of COVID-19 by vaccination status** (Source GC:
     [[3](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
     Table 2):
 
@@ -47,7 +64,7 @@ statistics and deaths statistics, the latter being reported with several months 
     report)
 - *Of these, recomputed\* for cases since May (general public vaccination)* using Refs [1] and [2]: <br> unvaccinated \<20% vs. fully vaccinated **\>70%** 
 
-[4]  **Serious vaccine adverse reactions** (Ref:
+[gc4]  **Serious vaccine adverse reactions** (Source GC:
     [[4](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
 
 - *May 2021 - Oct 2021*: **5200** (increased from 5038 posted in last month report)
@@ -64,9 +81,9 @@ statistics and deaths statistics, the latter being reported with several months 
 <!-- - Adverse reaction, not reported yet in Canada but reported in US: -->
 
 
-5.  COVID-19 vaccine recalls to date [5](https://recalls-rappels.canada.ca):
+[gc5]  COVID-19 vaccine recalls to date (Source GC: [5](https://recalls-rappels.canada.ca):
 
-- myocarditis and pericarditis: filed  9 months after the vaccination was approved
+- Mmyocarditis and pericarditis: filed  9 months after the vaccination was approved
 - Bell’s Palsy: filed  11 months after the vaccination was approved
 
 <!-- For additional official data and their analysis see  -->
@@ -138,19 +155,17 @@ purpose of the rally), <br>
 if it talks only about the number of cases and doses, but does
 not provide perspective inn to thw deaths and side-effects, than it is could propaganda.
 
--->
 
 #### Join  democratic rallies across the country in support of restoring human rights and truth, related to COVID and vaccines
 
 - Many rallies are happening all over the country. Check them out. <br>
 See for yourself who are these people: "extremists"  or concerned Canadian citizen, many with children, many who have been denied access to playgrounds, universities, sports, travel, work...
 
-    
-    <!-- Join them - to experience yourself "The Wind of Change". -->
+-->
 
 <center>
 
-**LEARN RAW DATA -- THINK FOR YOUSELF -- ACT NOW!**
+**SEE DATA -- THINK FOR YOUSELF -- ACT NOW!**
 
 </center>
 
