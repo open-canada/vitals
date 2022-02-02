@@ -17,12 +17,14 @@ statistics and deaths statistics, the latter being reported with several months 
 
 [usg1] Natural immunity vs. vaccine-induced immunity (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm))
 
-- TBA
-
-[ukg1] COVID deaths vs. COVID-alone deaths (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses))
-
 - "Natural immunity with or without vaccine provided significantly reduced number of hospitalization in the age of delta". 
 - "Natural immunity without vaccine resulted in less hospitations compared to Natural immunity with vaccine".
+
+[ukg1] COVID deaths vs. COVID alone deaths (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses))
+
+- Of all reported in UK COVID deaths, 13.6%  are due to COVID alone. 
+- 78% of all COVID alone deaths occurred in people with 65+ of age.
+- Average age of death from COVID is 82.5 years, which is statistically equal to the average life expectancy in UK.
 
 [gcA] COVID-19 cases vs. COVID-19 deaths (Source: [canada.ca]()):
 
