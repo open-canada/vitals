@@ -1,7 +1,11 @@
-Open Canada Vital Statistics Application Resources
+<!-- Open Canada Vital Statistics Application Resources-->
+
+Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 ==================================================
 
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals) 
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals)  
+
+Last Updated: 2022-02-02
 
 <!-- 
 [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
@@ -11,27 +15,19 @@ Open Canada Vital Statistics Application Resources
 
 ## Learn Facts
 
- Numbers below are *quoted* from **official** government sources
-and updated every week, unless marked by (\*), in which case they are *computed* from
-**official** government sources.
+ Numbers below are *quoted* from **official** government sources, unless marked by (\*), in which case they are *computed* from
+**official** government sources using the [App](https://open-canada.github.io/Apps/vitals).
 <!-- Data for up to October 2021 are used to allow comparison between adverse reactions
 statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
 
-[usg1] Natural immunity vs. vaccine-induced immunity (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm) - [Explanation](https://www.youtube.com/watch?v=eK83QqbNOmU))
+[usg1] **Natural immunity vs. vaccine-induced immunity** (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm) - [Explanation](https://www.youtube.com/watch?v=eK83QqbNOmU)):
 
-<!-- Credits for finding the reference:
--->
+
 - Both Vaccine-induced and  Natural immunity   reduce the risk hospitalization considirably (by x50-x100)
 - Natural immunity however provides at least twice (x2) as better protection  than  vaccine-induced immunity.
-<!-- 
-- Vccine-induced immunity  reduces the risk hospitalization considirably (x50-x100),  Natural immunity provides even  higher reduction (x100)
-- However, natural immunity in average provides even better at least twice as better protection from hospitalization than  vaccine-induced immunity 
-- Natural immunity with or without vaccine provided significantly (x50) reduced  number of hospitalization in the age of delta 
-- Natural immunity without vaccine resulted in at least two-times less less hospitations compared to  immunity with vaccine".
--->
 
-[ukg1] COVID deaths vs. COVID alone deaths (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses)) - [Explanation](https://www.youtube.com/watch?v=9UHvwWWcjYw)
+[ukg1] **COVID deaths vs. COVID alone deaths** (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses) - [Explanation](https://www.youtube.com/watch?v=9UHvwWWcjYw)):
 
 - Of all reported in UK COVID deaths, 13.6%  are due to COVID alone. 
 - 78% of all COVID alone deaths occurred in people with 65+ of age.
@@ -49,8 +45,8 @@ statistics and deaths statistics, the latter being reported with several months 
 -  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”  
 <!-- - and continues* to increase -->
 
-[gc1]  **Vaccination rates** (Ref:
-    [[1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)]) :
+[gc1]  **Vaccination rates** (Source:
+    [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
     
 - Dec 2020 - Apr 2021: High-risk population vaccination (rate: 0 -- 2%)
 - May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
@@ -95,6 +91,8 @@ statistics and deaths statistics, the latter being reported with several months 
 
 - All serious vaccine adverse reactions reported to date (Jan 2021 - Jan 2022): **7,526** 
 - Other "not serious" reported adverse reactions (including long-term and from which recvery has not occurred yet): *20,159*
+
+
 <!-- 
 - Many are not reported or published yet, like the one  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)
  - Adverse reaction, not reported yet in Canada but reported in US: -->
@@ -113,8 +111,7 @@ statistics and deaths statistics, the latter being reported with several months 
 
 
     
-#### CONCLUSION:   
-The latest official Government of Canada Open Data <u>do not</u> support original vaccine manufacturers\' claims about  vaccine efficacy and safety.**
+#### CONCLUSION:   The latest official Government of Canada Open Data <u>do not</u> support original vaccine manufacturers\' claims about  vaccine efficacy and safety.**
     
 
 
