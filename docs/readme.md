@@ -3,7 +3,7 @@
 Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 ==================================================
 
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals)  
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics / Deaths Tracker (App)](https://open-canada.github.io/Apps/vitals)  
 
 Last Updated: 2022-02-02
 
@@ -111,7 +111,9 @@ statistics and deaths statistics, the latter being reported with several months 
 
 
     
-#### CONCLUSION:   The latest official Government of Canada Open Data <u>do not</u> support original vaccine manufacturers\' claims about  vaccine efficacy and safety.**
+#### CONCLUSION:   The statistics that was made available to the Government of Canada since the start of the general public vaccination <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety. Based on the analyzed data, it appears that COVID-19 vaccines provide less efficient and less safe protection against COVID-19 compared to Natural immunity. Comments and corrections from experts of all related fields are sought for.
+
+<!-- In  meanwhile, based on the mounting evidence on the lack of evidence in vaccines safety and efficahe recommendation is made to continue monitoring  closely the listed above Open Canada statistics to-->
     
 
 
