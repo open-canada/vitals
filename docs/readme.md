@@ -1,19 +1,19 @@
 Open Canada Vital Statistics Application Resources
 ==================================================
 
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [App](https://open-canada.github.io/Apps/vitals) 
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals) |
 
 <!-- 
 [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
 -->
 
 <!-- See Raw Data-->
-Learn Facts
-------------
 
-<!-- Numbers below are *quoted* from **official** Government of Canada (GC) sources
+## Learn Facts
+
+ Numbers below are *quoted* from **official** government sources
 and updated every week, unless marked by (\*), in which case they are *computed* from
-**official** GC sources and  **official** sources of US and UK governments.-->
+**official** government sources.
 <!-- Data for up to October 2021 are used to allow comparison between adverse reactions
 statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
@@ -93,10 +93,10 @@ statistics and deaths statistics, the latter being reported with several months 
  - Adverse reaction, not reported yet in Canada but reported in US: -->
 
 
-[gc5]  COVID-19 vaccine recalls to date (Sources: 
+[gc5]  **COVID-19 vaccine recalls to date** (Sources: 
 [[Moderna](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
-[[Moderna](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
-[[Astrazeneca](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
+[[Pfizer](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=pfizer)], 
+[[Astrazeneca](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=astrazeneca)]
 ):
 
 - Risk of Bell’s Palsy. Posted: 2021-08-06 
@@ -105,7 +105,7 @@ statistics and deaths statistics, the latter being reported with several months 
 - Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
 
 
-<font size=2>
+<font size="2">
     
 **CONCLUSION:   
 The latest official Government of Canada Open Data <u>do not</u> support original vaccine manufacturers\' claims about  vaccine efficacy and safety.**
@@ -113,24 +113,19 @@ The latest official Government of Canada Open Data <u>do not</u> support origina
     
 </font>
 
-#### For more additional  analysis see:  
+For additional  analysis see:  
 
 <!-- #### Detailed analysis -->
 
 -   [Statistical analysis of official data sources related to vaccine efficacy and
     safety (NEW EVIDENCE SINCE OCTOBER
     2021)](https://open-canada.github.io/vitals/analysis)
-
 -   ["Some observations from Canadian Vital Statistics Death (CVSD) Database related to
     the 'Elephant in the Room'" Submission to The Lancet Journal.
     2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
-
--   COVID Statistics from Justice Centre for Constitutional Freedoms:
-    <https://www.jccf.ca/covid-stats/>
+-   COVID-19 Statistics from [Justice Centre for Constitutional Freedoms](https://www.jccf.ca/covid-stats)
     <!-- ([Up to December 29, 2021 at National Level](https://www.jccf.ca/wp-content/uploads/2022/01/Covid-Statistics-canada-dec-29-2021.png)) -->
-
 <!-- #### Personal Declarations -->
-
 -   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
     Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
     helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that
