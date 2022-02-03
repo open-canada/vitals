@@ -24,12 +24,13 @@ statistics and deaths statistics, the latter being reported with several months 
 [usg1] **Natural immunity vs. vaccine-induced immunity** (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm) - [Explanation](https://www.youtube.com/watch?v=eK83QqbNOmU)):
 
 
-- Both Vaccine-induced and  Natural immunity   reduce the risk hospitalization considirably (by x50-x100)
-- Natural immunity however provides at least twice (x2) as better protection  than  vaccine-induced immunity.
+- Both Vaccine-induced and  Natural immunity considirably  reduce the risk of hospitalization  
+- Natural immunity  provides about twice  better protection  than  vaccine-induced immunity
+- Natural immunity is slightly reduced  after vaccination
 
 [ukg1] **COVID deaths vs. COVID alone deaths** (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses) - [Explanation](https://www.youtube.com/watch?v=9UHvwWWcjYw)):
 
-- Of all reported in UK COVID deaths, 13.6%  are due to COVID alone. 
+- Of all reported in UK COVID deaths, only 13.6%  are due to COVID alone. 
 - 78% of all COVID alone deaths occurred in people with 65+ of age.
 - Average age of death from COVID is 82.5 years, which is statistically equal to the average life expectancy in UK.
 
@@ -109,11 +110,13 @@ statistics and deaths statistics, the latter being reported with several months 
 - Risk of Capillary Leak Syndrome. Posted: 2021-06-29
 - Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
 
-
-    
+#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety.
+ 
+ 
+ <!-- 
 #### CONCLUSION:   The statistics that was made available to the Government of Canada since the start of the general public vaccination <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety. Based on the analyzed data, it appears that COVID-19 vaccines provide less efficient and less safe protection against COVID-19 compared to Natural immunity. Comments and corrections from experts of all related fields are sought for.
 
-<!-- In  meanwhile, based on the mounting evidence on the lack of evidence in vaccines safety and efficahe recommendation is made to continue monitoring  closely the listed above Open Canada statistics to-->
+In  meanwhile, based on the mounting evidence on the lack of evidence in vaccines safety and efficahe recommendation is made to continue monitoring  closely the listed above Open Canada statistics to-->
     
 
 
@@ -121,13 +124,15 @@ For additional  analysis see:
 
 <!-- #### Detailed analysis -->
 
--   [Statistical analysis of official data sources related to vaccine efficacy and
+-   ["Statistical analysis of official data sources related to vaccine efficacy and
     safety (NEW EVIDENCE SINCE OCTOBER
-    2021)](https://open-canada.github.io/vitals/analysis)
+    2021)"](https://open-canada.github.io/vitals/analysis)
 -   ["Some observations from Canadian Vital Statistics Death (CVSD) Database related to
     the 'Elephant in the Room'" Submission to The Lancet Journal.
     2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
--   COVID-19 Statistics from [Justice Centre for Constitutional Freedoms](https://www.jccf.ca/covid-stats)
+
+-   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'". Trends Internal  Medicine,  2021; 1(1): 1-6](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf)
+-   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room", The Lancet, VOLUME 2, ISSUE 7, E279-E280]("https://doi.org/10.1016/S2666-5247(21)00069-0")
     <!-- ([Up to December 29, 2021 at National Level](https://www.jccf.ca/wp-content/uploads/2022/01/Covid-Statistics-canada-dec-29-2021.png)) -->
 <!-- #### Personal Declarations -->
 -   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
@@ -137,7 +142,7 @@ For additional  analysis see:
     links)](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf), [html
     (with
     comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
-
+-   COVID-19 Statistics from [Justice Centre for Constitutional Freedoms](https://www.jccf.ca/covid-stats)
 <!--
 Take Action:
 ------------
