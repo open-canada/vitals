@@ -3,7 +3,7 @@
 Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 ==================================================
 
-Last Updated: 2022-02-02
+Last Updated: 2022-02-03
 
 <!-- 
 [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
@@ -42,7 +42,13 @@ statistics and deaths statistics, the latter being reported with several months 
 [canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - Weekly report (PDF))
 
 -  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”  
+-  In January 2022,c lose to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated
+-  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021
 <!-- - and continues* to increase -->
+
+<!-- ON
+Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 vs211
+-->
 
 [gc1]  **Vaccination rates** (Source:
     [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
@@ -97,13 +103,13 @@ statistics and deaths statistics, the latter being reported with several months 
  - Adverse reaction, not reported yet in Canada but reported in US: -->
 
 
-[gc5]  **COVID-19 vaccine recalls to date** (Sources: 
+[gc5]  **Health Canada COVID-19 vaccine recalls to** (for 
 [[Moderna](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
 [[Pfizer](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=pfizer)], 
 [[Astrazeneca](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=astrazeneca)]
 ):
 
-- Risk of Bell’s Palsy. Posted: 2021-08-06 
+- Risk of Facial paralysis/Bell’s Palsy. Posted: 2021-08-06 
 - Risk of Myocarditis and pericarditis. Posted: 2021-06-30
 - Risk of Capillary Leak Syndrome. Posted: 2021-06-29
 - Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
@@ -204,5 +210,6 @@ See for yourself who are these people: "extremists"  or concerned Canadian citiz
 
 
 Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community)     
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics / Deaths Tracker (App)](https://open-canada.github.io/Apps/vitals)  
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Interactive Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals)  
 
+The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html)
