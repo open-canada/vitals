@@ -110,13 +110,9 @@ statistics and deaths statistics, the latter being reported with several months 
 - Risk of Capillary Leak Syndrome. Posted: 2021-06-29
 - Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
 
-#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety.
+#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety.
  
- 
- <!-- 
-#### CONCLUSION:   The statistics that was made available to the Government of Canada since the start of the general public vaccination <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety. Based on the analyzed data, it appears that COVID-19 vaccines provide less efficient and less safe protection against COVID-19 compared to Natural immunity. Comments and corrections from experts of all related fields are sought for.
 
-In  meanwhile, based on the mounting evidence on the lack of evidence in vaccines safety and efficahe recommendation is made to continue monitoring  closely the listed above Open Canada statistics to-->
     
 
 
