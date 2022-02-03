@@ -1,7 +1,7 @@
 Open Canada Vital Statistics Application Resources
 ==================================================
 
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals) |
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals) 
 
 <!-- 
 [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
@@ -18,13 +18,20 @@ and updated every week, unless marked by (\*), in which case they are *computed*
 statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
 
-[usg1] Natural immunity vs. vaccine-induced immunity (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm))
+[usg1] Natural immunity vs. vaccine-induced immunity (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm) - [Explanation](https://www.youtube.com/watch?v=eK83QqbNOmU))
 
-- Natural immunity with or without vaccine provided significantly reduced  number of hospitalization in the age of delta (x50)
--  
-- Natural immunity without vaccine resulted in less hospitations compared to Natural immunity with vaccine".
+<!-- Credits for finding the reference:
+-->
+- Both Vaccine-induced and  Natural immunity   reduce the risk hospitalization considirably (by x50-x100)
+- Natural immunity however provides at least twice (x2) as better protection  than  vaccine-induced immunity.
+<!-- 
+- Vccine-induced immunity  reduces the risk hospitalization considirably (x50-x100),  Natural immunity provides even  higher reduction (x100)
+- However, natural immunity in average provides even better at least twice as better protection from hospitalization than  vaccine-induced immunity 
+- Natural immunity with or without vaccine provided significantly (x50) reduced  number of hospitalization in the age of delta 
+- Natural immunity without vaccine resulted in at least two-times less less hospitations compared to  immunity with vaccine".
+-->
 
-[ukg1] COVID deaths vs. COVID alone deaths (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses))
+[ukg1] COVID deaths vs. COVID alone deaths (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses)) - [Explanation](https://www.youtube.com/watch?v=9UHvwWWcjYw)
 
 - Of all reported in UK COVID deaths, 13.6%  are due to COVID alone. 
 - 78% of all COVID alone deaths occurred in people with 65+ of age.
@@ -36,10 +43,11 @@ statistics and deaths statistics, the latter being reported with several months 
 - About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
 -->
 
-[gc0] Hospitalizations by vaccination status (Sources: [open.ontario](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
+[gc0] Hospitalizations by vaccination status (Sources: [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
 [canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html))
 
--  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021” (and continues to increase)
+-  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”  
+<!-- - and continues* to increase -->
 
 [gc1]  **Vaccination rates** (Ref:
     [[1](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)]) :
@@ -48,7 +56,7 @@ statistics and deaths statistics, the latter being reported with several months 
 - May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
 
 [gc2]  **Deaths of COVID-19 (including comorbidities)** (Source: GC
-    [[2](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)] - [App
+    [statcan.gc.ca](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)] - [App
     Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)):
 
 - Dec 2020 - Apr 2021: 13075
@@ -61,10 +69,9 @@ statistics and deaths statistics, the latter being reported with several months 
 - All COVID-19 since the start of pandemic: with comorbidities --, without comorbidities -- , without for \<65 years old -- 
 - For comparison, since the start of pandemic other caueses of death: Cancer -- , ...
 - For comparison, Deaths from Flu without comorbidities (10-year historical average): 
-
 -->
 
-[gc3]  **Deaths of COVID-19 by vaccination status** (Source GC:
+[gc3]  **Deaths of COVID-19 by vaccination status** (Source:
     [[canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
     Table 2):
 
@@ -105,13 +112,11 @@ statistics and deaths statistics, the latter being reported with several months 
 - Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
 
 
-<font size="2">
     
-**CONCLUSION:   
+#### CONCLUSION:   
 The latest official Government of Canada Open Data <u>do not</u> support original vaccine manufacturers\' claims about  vaccine efficacy and safety.**
     
-    
-</font>
+
 
 For additional  analysis see:  
 
