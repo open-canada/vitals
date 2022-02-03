@@ -3,8 +3,6 @@
 Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 ==================================================
 
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics / Deaths Tracker (App)](https://open-canada.github.io/Apps/vitals)  
-
 Last Updated: 2022-02-02
 
 <!-- 
@@ -16,7 +14,7 @@ Last Updated: 2022-02-02
 ## Learn Facts
 
  Numbers below are *quoted* from **official** government sources, unless marked by (\*), in which case they are *computed* from
-**official** government sources using the [App](https://open-canada.github.io/Apps/vitals).
+**official** government sources using the [Open Canada Vital Statistics (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals).
 <!-- Data for up to October 2021 are used to allow comparison between adverse reactions
 statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
@@ -41,7 +39,7 @@ statistics and deaths statistics, the latter being reported with several months 
 -->
 
 [gc0] Hospitalizations by vaccination status (Sources: [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
-[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html))
+[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - Weekly report (PDF))
 
 -  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”  
 <!-- - and continues* to increase -->
@@ -129,6 +127,7 @@ For additional  analysis see:
 
 -   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'". Trends Internal  Medicine,  2021; 1(1): 1-6](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf)
 -   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room", The Lancet, VOLUME 2, ISSUE 7, E279-E280]("https://doi.org/10.1016/S2666-5247(21)00069-0")
+
     <!-- ([Up to December 29, 2021 at National Level](https://www.jccf.ca/wp-content/uploads/2022/01/Covid-Statistics-canada-dec-29-2021.png)) -->
 <!-- #### Personal Declarations -->
 -   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
@@ -163,7 +162,7 @@ Take Action:
 Any Canadian can report vaccine side-effect, as a consumer, i.e., without a doctor, at the 
 Heath Canada portal. This is how you do it:
 
--   See if your symptoms are arelady reported in the US COVID Vaccine Adverse Event Reports
+-   See if your symptoms are reported in the US COVID Vaccine Adverse Event Reports
     (VAERS): [vaers.hhs.gov](https://openvaers.com)
 -   Check if your vaccine batch (aka lot), which is printed on your vaccination receipt, is among the ["bad ones"](https://www.howbad.info), according to VAERS data. 
 -   Go to the Health Canada Voluntary Side Effect Reporting portal :
@@ -175,7 +174,7 @@ Heath Canada portal. This is how you do it:
     vaccine names (and batch/lot number, if available), as printed on your receipt. 0
 -   Call Heath Canada Voluntary Reporting support line: Tel. 866-234-2345, if you still
     have problems submitting the form, leave a message, they should respond within 24
-    hours.
+    hours. )
 
 <!--
 #### Learn to distinguish propaganda from true journalism
@@ -201,3 +200,9 @@ See for yourself who are these people: "extremists"  or concerned Canadian citiz
 
 
 -->
+
+
+
+Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community)     
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [Open Canada Vital Statistics / Deaths Tracker (App)](https://open-canada.github.io/Apps/vitals)  
+
