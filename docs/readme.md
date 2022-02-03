@@ -1,24 +1,28 @@
 Open Canada Vital Statistics Application Resources
 ==================================================
 
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals/)
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) \| [App](https://open-canada.github.io/Apps/vitals) 
 
+<!-- 
 [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
+-->
 
-See Raw Data
+<!-- See Raw Data-->
+Learn Facts
 ------------
 
-Numbers below are *quoted* from **official** Government of Canada (GC) sources
+<!-- Numbers below are *quoted* from **official** Government of Canada (GC) sources
 and updated every week, unless marked by (\*), in which case they are *computed* from
-**official** GC sources and  **official** sources of US and UK governments.
+**official** GC sources and  **official** sources of US and UK governments.-->
 <!-- Data for up to October 2021 are used to allow comparison between adverse reactions
 statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
 
 [usg1] Natural immunity vs. vaccine-induced immunity (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm))
 
-- "Natural immunity with or without vaccine provided significantly reduced number of hospitalization in the age of delta". 
-- "Natural immunity without vaccine resulted in less hospitations compared to Natural immunity with vaccine".
+- Natural immunity with or without vaccine provided significantly reduced  number of hospitalization in the age of delta (x50)
+-  
+- Natural immunity without vaccine resulted in less hospitations compared to Natural immunity with vaccine".
 
 [ukg1] COVID deaths vs. COVID alone deaths (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses))
 
@@ -26,11 +30,13 @@ statistics and deaths statistics, the latter being reported with several months 
 - 78% of all COVID alone deaths occurred in people with 65+ of age.
 - Average age of death from COVID is 82.5 years, which is statistically equal to the average life expectancy in UK.
 
+<!-- 
 [gcA] COVID-19 cases vs. COVID-19 deaths (Source: [canada.ca]()):
 
 - About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
+-->
 
-[gcB] Hospitalizations by vaccination status (Sources: [open.ontario](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
+[gc0] Hospitalizations by vaccination status (Sources: [open.ontario](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
 [canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html))
 
 -  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021” (and continues to increase)
@@ -51,12 +57,15 @@ statistics and deaths statistics, the latter being reported with several months 
 **404** 
 - Of these\*, Deaths of COVID-19 without comorbidities for people \<65 years old: **89**
 
+<!-- 
 - All COVID-19 since the start of pandemic: with comorbidities --, without comorbidities -- , without for \<65 years old -- 
 - For comparison, since the start of pandemic other caueses of death: Cancer -- , ...
 - For comparison, Deaths from Flu without comorbidities (10-year historical average): 
 
+-->
+
 [gc3]  **Deaths of COVID-19 by vaccination status** (Source GC:
-    [[3](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
+    [[canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
     Table 2):
 
 - *Data extracted on December 15, 2021 for cases from December 14, 2020 up until November
@@ -66,8 +75,8 @@ statistics and deaths statistics, the latter being reported with several months 
     report)
 - *Of these, recomputed\* for cases since May (general public vaccination)* using Refs [1] and [2]: <br> unvaccinated \<20% vs. fully vaccinated **\>70%** 
 
-[gc4]  **Serious vaccine adverse reactions** (Source GC:
-    [[4](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
+[gc4]  **Serious vaccine adverse reactions** (Source: 
+    [[canada.ca](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
 
 - *May 2021 - Oct 2021*: **5200** (increased from 5038 posted in last month report)
 -  Of these (Table 1): 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970
@@ -79,18 +88,34 @@ statistics and deaths statistics, the latter being reported with several months 
 
 - All serious vaccine adverse reactions reported to date (Jan 2021 - Jan 2022): **7,526** 
 - Other "not serious" reported adverse reactions (including long-term and from which recvery has not occurred yet): *20,159*
+<!-- 
 - Many are not reported or published yet, like the one  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)
-<!-- - Adverse reaction, not reported yet in Canada but reported in US: -->
+ - Adverse reaction, not reported yet in Canada but reported in US: -->
 
 
-[gc5]  COVID-19 vaccine recalls to date (Source GC: [5](https://recalls-rappels.canada.ca):
+[gc5]  COVID-19 vaccine recalls to date (Sources: 
+[[Moderna](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
+[[Moderna](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
+[[Astrazeneca](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
+):
 
-- Mmyocarditis and pericarditis: filed  9 months after the vaccination was approved
-- Bell’s Palsy: filed  11 months after the vaccination was approved
+- Risk of Bell’s Palsy. Posted: 2021-08-06 
+- Risk of Myocarditis and pericarditis. Posted: 2021-06-30
+- Risk of Capillary Leak Syndrome. Posted: 2021-06-29
+- Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
 
-<!-- For additional official data and their analysis see  -->
 
-#### Detailed analysis
+<font size=2>
+    
+**CONCLUSION:   
+The latest official Government of Canada Open Data <u>do not</u> support original vaccine manufacturers\' claims about  vaccine efficacy and safety.**
+    
+    
+</font>
+
+#### For more additional  analysis see:  
+
+<!-- #### Detailed analysis -->
 
 -   [Statistical analysis of official data sources related to vaccine efficacy and
     safety (NEW EVIDENCE SINCE OCTOBER
@@ -104,7 +129,7 @@ statistics and deaths statistics, the latter being reported with several months 
     <https://www.jccf.ca/covid-stats/>
     <!-- ([Up to December 29, 2021 at National Level](https://www.jccf.ca/wp-content/uploads/2022/01/Covid-Statistics-canada-dec-29-2021.png)) -->
 
-#### Personal Declarations
+<!-- #### Personal Declarations -->
 
 -   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
     Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
@@ -114,8 +139,14 @@ statistics and deaths statistics, the latter being reported with several months 
     (with
     comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
 
+<!--
 Take Action:
 ------------
+-->
+
+
+
+## What you can do:
 
 #### Sign petitions
 
@@ -129,20 +160,19 @@ Take Action:
 
 <!-- , which is a bit tricky, if you don't know what to write in some manadary form fields.  But when you know, it takes 10 mins to do it. -->
 
-Any Canadian can report vaccine side-effect, as a consumer, i.e., without a doctor.
-Heath Canada encourages everyone impacted to do so. They also provide
-guidance over the phone on how to fill out online form. This is how you do it:
+Any Canadian can report vaccine side-effect, as a consumer, i.e., without a doctor, at the 
+Heath Canada portal. This is how you do it:
 
--   See if your symptoms are reported in the US COVID Vaccine Adverse Event Reports
+-   See if your symptoms are arelady reported in the US COVID Vaccine Adverse Event Reports
     (VAERS): [vaers.hhs.gov](https://openvaers.com)
--   Check if your vaccine batch (lot), which is printed on your vaccination receipt, is among the ["bad ones"](https://www.howbad.info), according to VAERS 
--   Go to the Health Canada Voluntary Side Effect Reporting portal to submit electronic form:
+-   Check if your vaccine batch (aka lot), which is printed on your vaccination receipt, is among the ["bad ones"](https://www.howbad.info), according to VAERS data. 
+-   Go to the Health Canada Voluntary Side Effect Reporting portal :
     <https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary>
--   To see how to fill out the form, see a real example of the submmitted form
-    [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf). ---
+-   Submit electronic form there as shown in this 
+    [Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf). (
     There are three places there you need to know how to fill out: in Section B: Patient
     ID write your initials; in Section D: Product DIN and Product Name - paste the
-    vaccine names (and batch/lot number, if available), as printed on your receipt.
+    vaccine names (and batch/lot number, if available), as printed on your receipt. 0
 -   Call Heath Canada Voluntary Reporting support line: Tel. 866-234-2345, if you still
     have problems submitting the form, leave a message, they should respond within 24
     hours.
@@ -163,11 +193,11 @@ not provide perspective inn to thw deaths and side-effects, than it is could pro
 - Many rallies are happening all over the country. Check them out. <br>
 See for yourself who are these people: "extremists"  or concerned Canadian citizen, many with children, many who have been denied access to playgrounds, universities, sports, travel, work...
 
--->
-
 <center>
 
 **SEE DATA -- THINK FOR YOUSELF -- ACT NOW!**
 
 </center>
 
+
+-->
