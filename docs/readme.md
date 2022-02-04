@@ -119,9 +119,9 @@ Additional data:
 [usg1] **Natural immunity vs. vaccine-induced immunity** (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm) - [Explanation](https://www.youtube.com/watch?v=eK83QqbNOmU)):
 
 
-- Both Vaccine-induced and  Natural immunity considirably  reduce the risk of hospitalization  
-- Natural immunity  provides about twice  better protection  than  vaccine-induced immunity
-- Natural immunity is slightly reduced  after vaccination
+- Both Vaccine-induced and  Natural immunity considirably  reduce the risk of hospitalization  (> x20)
+- Natural immunity  provides better protection  than  vaccine-induced immunity (> x2) 
+<!-- - Natural immunity with vaccination  is not better, possibly worse, than Natural immunityslightly reduced  after vaccination -->
 
 [ukg1] **COVID deaths vs. COVID alone deaths** (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses) - [Explanation](https://www.youtube.com/watch?v=9UHvwWWcjYw)):
 
@@ -186,39 +186,13 @@ Heath Canada portal. This is how you do it:
     hours. )
     
 <!--     
-#### Sign petitions
+#### Sign petition
 
--   Petition to Protect the fundamental civil rights of Canadians by disallowing vaccine
-    passport certificates nationally:
-    <https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592>
 -   Proposed Memorandum of Understanding (MOU) between Canada Unity (CU) and the Senate
     of Canada and the Governor General of Canada: <https://canada-unity.com/mou/>
 
 --> 
-<!--
-#### Learn to distinguish propaganda from true journalism
 
-If the opposing views are not presented, <br>
-if media shows only one kind of rally posters
-(aimed at discrediting the rally) and does not show others (that represent the true
-purpose of the rally), <br>
-if it talks only about the number of cases and doses, but does
-not provide perspective inn to thw deaths and side-effects, than it is could propaganda.
-
-
-#### Join  democratic rallies across the country in support of restoring human rights and truth, related to COVID and vaccines
-
-- Many rallies are happening all over the country. Check them out. <br>
-See for yourself who are these people: "extremists"  or concerned Canadian citizen, many with children, many who have been denied access to playgrounds, universities, sports, travel, work...
-
-<center>
-
-**SEE DATA -- THINK FOR YOUSELF -- ACT NOW!**
-
-</center>
-
-
--->
 
 <!-- \| [Interactive Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals)  -->
 
@@ -226,7 +200,7 @@ See for yourself who are these people: "extremists"  or concerned Canadian citiz
 Disclaimer: The views expressed in this publication are those of the authors. They do not purport to reflect the views of
 any Canadian Agency, University, or Department.
 
-Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community)     
+Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community).        
 [open-canada.github.io/vitals](https://open-canada.github.io/vitals) 
 
 The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html)
