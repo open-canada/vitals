@@ -51,15 +51,15 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
 
 
 - Dec 2020 - Apr 2021: 13075
-- *May 2021 - Oct 2021*: **2975**, or 
+- *May 2021 - Oct 2021*: **2975** 
 
 
-- Of these (recomputed)\*, Deaths of COVID-19 without comorbidities: **404** 
-- Of these (recomputed)\*, Deaths of COVID-19 without comorbidities for people \<65 years old: **89**
-
-- For comparison (in the same period): Cancer -- , ...
+- Of these (recomputed)\*, Deaths of COVID-19 without comorbidities: **404** (TBC)
+- Of these (recomputed)\*, Deaths of COVID-19 without comorbidities for people \<65 years old: **89** (TBC)
 
 <!-- 
+- For comparison (in the same period): Cancer -- , ...
+
 - All COVID-19 since the start of pandemic: with comorbidities --, without comorbidities -- , without for \<65 years old -- 
 - For comparison, since the start of pandemic other caueses of death: Cancer -- , ...
 - For comparison, Deaths from Flu without comorbidities (10-year historical average): 
@@ -69,6 +69,9 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
     [[canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
     Table 2):
 
+- *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>*: <br>
+ Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month), 
+<!-- 
 - *Data extracted on January 28, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,458,433) <br> 
 unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week)
 - *Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08, 2022 (n=1,341,192)*: <br> 
@@ -76,8 +79,10 @@ unvaccinated 72.8% vs. fully vaccinated **13.8%** (+4.3% increase since December
 - *Data extracted on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988)*: <br> 
 unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
-    
-- *Of these, recomputed\* for cases since May (general public vaccination)* using Refs [1] and [2]: <br> unvaccinated \<20% vs. fully vaccinated **\>70%** 
+--> 
+
+- Of these, recomputed\* for cases since May (general public vaccination) using Refs [1] and [2]: <br> 
+ Unvaccinated \<20% vs. fully vaccinated **\>70%** 
 
 [gc4]  **Serious vaccine adverse reactions** (Source: 
     [[canada.ca](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
