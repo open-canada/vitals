@@ -21,29 +21,31 @@ Last Updated: 2022-02-04
 statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
 
+
+[gc0]  **Vaccination rates** (Source:
+    [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
+    
+- Dec 2020 - Apr 2021: High-risk population vaccination (rate: 0 -- 2%)
+- May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
+
+
 <!-- 
 [gcA] COVID-19 cases vs. COVID-19 deaths (Source: [canada.ca]()):
 
 - About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
 -->
 
-[gc0] Hospitalizations by vaccination status (Sources: [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
-[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - Weekly report (PDF))
+[gc1] **Hospitalizations by vaccination status** (Sources: [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
+[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - weekly report (PDF))
 
 -  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”  
--  In January 2022,c lose to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated
+-  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated
 -  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021
 <!-- - and continues* to increase -->
 
 <!-- ON
 Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 vs211
 -->
-
-[gc1]  **Vaccination rates** (Source:
-    [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
-    
-- Dec 2020 - Apr 2021: High-risk population vaccination (rate: 0 -- 2%)
-- May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
 
 [gc2]  **Deaths of COVID-19** (Source: GC
     [statcan.gc.ca](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)] - [App
@@ -71,6 +73,8 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month)
  - Of these, recomputed\* for cases since May (general public vaccination) using Refs [1] and [2]: <br> 
  Unvaccinated \<20% vs. fully vaccinated **\>70%**
+ 
+ 
 <!-- 
 - *Data extracted on January 28, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,458,433) <br> 
 unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week)
@@ -93,9 +97,8 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
     kidney injury, 25 Liver injury, and 208 deaths (some under investigation).
     
 
-
-- All serious vaccine adverse reactions reported to date (Jan 2021 - Jan 2022): **7,526** 
-- Other "not serious" reported adverse reactions (including long-term and from which recvery has not occurred yet): *20,159*
+- Jan 2021 - Jan 2022: **7,526** 
+- "Not serious" reactions: *20,159* (including long-term and from which recovery has not occurred yet) 
 
 
 <!-- 
