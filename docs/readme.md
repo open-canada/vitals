@@ -52,10 +52,8 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
 
 - Dec 2020 - Apr 2021: 13075
 - *May 2021 - Oct 2021*: **2975** 
-
-
 - Of these (recomputed)\*, Deaths of COVID-19 without comorbidities: **404** (TBC)
-- Of these (recomputed)\*, Deaths of COVID-19 without comorbidities for people \<65 years old: **89** (TBC)
+- Of these (recomputed)\*, Deaths of COVID-19 w/o comorbidities for people \<65 years old: **89** (TBC)
 
 <!-- 
 - For comparison (in the same period): Cancer -- , ...
@@ -70,7 +68,9 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
     Table 2):
 
 - *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>*: <br>
- Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month), 
+ Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month)
+ - Of these, recomputed\* for cases since May (general public vaccination) using Refs [1] and [2]: <br> 
+ Unvaccinated \<20% vs. fully vaccinated **\>70%**
 <!-- 
 - *Data extracted on January 28, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,458,433) <br> 
 unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week)
@@ -81,8 +81,7 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
 --> 
 
-- Of these, recomputed\* for cases since May (general public vaccination) using Refs [1] and [2]: <br> 
- Unvaccinated \<20% vs. fully vaccinated **\>70%** 
+ 
 
 [gc4]  **Serious vaccine adverse reactions** (Source: 
     [[canada.ca](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
