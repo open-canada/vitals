@@ -144,8 +144,9 @@ Additional  analysis:
     2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
 -   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room", The Lancet, VOLUME 2, ISSUE 7, E279-E280]("https://doi.org/10.1016/S2666-5247(21)00069-0")
 -   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'". Trends Internal  Medicine,  2021; 1(1): 1-6](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf)
-    <!-- ([Up to December 29, 2021 at National Level](https://www.jccf.ca/wp-content/uploads/2022/01/Covid-Statistics-canada-dec-29-2021.png)) -->
-<!-- #### Personal Declarations 
+
+
+<!-- 
 -   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
     Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
     helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that
@@ -156,6 +157,7 @@ Additional  analysis:
 
 -   COVID-19 Statistics from [Justice Centre for Constitutional Freedoms](https://www.jccf.ca/covid-stats)
 -->
+
 
 
 
