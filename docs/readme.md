@@ -222,10 +222,11 @@ See for yourself who are these people: "extremists"  or concerned Canadian citiz
 
 <!-- \| [Interactive Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals)  -->
 
-Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community). Corrections/Comments: dmitry@gorodnichy.ca        
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) 
-
+<hr>
 Disclaimer: The views expressed in this publication are those of the authors. They do not purport to reflect the views of
-any Canadian Agency, University, or Department
+any Canadian Agency, University, or Department.
+
+Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community)     
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) 
 
 The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html)
