@@ -7,16 +7,21 @@ Official Data Related to COVID-19 Vaccine Efficacy and Safety
 
 Last Updated: 2022-02-04
 
+Disclaimer: The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html). The views expressed here do not purport to reflect the views of
+any Canadian Agency, University, or Department. 
+
 <!-- 
 [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
 -->
 
 <!-- See Raw Data-->
 
-## Learn Facts
+## Analyses of Sources
 
  Numbers below are *quoted* from **official** government sources, unless marked by (\*), in which case they are *computed* from
-**official** government sources using the [Open Canada Vital Statistics (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals).
+**official** government sources using  [Open Canada Vital Statistics (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals). 
+
+<!--Because the data posted in the official sources changes weekly, the numbers presented below  may not match exactly the currently posted statistics. They should be still close enough (within 95% range) to the currently posted numbers -->
 <!-- Data for up to October 2021 are used to allow comparison between adverse reactions
 statistics and deaths statistics, the latter being reported with several months delay. -->
 <!-- which are available up to October only. -->
@@ -38,9 +43,9 @@ statistics and deaths statistics, the latter being reported with several months 
 [gc1] **Hospitalizations by vaccination status** (Sources: [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
 [canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - weekly report (PDF))
 
--  “Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”  
--  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated
--  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021
+-  *“Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”*. 
+-  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated.
+-  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021.
 <!-- - and continues* to increase -->
 
 <!-- ON
@@ -52,10 +57,10 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
     Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)):
 
 
-- Dec 2020 - Apr 2021: 13075
-- *May 2021 - Oct 2021*: **2975** 
-- Of these (recomputed)\*, Deaths of COVID-19 without comorbidities: **404** (TBC)
-- Of these (recomputed)\*, Deaths of COVID-19 w/o comorbidities for people \<65 years old: **89** (TBC)
+- From December 14, 2020 to  April 30, 2021: 13075
+- From May 1,  2021 to  October 31, 2021*: **2975** 
+- Of these, deaths of COVID-19 without comorbidities: **404** (recomputed using [ukg1])
+- Of these (recomputed  using [ukg1], deaths of COVID-19 without comorbidities for people \<65 years old: **89** (TBC)
 
 <!-- 
 - For comparison (in the same period): Cancer -- , ...
@@ -71,7 +76,7 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
 
 - *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>*: <br>
  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month)
- - Of these, recomputed\* for cases since May (general public vaccination) using Refs [1] and [2]: <br> 
+ - Of these*, for cases from May (recomputed using [gc0] and [gc2]): <br> 
  Unvaccinated \<20% vs. fully vaccinated **\>70%**
  
  
@@ -126,8 +131,8 @@ Additional data:
 [usg1] **Natural immunity vs. vaccine-induced immunity** (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm) - [Explanation](https://www.youtube.com/watch?v=eK83QqbNOmU)):
 
 
-- Both Vaccine-induced and  Natural immunity considirably  reduce the risk of hospitalization  (> x20)
-- Natural immunity  provides better protection  than  vaccine-induced immunity (> x2) 
+- Both Vaccine-induced and  Natural immunity considirably  reduce the risk of hospitalization  
+- Natural immunity  provides better protection  than  vaccine-induced immunity 
 <!-- - Natural immunity with vaccination  is not better, possibly worse, than Natural immunityslightly reduced  after vaccination -->
 
 [ukg1] **COVID deaths vs. COVID alone deaths** (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses) - [Explanation](https://www.youtube.com/watch?v=9UHvwWWcjYw)):
@@ -151,25 +156,14 @@ Additional  analysis:
     2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
 -   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room", The Lancet, VOLUME 2, ISSUE 7, E279-E280]("https://doi.org/10.1016/S2666-5247(21)00069-0")
 -   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'". Trends Internal  Medicine,  2021; 1(1): 1-6](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf)
-
-
-<!-- 
--   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
-    Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
-    helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that
-    forms part of it): [pdf (with
-    links)](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf), [html
-    (with
-    comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
-
 -   COVID-19 Statistics from [Justice Centre for Constitutional Freedoms](https://www.jccf.ca/covid-stats)
--->
 
 
 
 
 
-## What you can do:
+
+##  Additional resources:
 
 #### Report side-effect
 
@@ -192,22 +186,32 @@ Heath Canada portal. This is how you do it:
     have problems submitting the form, leave a message, they should respond within 24
     hours. )
     
-<!--     
+
+#### Read personal declarations of prominent Canadians:
+
+-   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
+    Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
+    helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that
+    forms part of it): [pdf (with
+    links)](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf), [html
+    (with
+    comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
+
+   
 #### Sign petition
 
 -   Proposed Memorandum of Understanding (MOU) between Canada Unity (CU) and the Senate
     of Canada and the Governor General of Canada: <https://canada-unity.com/mou/>
 
---> 
+
 
 
 <!-- \| [Interactive Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals)  -->
 
 <hr>
-Disclaimer: The views expressed in this publication are those of the authors. They do not purport to reflect the views of
-any Canadian Agency, University, or Department.
+
 
 Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community).        
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals) 
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals)  ([App](https://open-canada.github.io/App/vitals))
 
-The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html)
+
