@@ -72,7 +72,7 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
 
 [gc3]  **Deaths of COVID-19 by vaccination status** (Source:
     [[canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9)] -
-    Table 2):
+    Table 2, [archived past reports]("https://github.com/open-canada/vitals/tree/main/docs/Epidemiological-summary-of-COVID-19-cases-in-Canada-Canada.ca%20(cached)")):
 
 - *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>*: <br>
  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month)
@@ -151,8 +151,9 @@ Additional  analysis:
     safety (NEW EVIDENCE SINCE OCTOBER
     2021)"](https://open-canada.github.io/vitals/analysis)
     2022) -->
--   ["Some observations from Canadian Vital Statistics Death (CVSD) Database related to
-    the 'Elephant in the Room'",  Submission to The Lancet Journal.
+- [One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science (Presentation at the R4GC Community Lunch and Learn Meetup - Special Anniversary Edition)](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf)  
+-  [Comment Submission to The Lancet Journal: "Some observations from Canadian Vital Statistics Death (CVSD) Database related to
+    the 'Elephant in the Room'",  Comment submission to The Lancet Journal.
     2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
 -   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room", The Lancet, VOLUME 2, ISSUE 7, E279-E280]("https://doi.org/10.1016/S2666-5247(21)00069-0")
 -   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'". Trends Internal  Medicine,  2021; 1(1): 1-6](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf)
@@ -211,7 +212,7 @@ Heath Canada portal. This is how you do it:
 <hr>
 
 
-Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community).        
+Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community). Corrections/Comments: <office@ivim.ca>       
 [open-canada.github.io/vitals](https://open-canada.github.io/vitals)  ([App](https://open-canada.github.io/App/vitals))
 
 
