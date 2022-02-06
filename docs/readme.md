@@ -75,15 +75,9 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
     Table 2):
 
 - *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>* <br>
-  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month)
+  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month) <br>
+  NB: This statistics is computed using the  data in December 2020, when there were no fully vaccinated, till February, when it was less than 1% fully vaccinated, and till April, when it was less than 3% fully vaccinated, and when  most COVID-19 deaths happened (which can be computed using the  [App](https://open-canada.github.io/App/vitals)).  
  
-  \* This statistics is computed using the  data in December 2020, when there were no fully vaccinated, till February, when it was less than 1% fully vaccinated, and till April, when it was less than 3% fully vaccinated, and when  most COVID-19 deaths happened (which can be computed using the  [App](https://open-canada.github.io/App/vitals)).  
-  
- <!-- 
- - Of these*, for cases from May (recomputed using [gc0] and [gc2]): <br> 
- Unvaccinated \<20% vs. fully vaccinated **\>70%**
-
--->
  
  
 <!-- 
