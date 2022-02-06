@@ -8,7 +8,7 @@ Official Data Related to COVID-19 Vaccine Efficacy and Safety
 Last Updated: 2022-02-04
 
 Disclaimer: The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html). The views expressed here do not purport to reflect the views of
-any Canadian Agency, University, or Department. 
+any Canadian Agency, University, or Department. All codes behind the analysis and supportinh documents are available in [GitHub](https://github.com/open-canada/vitals/). Corrections and comments are welcome.
 
 <!-- 
 [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
@@ -74,10 +74,15 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
     [[canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9), [archived reports]("https://github.com/open-canada/vitals/tree/main/docs/Epidemiological-summary-of-COVID-19-cases-in-Canada-Canada.ca%20(cached)")] -
     Table 2):
 
-- *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>*: <br>
- Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month)
+- *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>* <br>
+  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month)
+ 
+  \* This statistics is computed using the  data in December 2020, when there were no fully vaccinated, till February, when it was less than 1\% fully vaccinated, and till April, when it was less than 3\% fully vaccinated, and when  most COVID-19 deaths happened (which can be computed using the  [App](https://open-canada.github.io/App/vitals)).  
+ <!-- 
  - Of these*, for cases from May (recomputed using [gc0] and [gc2]): <br> 
  Unvaccinated \<20% vs. fully vaccinated **\>70%**
+
+-->
  
  
 <!-- 
