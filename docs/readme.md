@@ -5,7 +5,7 @@ Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 Official Data Related to COVID-19 Vaccine Efficacy and Safety
 ==================================================
 
-Last Updated: 2022-02-04
+Last Updated: 2022-02-06
 
 Disclaimer: The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html). The views expressed here do not purport to reflect the views of
 any Canadian Agency, University, or Department. All codes behind the analysis and supporting documents are available in [GitHub](https://github.com/open-canada/vitals/). Corrections and comments are welcome.
@@ -27,40 +27,35 @@ statistics and deaths statistics, the latter being reported with several months 
 <!-- which are available up to October only. -->
 
 
-[gc0]  **Vaccination rates** (Source:
-    [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
-    
-- Dec 2020 - Apr 2021: High-risk population vaccination (rate: 0 -- 2%)
-- May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
-
-
 <!-- 
 [gcA] COVID-19 cases vs. COVID-19 deaths (Source: [canada.ca]()):
 
 - About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
 -->
 
-[gc1] **Hospitalizations by vaccination status** (Sources: [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus), 
-[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - weekly report (PDF))
+[gc1] **Hospitalizations by vaccination status** (Sources:  
+[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - weekly report (PDF), [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus))
 
 -  *“Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”*. 
 -  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated.
--  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021.
+
+<!-- -  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021.-->
 <!-- - and continues* to increase -->
 
-<!-- ON
-Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 vs211
+<!-- ONTARIO
+Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 vs 211
+Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 10 vs. 174
 -->
 
 [gc2]  **Deaths of COVID-19** (Source: GC
-    [statcan.gc.ca](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001)] - [App
-    Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)):
+    [statcan.gc.ca](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001), [App
+    Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)) - (Last record: 6 NOV 2021):
 
 
 - From December 14, 2020 to  April 30, 2021: 13075
 - From May 1,  2021 to  October 31, 2021*: **2975** 
 - Of these, deaths of COVID-19 without comorbidities: **404** (recomputed using [ukg1])
-- Of these (recomputed  using [ukg1], deaths of COVID-19 without comorbidities for people \<65 years old: **89** (TBC)
+- Of these, deaths of COVID-19 without comorbidities for \<65 : **89** (recomputed  using [ukg1])
 
 <!-- 
 - For comparison (in the same period): Cancer -- , ...
@@ -121,6 +116,15 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
 - Risk of Myocarditis and pericarditis. Posted: 2021-06-30
 - Risk of Capillary Leak Syndrome. Posted: 2021-06-29
 - Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
+
+
+[gc0]  **Vaccination rates** (Source:
+    [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
+    
+- Dec 2020 - Apr 2021: High-risk population vaccination (rate: 0 -- 2%)
+- May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
+
+
 
 #### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety.
  
