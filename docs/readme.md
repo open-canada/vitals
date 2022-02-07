@@ -19,7 +19,7 @@ any Canadian Agency, University, or Department. All codes behind the analysis an
 ## Analyses of Sources
 
  Numbers below are *quoted* from **official** government sources, unless marked by (\*), in which case they are *computed* from
-**official** government sources using  [Open Canada Vital Statistics (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals). 
+**official** government sources using  interactive  **Open Canada Vital Statistics (Deaths) Tracker App** located here: <https://open-canada.github.io/Apps/vitals>. 
 
 <!--Because the data posted in the official sources changes weekly, the numbers presented below  may not match exactly the currently posted statistics. They should be still close enough (within 95% range) to the currently posted numbers -->
 <!-- Data for up to October 2021 are used to allow comparison between adverse reactions
@@ -155,19 +155,12 @@ Additional  analysis:
     safety (NEW EVIDENCE SINCE OCTOBER
     2021)"](https://open-canada.github.io/vitals/analysis)
     2022) -->
-- [One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science (Presentation at the R4GC Community Lunch and Learn Meetup - Special Anniversary Edition)](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf)  
+- [One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), Presentation at the R4GC Community Lunch and Learn Meetup - Special Anniversary Edition (4 February 2022).
 -  [Comment Submission to The Lancet Journal: "Some observations from Canadian Vital Statistics Death (CVSD) Database related to
-    the 'Elephant in the Room'",  Comment submission to The Lancet Journal.
-    2022/01/16](https://open-canada.github.io/vitals/comment.pdf)
--   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room", The Lancet, VOLUME 2, ISSUE 7, E279-E280]("https://doi.org/10.1016/S2666-5247(21)00069-0")
--   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'". Trends Internal  Medicine,  2021; 1(1): 1-6](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf)
--   ["Why are we vaccinating children against COVID-19?", Toxicology Reports, Volume 8, 2021](https://doi.org/10.1016/j.toxrep.2021.08.010)
--   COVID-19 Statistics from [Justice Centre for Constitutional Freedoms](https://www.jccf.ca/covid-stats)
-
-
-
-
-
+    the 'Elephant in the Room'"](https://open-canada.github.io/vitals/comment.pdf), Comment submission to The Lancet Journal (16 January 2022).
+-   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room"]("https://doi.org/10.1016/S2666-5247(21)00069-0"), The Lancet, VOLUME 2, ISSUE 7, E279-E280 (1 July 2021)
+-   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'"](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf),  Trends Internal  Medicine,  2021; 1(1): 1-6, (25 August 2021).
+-   ["Why are we vaccinating children against COVID-19?"](https://doi.org/10.1016/j.toxrep.2021.08.010), Toxicology Reports, Volume 8 (14 September 2021) 
 
 ##  Additional resources:
 
@@ -192,8 +185,9 @@ Heath Canada portal. This is how you do it:
     have problems submitting the form, leave a message, they should respond within 24
     hours. )
     
+    
 
-#### Read personal declarations of prominent Canadians:
+#### Personal declarations
 
 -   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
     Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
@@ -204,10 +198,14 @@ Heath Canada portal. This is how you do it:
     comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
 
    
-#### Sign petition
+#### Petition
 
 -   Proposed Memorandum of Understanding (MOU) between Canada Unity (CU) and the Senate
     of Canada and the Governor General of Canada: <https://canada-unity.com/mou/>
+
+#### Legal help
+
+- [Justice Centre for Constitutional Freedoms](https://www.jccf.ca)
 
 
 
