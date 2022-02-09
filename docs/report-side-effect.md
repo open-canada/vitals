@@ -19,7 +19,7 @@ Once you know how to do it, it should not take more than fifteen minutes to do i
 An [Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf) is provided here. 
 
 
-##### Submitting Voluntary Side Effect Report via Health Canada portal
+#### Submitting Voluntary Side Effect Report via Health Canada portal
 
 
 Step 1: Go to the Health Canada Voluntary Side Effect Reporting portal :
@@ -48,11 +48,11 @@ If you don't receive email from them within 5 business days, please check you Sp
 if it is not there, please call them at Tel. 866-234-2345 and leave a message. 
 
 
-Bear in mind that the posting of reports in the online database remains 3 months behind the date of reporting. 
-This delay accounts for the necessary activities involved in report processing.
+*"Bear in mind that the posting of reports in the online database remains 3 months behind the date of reporting. 
+This delay accounts for the necessary activities involved in report processing"* (quoted from Health Canada communication)
 
 
-### Additional resources:
+#### Additional resources:
 
 You may consult the following resources to see if your symptoms  are already reported among the  listed COVID-19 Vaccine side-effects:
 
@@ -71,6 +71,9 @@ for
 The VAERS portal allows  you also  search  the submitted side-effect reports by vaccine brand and batch (a.k.a. lot, which is nornmally  printed on your vaccination receipt)
 You can also check if your vaccine batch (lot) is among the ["bad ones"](https://www.howbad.info), according to VAERS data,  [here](https://www.howbad.info),
 
+- World-wide COVID-19 vaccine reports are availble [here](https://vaxxtracker.com/VaxAdvancedQueries.aspx)
+
+<hr>
 
  The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html).
 
