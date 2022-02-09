@@ -5,13 +5,14 @@ Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 Official Data Related to COVID-19 Vaccine Efficacy and Safety
 ==================================================
 
-Last Updated: 2022-02-06
+Last Updated: 2022-02-09
 
 Disclaimer: The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html). The views expressed here do not purport to reflect the views of
-any Canadian Agency, University, or Department. All codes behind the analysis and supporting documents are available in [GitHub](https://github.com/open-canada/vitals/). Corrections and comments are welcome.
+any Canadian Agency, University, or Department. All codes behind the analysis and supporting documents are available in [GitHub](https://github.com/open-canada/vitals/). 
+<!-- Corrections and comments are welcome. -->
 
 <!-- 
-[Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |
+[Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) | [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) |  |
 -->
 
 <!-- See Raw Data-->
@@ -37,7 +38,7 @@ statistics and deaths statistics, the latter being reported with several months 
 [canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - weekly report (PDF), [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus))
 
 -  *“Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”*. 
--  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated.
+-  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated
 
 <!-- -  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021.-->
 <!-- - and continues* to increase -->
@@ -66,11 +67,11 @@ Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 1
 -->
 
 [gc3]  **Deaths of COVID-19 by vaccination status** (Source:
-    [[canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9), [archived reports]("https://github.com/open-canada/vitals/tree/main/docs/Epidemiological-summary-of-COVID-19-cases-in-Canada-Canada.ca%20(cached)")] -
+    [[canada.ca](https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9), [archived reports](https://github.com/open-canada/vitals/tree/main/docs/Epidemiological-summary-of-COVID-19-cases-in-Canada-Canada.ca)] -
     Table 2):
 
 - *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>* <br>
-  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month) <br>
+  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month) <p>
   NB: This statistics is computed using the  data in December 2020, when there were no fully vaccinated, till February, when it was less than 1% fully vaccinated, and till April, when it was less than 3% fully vaccinated, and when  most COVID-19 deaths happened (which can be computed using the  [App](https://open-canada.github.io/App/vitals)).  
  
  
@@ -87,19 +88,18 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
  
 
-[gc4]  **Serious vaccine adverse reactions** (Source: 
-    [[canada.ca](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1):
+[gc4]  **COVID-19 vaccine adverse reactions (side-effects)** (Source: 
+    [[canada.ca](https://health-infobase.canada.ca/covid-19/vaccine-safety/)] - Figure 1, Table 1)):
 
-- *May 2021 - Oct 2021*: **5200** (increased from 5038 posted in last month report)
--  Of these (Table 1): 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970
+- Between *May 2021 and Oct 2021* "Serious" side-effects: **5200** (increased from 5038 posted in last month report)
+-  Of these: 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970
     Myocarditis1/Pericarditis), 947 thrombosis, 781 central nervous system failures
     (including 594 Bell's Palsy), 487 Anaphylaxis, 166 Auto-immune diseases, 37 Acute
     kidney injury, 25 Liver injury, and 208 deaths (some under investigation).
     
 
-- Jan 2021 - Jan 2022: **7,526** 
-- "Not serious" reactions: *20,159* (including long-term and from which recovery has not occurred yet) 
-
+- Total (since Jan 2021) "Serious": **7,526** 
+- Total (since Jan 2021) "Not serious": *20,159*    
 
 <!-- 
 - Many are not reported or published yet, like the one  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)
@@ -126,7 +126,7 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
 
 
-#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the original vaccine manufacturers\' claims about  vaccine efficacy and safety.
+#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the COVID-19  vaccine manufacturers\' claims about  vaccine efficacy and safety.
  
 
 Additional data:
@@ -147,7 +147,7 @@ Additional data:
 
 
 
-Additional  analysis:  
+#### Additional  analysis:  
 
 <!-- #### Detailed analysis -->
 
@@ -158,35 +158,47 @@ Additional  analysis:
 - [One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), Presentation at the R4GC Community Lunch and Learn Meetup - Special Anniversary Edition (4 February 2022).
 -  [Comment Submission to The Lancet Journal: "Some observations from Canadian Vital Statistics Death (CVSD) Database related to
     the 'Elephant in the Room'"](https://open-canada.github.io/vitals/comment.pdf), Comment submission to The Lancet Journal (16 January 2022).
+ 
+#### Analysis of other open data: 
+ 
 -   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room"]("https://doi.org/10.1016/S2666-5247(21)00069-0"), The Lancet, VOLUME 2, ISSUE 7, E279-E280 (1 July 2021)
 -   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'"](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf),  Trends Internal  Medicine,  2021; 1(1): 1-6, (25 August 2021).
 -   ["Why are we vaccinating children against COVID-19?"](https://doi.org/10.1016/j.toxrep.2021.08.010), Toxicology Reports, Volume 8 (14 September 2021) 
 
-##  Additional resources:
-
-#### Report side-effect
 
 <!-- , which is a bit tricky, if you don't know what to write in some manadary form fields.  But when you know, it takes 10 mins to do it. -->
 
+  
+### Additional tools and resources:
+
+- [Report COVID-19 vaccine side-effect](report-side-effect)
+- **Open Canada Vital Statistics (Deaths) Tracker App** located here: <https://open-canada.github.io/Apps/vitals>. 
+
+<!--  
 Any Canadian can report vaccine side-effect, as a consumer, i.e., without a doctor, at the 
 Heath Canada portal. This is how you do it:
 
--   See if your symptoms are reported in the US COVID Vaccine Adverse Event Reports
-    (VAERS): [vaers.hhs.gov](https://openvaers.com)
--   Check if your vaccine batch (aka lot), which is printed on your vaccination receipt, is among the ["bad ones"](https://www.howbad.info), according to VAERS data. 
+-   Check if your symptoms are reported in the US COVID Vaccine Adverse Event Reports
+    (VAERS): [vaers.hhs.gov](https://openvaers.com). 
 -   Go to the Health Canada Voluntary Side Effect Reporting portal :
     <https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary>
 -   Submit electronic form there as shown in this 
     [Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf). (
     There are three places there you need to know how to fill out: in Section B: Patient
     ID write your initials; in Section D: Product DIN and Product Name - paste the
-    vaccine names (and batch/lot number, if available), as printed on your receipt. 0
+    vaccine names (and batch/lot number, if available), as printed on your receipt. )
 -   Call Heath Canada Voluntary Reporting support line: Tel. 866-234-2345, if you still
     have problems submitting the form, leave a message, they should respond within 24
     hours. )
     
-    
+-->
 
+<!-- 
+ -   Check if your symptoms are reported in the US COVID Vaccine Adverse Event Reports
+    (VAERS): [vaers.hhs.gov](https://openvaers.com). 
+-   Check if your vaccine batch (aka lot), which is printed on your vaccination receipt, is among the ["bad ones"](https://www.howbad.info), according to VAERS data. -->    
+<!--   
+     
 #### Personal declarations
 
 -   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
@@ -197,7 +209,7 @@ Heath Canada portal. This is how you do it:
     (with
     comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
 
-   
+
 #### Petition
 
 -   Proposed Memorandum of Understanding (MOU) between Canada Unity (CU) and the Senate
@@ -208,7 +220,7 @@ Heath Canada portal. This is how you do it:
 - [Justice Centre for Constitutional Freedoms](https://www.jccf.ca)
 
 
-
+-->
 
 <!-- \| [Interactive Open Canada Vital Statistics (Deaths) Tracker](https://open-canada.github.io/Apps/vitals)  -->
 
