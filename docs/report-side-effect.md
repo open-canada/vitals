@@ -52,7 +52,7 @@ This delay accounts for the necessary activities involved in report processing"*
 
 The following additional resources are provided to help you prepare your side-effect report. 
 There you can check if your symptoms  are already reported in national adverse event reporting systems, and if so, how common they are, for which type of vaccine, and which vaccine batch (a.k.a. lot, which is the number printed on your vaccination receipt)
-You may consult the following additional resources to help you prepare your side-effect report.
+
 
 
 - Recalls and safety alerts, Government of Canada <https://recalls-rappels.canada.ca/>: 
@@ -63,7 +63,7 @@ for
 )
 
 - ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, 
- Public Health Agency of Canada, https://health-infobase.canada.ca/covid-19/vaccine-safety/
+ Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety/>
 
 -  US Government Vaccine Adverse Event Reports     (VAERS): [https://vaers.hhs.gov](https://openvaers.com). You can also check if your vaccine batch (lot) is among the ["bad ones"](https://www.howbad.info), according to VAERS data,  [here](https://www.howbad.info),
 
@@ -73,6 +73,14 @@ for
 Prepared by Pfizer, Released to Public Health and Medical Professionals for Transparency (<https://phmpt.org>) 
 under the court order on 17 November 2021: <https://phmpt.org/wp-content/uploads/2021/11/5.3.6-postmarketing-experience.pdf>
 
+<!-- 
+The reference provide 
+
+-   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room"]("https://doi.org/10.1016/S2666-5247(21)00069-0"), The Lancet, VOLUME 2, ISSUE 7, E279-E280 (1 July 2021)
+-   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'"](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf),  Trends Internal  Medicine,  2021; 1(1): 1-6, (25 August 2021).
+-   ["Why are we vaccinating children against COVID-19?"](https://doi.org/10.1016/j.toxrep.2021.08.010), Toxicology Reports, Volume 8 (14 September 2021) 
+-->
+
 <hr>
 
  The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html).
@@ -80,18 +88,7 @@ under the court order on 17 November 2021: <https://phmpt.org/wp-content/uploads
 
 <!-- 
 
-For supplemental information on COVID-19 vaccine safety and efficiency, you can also check one any of the following sites:
-
-
-- ‘COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room’, The Lancet, 
-VOLUME 2, ISSUE 7, E279-E280 (JULY 01, 2021): <https://doi.org/10.1016/S2666-5247(21)00069-0>
-
-
-- ‘US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper 
-Scientific Endpoint “All Cause Severe Morbidity”’. Trends Int Med. 2021; 1(1): 1-6 (25 August 2021). https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf
-
 - https://www.canadiancovidcarealliance.org/
-
 
 -->
 
