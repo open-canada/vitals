@@ -11,16 +11,6 @@ Disclaimer:  The results and views presented here are those by the authors and a
 any Canadian Agency, University, or Department. They were developed and gathered by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community) as part of the community training and socializing, mostly on authors' own time and using authors' own resources.
 All codes behind the analysis and supporting documents are free, open and available in [GitHub](https://github.com/open-canada/vitals/). 
 
-### Where to go from here:
-
-- [Interaxctive *Open Canada Vitals Statitistcs (Deaths) Tracker* App, developed by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community) ](https://open-canada.github.io/Apps/vitals) 
-- ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
-Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup --> 
-<!-- by the community lead, Senior Data Scientist, Dr. Dmitry Gorodnichy --> (4 February 2022).
--  ["Some observations from Canadian Vital Statistics Death (CVSD) Database related to
-    the 'Elephant in the Room'"](https://open-canada.github.io/vitals/comment.pdf), Comment submission to The Lancet Journal (6 January 2022)
-- [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  
-
 <!-- 
 -   ["Statistical analysis of official data sources related to vaccine efficacy and  safety (NEW EVIDENCE SINCE OCTOBER
     2021)"](https://open-canada.github.io/vitals/analysis)
@@ -29,6 +19,18 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
 [Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | ["One Year since Vaccination..." (Presentation)](https://open-canada.github.io/vitals/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf) | ["Some observa--> tions related to
     the 'Elephant in the Room'" (Research Paper)](https://open-canada.github.io/vitals/comment.pdf) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
 
+
+[Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
+
+
+[Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | ["One Year since Vaccination..." (Presentation)](https://open-canada.github.io/vitals/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf) | ["Some observa--> tions related tothe 'Elephant in the Room'" (Research Paper)](https://open-canada.github.io/vitals/comment.pdf) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
+
+qqq | www | eee 
+the | eee | eee
+
+
+qqq | www | eee 
+    the | eee | eee
 <!-- 
 [Deaths Statistics Tracker App](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  |  [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) -
 
@@ -47,20 +49,33 @@ of Canada,
 We refrain from making public criticisms of the CBSA and/or the Government
 of Canada including posting critical comments on social media fora. -->
 
-The following presentation was given to the Government of Canada ( employees, who expressed interest in learning about the  latest Government of Canada data related to vaccination. 
-A considerable portion of this presenation was about how to create a safe and respectful environment within Government of Canada where Government of Canada employees can discuss this topic ("The Elephant in the Room"), which has already caused much of polarization within Canadian public, including among the Government of Canada employees, and which has recently led to  the largest in the Canadian history uprising of Canadians against the government, demanding the government to revoke its so-called "Mandatory Vaccination Policy" mandates, as being scientifically, ethically,  legally, and economically unjustified. 
-The solution to  this problem was seen in keeping the discussion focused entirely on the Canada's own open data, much of which have become available -- thanks to Open Goverment and Scientific Integrity policies introduced by the  Liberal Government several years ago, in particular *after* the vaccination has started.
+The following presentation was given to the Government of Canada employees, who expressed interest in learning about the  latest Government of Canada data related to COVID-19 vaccination. 
+A considerable portion of this presenation was about how to create a safe and respectful environment within Government of Canada where Government of Canada employees can discuss this topic ("The Elephant in the Room"), which has already caused much of polarization within Canadian public, including among the Government of Canada employees, and which has recently led to  the largest in the Canadian history uprising of Canadians against the government, demanding the government to revoke its "Vaccination mandates", as being scientifically, ethically,  legally, and economically unjustified. 
+The solution to  this problem  was seen in keeping the discussion focused entirely on the Canada's own open data, much of which have become available, in particular, *after* the vaccination has started -- thanks to the [Open Goverment and Scientific Integrity](https://open-canada.github.io/r4gc/open-policies.html#open-policies) policies introduced by the  Liberal Government several years ago, and which are the focus of analysis in  this work. 
 
 <!-- A lot of effort in this presentation was given to applaud many of the Government of Canada efforts -->
 
 - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
 Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by the community lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022).
 
+Other presentations and tools:
+
+<!-- ### Where to go from here:-->
+
+- [Interactive *Open Canada Vitals Statitistcs (Deaths) Tracker* App](https://open-canada.github.io/Apps/vitals) 
+- [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  
+<!-- - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
+Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup --> 
+<!-- by the community lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022) -->
+-  ["Some observations from Canadian Vital Statistics Death (CVSD) Database related to
+    the 'Elephant in the Room'"](https://open-canada.github.io/vitals/comment.pdf), Comment submission to The Lancet Journal (6 January 2022)
+
+
 
 <!-- ## Analyses of Sources -->
 
 
-## Summary of results (Updated weekly)
+### Summary of results (Updated weekly)
 
 Last Updated: 2022-02-09
 
@@ -211,7 +226,7 @@ Additional data:
 
 <!-- , which is a bit tricky, if you don't know what to write in some manadary form fields.  But when you know, it takes 10 mins to do it. -->
 
-  
+<!--
 ### Additional tools and resources:
 
 - [Report COVID-19 vaccine side-effect](report-side-effect)
@@ -221,6 +236,7 @@ Additional data:
  
 - [Justice Centre for Constitutional Freedoms](https://www.jccf.ca)
 
+-->
 
 <!--  
 Any Canadian can report vaccine side-effect, as a consumer, i.e., without a doctor, at the 
