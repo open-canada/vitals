@@ -16,26 +16,17 @@ All codes behind the analysis and supporting documents are free, open and availa
     2021)"](https://open-canada.github.io/vitals/analysis)
 -->
 
-[Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | ["One Year since Vaccination..." (Presentation)](https://open-canada.github.io/vitals/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf) | ["Some observa--> tions related to
-    the 'Elephant in the Room'" (Research Paper)](https://open-canada.github.io/vitals/comment.pdf) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
-
-
+<!-- 
 [Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
 
 
-[Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | ["One Year since Vaccination..." (Presentation)](https://open-canada.github.io/vitals/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf) | ["Some observa--> tions related tothe 'Elephant in the Room'" (Research Paper)](https://open-canada.github.io/vitals/comment.pdf) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
+[Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | ["One Year since Vaccination..." (Presentation)](https://open-canada.github.io/vitals/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf) | ["Some observations related tothe 'Elephant in the Room'" (Research Paper)](https://open-canada.github.io/vitals/comment.pdf) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
+
 
 qqq | www | eee 
 the | eee | eee
 
-
-qqq | www | eee 
-    the | eee | eee
-<!-- 
-[Deaths Statistics Tracker App](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  |  [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf) -
-
 -->
-
 
 ### Talking about "The Elephant in the Room". 
 <!-- How to defend the constitutional freedom and scientific integgity in the times of crisis-->
@@ -50,17 +41,15 @@ We refrain from making public criticisms of the CBSA and/or the Government
 of Canada including posting critical comments on social media fora. -->
 
 The following presentation was given to the Government of Canada employees, who expressed interest in learning about the  latest Government of Canada data related to COVID-19 vaccination. 
-A considerable portion of this presenation was about how to create a safe and respectful environment within Government of Canada where Government of Canada employees can discuss this topic ("The Elephant in the Room"), which has already caused much of polarization within Canadian public, including among the Government of Canada employees, and which has recently led to  the largest in the Canadian history uprising of Canadians against the government, demanding the government to revoke its "Vaccination mandates", as being scientifically, ethically,  legally, and economically unjustified. 
-The solution to  this problem  was seen in keeping the discussion focused entirely on the Canada's own open data, much of which have become available, in particular, *after* the vaccination has started -- thanks to the [Open Goverment and Scientific Integrity](https://open-canada.github.io/r4gc/open-policies.html#open-policies) policies introduced by the  Liberal Government several years ago, and which are the focus of analysis in  this work. 
+A considerable portion of this presenation was about how to create a safe and respectful environment within Government of Canada where Government of Canada employees can discuss this topic ("The Elephant in the Room"), which has already caused much of polarization within Canadian public, including among the Government of Canada employees, and which has recently led to  the largest in the Canadian history uprising of Canadians against the government, demanding the government to revoke its "Mandatory Vaccination Policies" <!-- as being scientifically, ethically,  legally, and economically unjustified. -->
+The solution to  this problem  was seen in keeping the discussion focused entirely on  Canada's own open data, much of which have become available -- thanks to the [Open Goverment and Scientific Integrity](https://open-canada.github.io/r4gc/open-policies.html#open-policies) policies introduced by the  Liberal Government several years ago -- and which are the focus of analysis in  this work. 
 
 <!-- A lot of effort in this presentation was given to applaud many of the Government of Canada efforts -->
 
 - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
-Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by the community lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022).
+Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community)  lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022).
 
-Other presentations and tools:
-
-<!-- ### Where to go from here:-->
+Other developed presentations and tools:
 
 - [Interactive *Open Canada Vitals Statitistcs (Deaths) Tracker* App](https://open-canada.github.io/Apps/vitals) 
 - [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  
@@ -93,13 +82,18 @@ statistics and deaths statistics, the latter being reported with several months 
 <!-- which are available up to October only. -->
 
 
-[gc0] COVID-19 cases vs. COVID-19 deaths ([google1](https://www.google.com/search?q=canada+covid+cases&oq=canada+covid+cases) :
+[gc0] **COVID-19 cases vs. COVID-19 deaths** (source: [google1](https://www.google.com/search?q=canada+covid+cases&oq=canada+covid+cases)):
 
 - Canada population: 38.246.108
-- COVID Cases (Total, since the start of pandemic): 3.15 M
-- COVID Deaths: 35 K, which is about 1.1% Cases
+- Total COVID Cases (since March 2020): 3.150.000
+- Total COVID Deaths (since March 2020): 35.00 or 1.1% Cases
+- Of these, Most are comorbidities (>90% based on UKG and USG data)
+- Of these, Most are in people 65+ (>90% based on GC, UKG, USG data)
+- COVID Deaths for people younger than 65 with no health problems: < 0.01% Cases
+- 
+<!-- 
 - About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
-
+-->
 
 
 [gc1] **Hospitalizations by vaccination status** (Sources:
@@ -197,7 +191,7 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
 #### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the COVID-19  vaccine manufacturers\' claims about  vaccine efficacy and safety.
 -->
 
-Additional data:
+Data from other governments"
  
  
 [usg1] **Natural immunity vs. vaccine-induced immunity** (Source: [cdc.gov](https://www.cdc.gov/mmwr/volumes/71/wr/mm7104e1.htm) - [Explanation](https://www.youtube.com/watch?v=eK83QqbNOmU)):
