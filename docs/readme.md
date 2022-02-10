@@ -4,10 +4,10 @@ Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 
 Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 ==================================================
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) 
 
-The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html).
 
-Disclaimer:  The results and views presented here are those by the authors and are not to be misconstrued as representing  views of
+Disclaimer: The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html). The results and views presented here are those by the authors and are not to be misconstrued as representing  views of
 any Canadian Agency, University, or Department. They were developed and gathered by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community) as part of the community training and socializing, mostly on authors' own time and using authors' own resources.
 All codes behind the analysis and supporting documents are free, open and available in [GitHub](https://github.com/open-canada/vitals/). 
 
@@ -44,7 +44,7 @@ The following presentation was given to the Government of Canada employees, who 
 A considerable portion of this presenation was about how to create a safe and respectful environment within Government of Canada where Government of Canada employees can discuss this topic ("The Elephant in the Room"), which has already caused much of polarization within Canadian public, including among the Government of Canada employees, and which has recently led to  the largest in the Canadian history uprising of Canadians against the government, demanding the government to revoke its "Mandatory Vaccination Policies" <!-- as being scientifically, ethically,  legally, and economically unjustified. -->
 The solution to  this problem  was seen in keeping the discussion focused entirely on  Canada's own open data, much of which have become available -- thanks to the [Open Goverment and Scientific Integrity](https://open-canada.github.io/r4gc/open-policies.html#open-policies) policies introduced by the  Liberal Government several years ago -- and which are the focus of analysis in  this work. 
 
-<!-- A lot of effort in this presentation was given to applaud many of the Government of Canada efforts -->
+<!-- A[open-canada.github.io/vitals](https://open-canada.github.io/vitals)  lot of effort in this presentation was given to applaud many of the Government of Canada efforts -->
 
 - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
 Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community)  lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022).
@@ -53,7 +53,7 @@ Other developed presentations and tools:
 
 - [Interactive *Open Canada Vitals Statitistcs (Deaths) Tracker* App](https://open-canada.github.io/Apps/vitals) 
 - [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  
-<!-- - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
+<!-- - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetu[open-canada.github.io/vitals](https://open-canada.github.io/vitals) p-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
 Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup --> 
 <!-- by the community lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022) -->
 -  ["Some observations from Canadian Vital Statistics Death (CVSD) Database related to
@@ -69,8 +69,8 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
 Last Updated: 2022-02-09
 
 All numbers below are *quoted* from **official** government sources, unless marked by (\*), in which case they are *computed* from
-**official** government sources using  interactive  **[Open Canada Vital Statistics (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) 
-The details of the analysis are provided [here](analysis).
+**official** government sources using    [Open Canada Vital Statistics (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals). 
+Additional details of the analysis are provided [here](analysis).
 <!-- Corrections and comments are welcome and should be email to [office @ ivim . ca] -->
  
 
@@ -90,7 +90,7 @@ statistics and deaths statistics, the latter being reported with several months 
 - Of these, Most are comorbidities (>90% based on UKG and USG data)
 - Of these, Most are in people 65+ (>90% based on GC, UKG, USG data)
 - COVID Deaths for people younger than 65 with no health problems: < 0.01% Cases
-- 
+
 <!-- 
 - About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
 -->
@@ -187,10 +187,6 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
 - May 2021 - Oct 2021: General public  vaccination (rate: **2% -- 75%**)
 
 
-<!-- 
-#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the COVID-19  vaccine manufacturers\' claims about  vaccine efficacy and safety.
--->
-
 Data from other governments"
  
  
@@ -207,6 +203,11 @@ Data from other governments"
 - 78% of all COVID alone deaths occurred in people with 65+ of age.
 - Average age of death from COVID is 82.5 years, which is statistically equal to the average life expectancy in UK.
 
+
+    
+<!-- 
+#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the COVID-19  vaccine manufacturers\' claims about  vaccine efficacy and safety.
+-->
 
 
 <!-- 
@@ -275,7 +276,7 @@ Heath Canada portal. This is how you do it:
 <hr>
 
 
-Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community). Corrections/Comments: <office@ivim.ca>       
-[open-canada.github.io/vitals](https://open-canada.github.io/vitals)  ([App](https://open-canada.github.io/App/vitals))
+<!-- Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community). Corrections/Comments: <office@ivim.ca>   -->    
+ 
 
 
