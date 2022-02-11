@@ -9,18 +9,12 @@ Analysis of Official Data Related to COVID-19 Vaccine Efficacy and Safety
 
 Disclaimer: The authoritative source for COVID-19 information is [Canada.ca/coronavirus](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html). The results and views presented here are those by the authors and are not to be misconstrued as representing  views of
 any Canadian Agency, University, or Department. They were developed and gathered by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community) as part of the community training and socializing, mostly on authors' own time and using authors' own resources.
-All codes behind the analysis and supporting documents are free, open and available in [GitHub](https://github.com/open-canada/vitals/). 
+All codes behind the analysis and supporting documents are free, open and available in [GitHub](https://github.com/open-canada/vitals/).  Comments and corrections are welcome.
 
 <!-- 
 -   ["Statistical analysis of official data sources related to vaccine efficacy and  safety (NEW EVIDENCE SINCE OCTOBER
     2021)"](https://open-canada.github.io/vitals/analysis)
 -->
-
-<!-- 
-[Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
-
-
-[Open Canada Vitals Statitistcs (Deaths) Tracker App](https://open-canada.github.io/Apps/vitals) | ["One Year since Vaccination..." (Presentation)](https://open-canada.github.io/vitals/r4gc-meetup-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf) | ["Some observations related tothe 'Elephant in the Room'" (Research Paper)](https://open-canada.github.io/vitals/comment.pdf) | [Reporting COVID-19 vaccine side-effects in Canada](report-side-effects)  | 
 
 
 -->
@@ -46,16 +40,19 @@ The solution to  this problem  was seen in keeping the discussion focused entire
 <!-- A[open-canada.github.io/vitals](https://open-canada.github.io/vitals)  lot of effort in this presentation was given to applaud many of the Government of Canada efforts -->
 
 <a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf" style="text-align: center">
-<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s1.png" width="250" align="center"></a>
+<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s1.png" width="500" align="center"></a>
 
 - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf), 
 Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community)  lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022).
 
+<!--
 - Shorter version of the above deck, modified for larger audience is [here]()
+
+-->
 
 White Papers and Tools:
 
-- [Guide on how to report COVID-19 vaccine side-effects in Canada as a consumer](report-side-effects)
+- [Guide on how to report COVID-19 vaccine side-effects in Canada as a consumer](https://open-canada.github.io/vitals/report-side-effect)
 
 - [Interactive *Open Canada Vitals Statitistcs (Deaths) Tracker* App](https://open-canada.github.io/Apps/vitals) 
 <!-- - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetu[open-canada.github.io/vitals](https://open-canada.github.io/vitals) p-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
@@ -70,7 +67,7 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
   
   
 <a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf" style="text-align: center">
-<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s19.png" width="250" align="center">
+<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s19.png" width="500" align="center">
 </a>
 
   
@@ -246,13 +243,13 @@ Data from other governments:
 
 
 <a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf" style="text-align: center">
-<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s13.png" width="250" align="center">
+<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s13.png" width="500" align="center">
 </a>
 
 
     
 <!-- 
-#### CONCLUSION: Open Canada data that has become available since the start of COVID-19 vaccination in Canada <u>do not</u> support the COVID-19  vaccine manufacturers\' claims about  vaccine efficacy and safety.
+#### CONCLUSION: Open Canada data that has become available *after* the start of general public vaccination  <u>do not</u> support the COVID-19  vaccine manufacturers\' claims about  vaccine efficacy and safety.
 -->
 
 
