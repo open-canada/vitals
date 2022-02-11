@@ -47,10 +47,9 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by
 <img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s1.png" width="500" align="center"></a>
 
 
-White Papers and Tools:
+### White Papers and Tools:
 
 - [Guide on how to report COVID-19 vaccine side-effects in Canada as a consumer](https://open-canada.github.io/vitals/report-side-effect)
-
 - [Interactive *Open Canada Vitals Statitistcs (Deaths) Tracker* App](https://open-canada.github.io/Apps/vitals) 
 <!-- - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://github.com/open-canada/vitals/blob/main/docs/r4gc-meetu[open-canada.github.io/vitals](https://open-canada.github.io/vitals) p-2022-02-04-SpecialEdition(OneYearOfVaccineInCanada).pdf), 
 Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup --> 
@@ -58,13 +57,11 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
 
 -  ["Some observations from Canadian Vital Statistics Death (CVSD) Database related to
     the 'Elephant in the Room'"](https://open-canada.github.io/vitals/comment.pdf), Comment submission to The Lancet Journal (6 January 2022)
-    
-  
 -  ["Additional  observations related to the 'Elephant in the Room' –  from the Government of Canada COVID-19 daily epidemiology updates.  Time to act!"](https://open-canada.github.io/vitals/comment2.pdf), White paper (10 January 2022)  
   
   
-<a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf" style="text-align: center">
-<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s19.png" width="500" align="center">
+<a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s19.png">
+<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s19.png" width="500">
 </a>
 
 
@@ -73,22 +70,28 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
 
 
 
-<!-- - Reverse-engineering Algorithmic Bias from published COVID-19 data -->
-
-<!-- ### Sources and Key Findings (Updated weekly) -->
-
-
-
-### COVID-19 deaths by Vaccination Status
+### Sources and Findings
 
 
 
 
-#### Source [gc1]: Cases* following vaccination, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9>
+#### Source 1
 
+[gc1] "Cases* following vaccination, COVID-19 Daily Epidemiology Update"*, Public Health Agency of Canada,  <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9> ([archived reports](https://github.com/open-canada/vitals/tree/main/docs/COVID-19%20epidemiology%20updates))
+
+NB: The statistics reported in this source are computed using the death data since December 2020, when  there were no fully vaccinated Canadians yet, but many cases happened (More exactly: There were 0 fully-vaccinated in December, < 1% for most of January,  <3%  until May). This is known as *algorithmic bias*, which skews results favourably towards fully-vaccinated cases, and which can be removed using  the technique described in [this paper](https://open-canada.github.io/vitals/comment2.pdf). The number below are quoted directrly from the source.
+  
+  
+Last Updated: 2022-02-10 
+
+ 
 <!-- 
 
-Last Updated: 2022-02-10 
+
+
+- *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>* <br>
+  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month) <p>
+    
 
 Fully vaccinated among COVID-19 deaths
 
@@ -119,14 +122,12 @@ Proportion of Unvaccinated among COVID-19 deaths
     Table 2):
 
 
-- *Data extracted on January 28, 2022 for cases <u>from December 14, 2020</u>* <br>
-  Unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week, +7.3% increase since last month) <p>
-  NB: This statistics is computed using the  data in December 2020, when there were no fully vaccinated, till February, when it was less than 1% fully vaccinated, and till April, when it was less than 3% fully vaccinated, and when  most COVID-19 deaths happened (which can be computed using the  [App](https://open-canada.github.io/App/vitals)).  
- 
 -->
 
+##### COVID-19 deaths by Vaccination Status
+
  
-- *on February 04, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,670,682)* <br> 
+- *on February 10, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,670,682)* <br> 
 unvaccinated 68.1%% vs. fully vaccinated **19.5%** (+2.7% increase since last week)
 - *on February 04,  2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,458,433)* <br> 
 unvaccinated 70.3% vs. fully vaccinated **16.8%** (+3% increase since last week)
@@ -135,10 +136,35 @@ unvaccinated 72.8% vs. fully vaccinated **13.8%** (+4.3% increase since December
 - *on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988)*: <br> 
 unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
-**NB: \* Significant bias is introduced in the reporting of Fully-vaccinated deaths by counting  Deaths since December 14, 2020, when there were very few fully-vaccinated  people back between then and May.***
+
+#### Source 2
 
 
-#### Source [gc2]: ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety>
+[ gc2a ] Hospitalizations by vaccination status, COVID-19 (coronavirus) in Ontario, <https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus>
+
+[ gc2b ] For more information on cases following vaccination, please see the Weekly epidemiology report (PDF) available on the [Government of Canada’s COVID-19 data trends](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) page
+
+<!-- 
+
+[gc1] **Hospitalizations by vaccination status** (Sources:
+[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - weekly report (PDF), [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus))
+
+-->
+
+-  *“Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”*. 
+-  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated
+
+<!-- -  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021.-->
+<!-- - and continues* to increase -->
+
+<!-- ONTARIO
+Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 vs 211
+Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 10 vs. 174
+-->
+
+#### Source 3
+
+[gc3]: ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety>
  
 <!-- 
 [gc4]  **COVID-19 vaccine adverse reactions (side-effects)** (Source: 
@@ -162,25 +188,32 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
 - Many are not reported or published yet, like the one  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)
  - Adverse reaction, not reported yet in Canada but reported in US: -->
 
+#### Source 4
+
+[gc4] 
+Recalls and safety alerts, Government of Canada: <https://recalls-rappels.canada.ca/>
+(for 
+[[Moderna](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
+[[Pfizer](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=pfizer)], 
+[[Astrazeneca](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=astrazeneca)]
+):
+
+- Risk of Facial paralysis/Bell’s Palsy. Posted: 2021-08-06 
+- Risk of Myocarditis and pericarditis. Posted: 2021-06-30
+- Risk of Capillary Leak Syndrome. Posted: 2021-06-29
+- Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
 
 
-[gc1] **Hospitalizations by vaccination status** (Sources:
-[canada.ca](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/epidemiological-economic-research-data.html) - weekly report (PDF), [ontario.ca](https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus))
 
--  *“Incidence [of COVID-19 cases] among fully vaccinated cases has surpassed those among unvaccinated since mid-December 2021”*. 
--  In January 2022, close to 3/4 of hospitalized COVID patients in Ontario were fully vaccinated
+#### Source 5
 
-<!-- -  The proportion of fully-vaccinated hospitalizations has been increasing since December 2021.-->
-<!-- - and continues* to increase -->
+[ gc5 ] Statistics Canada, Canadian Vital Statistics - Death database . Provisional weekly death counts, by selected grouped causes of death.  <https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001>  (Dashboard: <https://open-canada.github.io/vitals>) 
 
-<!-- ONTARIO
-Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 vs 211
-Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 10 vs. 174
--->
-
-[gc2]  **Deaths of COVID-19** (Source: GC
+<!-- 
+[gc4]: **Deaths of COVID-19** (Source: GC
     [statcan.gc.ca](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001), [App
     Calculator](https://o-canada.shinyapps.io/vitals/#section-statistics)) - (Last record: 6 NOV 2021):
+-->
 
 
 - From December 14, 2020 to  April 30, 2021: 13075
@@ -196,17 +229,8 @@ Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 1
 - For comparison, Deaths from Flu without comorbidities (10-year historical average): 
 -->
 
-[gc5]  **Health Canada COVID-19 vaccine recalls to** (for 
-[[Moderna](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=moderna)], 
-[[Pfizer](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=pfizer)], 
-[[Astrazeneca](https://recalls-rappels.canada.ca/en/search/site?search_api_fulltext=astrazeneca)]
-):
 
-- Risk of Facial paralysis/Bell’s Palsy. Posted: 2021-08-06 
-- Risk of Myocarditis and pericarditis. Posted: 2021-06-30
-- Risk of Capillary Leak Syndrome. Posted: 2021-06-29
-- Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
-
+#### Additional Sources: 
 
 [gcA]  **Vaccination rates** (Source:
     [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
@@ -231,7 +255,7 @@ Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 1
 
 
 
-Data from other governments:
+#### Data from other governments:
  
  
 [ukg1] **COVID deaths vs. COVID alone deaths** (Source: [gov.uk](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/deathsfromcovid19withnootherunderlyingcauses) - [Explanation](https://www.youtube.com/watch?v=9UHvwWWcjYw)):
@@ -263,21 +287,6 @@ Data from other governments:
 #### Additional  references:  
 
  
--   ["COVID-19 vaccine efficacy and effectiveness—the elephant (not) in the room"]("https://doi.org/10.1016/S2666-5247(21)00069-0"), The Lancet, VOLUME 2, ISSUE 7, E279-E280 (1 July 2021)
--   ["US COVID-19 Vaccines Proven to Cause More Harm than Good Based on Pivotal Clinical Trial Data Analyzed Using the Proper Scientific Endpoint 'All Cause Severe Morbidity'"](https://www.scivisionpub.com/pdfs/us-covid19-vaccines-proven-to-cause-more-harm-than-good-based-on-pivotal-clinical-trial-data-analyzed-using-the-proper-scientific--1811.pdf),  Trends Internal  Medicine,  2021; 1(1): 1-6, (25 August 2021).
--   ["Why are we vaccinating children against COVID-19?"](https://doi.org/10.1016/j.toxrep.2021.08.010), Toxicology Reports, Volume 8 (14 September 2021) 
-
-
-<!-- , which is a bit tricky, if you don't know what to write in some manadary form fields.  But when you know, it takes 10 mins to do it. -->
-
-<!--
-### Additional tools and resources:
-
-- [Report COVID-19 vaccine side-effect](report-side-effect)
-- [Open Canada Vital Statistics (Deaths) Tracker App: <https://open-canada.github.io/Apps/vitals>. 
-- Repository of archived
- 
- 
 - [Justice Centre for Constitutional Freedoms](https://www.jccf.ca)
 
 -->
@@ -306,26 +315,13 @@ Heath Canada portal. This is how you do it:
     (VAERS): [vaers.hhs.gov](https://openvaers.com). 
 -   Check if your vaccine batch (aka lot), which is printed on your vaccination receipt, is among the ["bad ones"](https://www.howbad.info), according to VAERS data. -->    
 <!--   
-     
-#### Personal declarations
-
--   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
-    Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
-    helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that
-    forms part of it): [pdf (with
-    links)](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf), [html
-    (with
-    comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
-
-
-
 
 -->
 
 <hr>
 
 
-<!-- Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community). Corrections/Comments: <office@ivim.ca>   -->    
+<!-- Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community). Corrections/Comments: <open-canada-data-analysis@ivim.ca>   -->    
  
 
 
