@@ -72,17 +72,16 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
 
 ### Sources and Findings
 
+Last Updated: 2022-02-10 
 
 
-
-#### Source 1
 
 [gc1] "Cases* following vaccination, COVID-19 Daily Epidemiology Update"*, Public Health Agency of Canada,  <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9> ([archived reports](https://github.com/open-canada/vitals/tree/main/docs/COVID-19%20epidemiology%20updates))
 
-NB: The statistics reported in this source are computed using the death data since December 2020, when  there were no fully vaccinated Canadians yet, but many cases happened (More exactly: There were 0 fully-vaccinated in December, < 1% for most of January,  <3%  until May). This is known as *algorithmic bias*, which skews results favourably towards fully-vaccinated cases, and which can be removed using  the technique described in [this paper](https://open-canada.github.io/vitals/comment2.pdf). The number below are quoted directrly from the source.
+NB: The statistics reported in this source are computed using  death data since December 2020, when  there were no fully vaccinated Canadians yet, but when many cases happened (More exactly: There were 0 fully-vaccinated in December, < 1% for most of January,  <3%  until May). This is known as *algorithmic bias*, which skews results favourably towards fully-vaccinated cases, and which can be removed using  technique described in [this paper](https://open-canada.github.io/vitals/comment2.pdf). The numbers below are quoted directrly from the source.
   
   
-Last Updated: 2022-02-10 
+
 
  
 <!-- 
@@ -124,7 +123,7 @@ Proportion of Unvaccinated among COVID-19 deaths
 
 -->
 
-##### COVID-19 deaths by Vaccination Status
+###### COVID-19 deaths by Vaccination Status
 
  
 - *on February 10, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,670,682)* <br> 
@@ -136,9 +135,7 @@ unvaccinated 72.8% vs. fully vaccinated **13.8%** (+4.3% increase since December
 - *on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988)*: <br> 
 unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
-
-#### Source 2
-
+<hr>
 
 [ gc2a ] Hospitalizations by vaccination status, COVID-19 (coronavirus) in Ontario, <https://covid-19.ontario.ca/data/hospitalizations#hospitalizationsByVaccinationStatus>
 
@@ -162,7 +159,7 @@ Last updated: February 3, 2022 at 10:31 a.m. (EST): Hosp. 536 vs 1383, ICU 179 v
 Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 10 vs. 174
 -->
 
-#### Source 3
+<hr>
 
 [gc3]: ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety>
  
@@ -188,7 +185,7 @@ Last updated: February 6, 2022 at 10:31 a.m. (EST): 484 + 100, vs. 1264, 158 + 1
 - Many are not reported or published yet, like the one  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)
  - Adverse reaction, not reported yet in Canada but reported in US: -->
 
-#### Source 4
+<hr>
 
 [gc4] 
 Recalls and safety alerts, Government of Canada: <https://recalls-rappels.canada.ca/>
@@ -204,8 +201,7 @@ Recalls and safety alerts, Government of Canada: <https://recalls-rappels.canada
 - Risk of Thrombosis with Thrombocytopenia. Posted: 2021-03-24
 
 
-
-#### Source 5
+<hr>
 
 [ gc5 ] Statistics Canada, Canadian Vital Statistics - Death database . Provisional weekly death counts, by selected grouped causes of death.  <https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001>  (Dashboard: <https://open-canada.github.io/vitals>) 
 
@@ -230,7 +226,7 @@ Recalls and safety alerts, Government of Canada: <https://recalls-rappels.canada
 -->
 
 
-#### Additional Sources: 
+<hr>
 
 [gcA]  **Vaccination rates** (Source:
     [canada.ca](https://health-infobase.canada.ca/covid-19/vaccination-coverage/)):
@@ -253,7 +249,7 @@ Recalls and safety alerts, Government of Canada: <https://recalls-rappels.canada
 - About 0.0xxx% of COVID-19 cases result in hospitalizations, 0.00yy% result in ICU, and 0.000z% in deaths, about 10% of which  COVID-deaths only - TBC
 -->
 
-
+<hr>
 
 #### Data from other governments:
  
@@ -272,8 +268,8 @@ Recalls and safety alerts, Government of Canada: <https://recalls-rappels.canada
 - However, natural immunity  reduces the risk of hospitalization even more (by x20-x50),  while the chance of having severe complication from COVID infection for people younger than 65 and in good health is very low (<0.01% Cases based on [ukg1])  and for  children under 12 even lower (<0.0001% Cases based on [ukg2]).
 
 
-<a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf" style="text-align: center">
-<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s13.png" width="500" align="center">
+<a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s13.png" >
+<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s13.png" width="500" >
 </a>
 
 
@@ -321,7 +317,7 @@ Heath Canada portal. This is how you do it:
 <hr>
 
 
-<!-- Prepared by: [R4GC community](https://open-canada.github.io/r4gc/index.html#r4gc-community). Corrections/Comments: <open-canada-data-analysis@ivim.ca>   -->    
+ Corrections/Comments: [ open-canada-data-analysis @ ivim . ca ]     
  
 
 
