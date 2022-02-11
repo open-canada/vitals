@@ -11,13 +11,8 @@ Disclaimer: The authoritative source for COVID-19 information is [Canada.ca/coro
 any Canadian Agency, University, or Department. They were developed and gathered by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community) as part of the community training and socializing, mostly on authors' own time and using authors' own resources.
 All codes behind the analysis and supporting documents are free, open and available in [GitHub](https://github.com/open-canada/vitals/).  Comments and corrections are welcome.
 
-<!-- 
--   ["Statistical analysis of official data sources related to vaccine efficacy and  safety (NEW EVIDENCE SINCE OCTOBER
-    2021)"](https://open-canada.github.io/vitals/analysis)
--->
 
 
--->
 
 ### Talking about "The Elephant in the Room". 
 <!-- How to defend the constitutional freedom and scientific integgity in the times of crisis-->
@@ -70,18 +65,24 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
 <img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s19.png" width="500" align="center">
 </a>
 
-  
+  <!-- 
+-   ["Statistical analysis of official data sources related to vaccine efficacy and  safety (NEW EVIDENCE SINCE OCTOBER
+    2021)"](https://open-canada.github.io/vitals/analysis)
+-->
+
 
 <!-- - Reverse-engineering Algorithmic Bias from published COVID-19 data -->
 
 <!-- ### Sources and Key Findings (Updated weekly) -->
+
+
 
 ### COVID-19 deaths by Vaccination Status
 
 
 
 
-#### Source [gc1]: Cases following vaccination’, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9>
+#### Source [gc1]: Cases* following vaccination, COVID-19 Daily Epidemiology Update, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html#a9>
 
 <!-- 
 
@@ -123,15 +124,16 @@ Proportion of Unvaccinated among COVID-19 deaths
 -->
 
  
-
-- *Data extracted on January 28, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,458,433) <br> 
-unvaccinated 70.3%% vs. fully vaccinated **16.8%** (+3% increase since last week)
-- *Data extracted on January 21, 2022 for cases from December 14, 2020 up until January 08, 2022 (n=1,341,192)*: <br> 
+- *on February 04, 2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,670,682)* <br> 
+unvaccinated 68.1%% vs. fully vaccinated **19.5%** (+2.7% increase since last week)
+- *on February 04,  2022 for cases from December 14, 2020 up until January 15, 2022 (n=1,458,433)* <br> 
+unvaccinated 70.3% vs. fully vaccinated **16.8%** (+3% increase since last week)
+- *on January 21, 2022 for cases from December 14, 2020 up until January 08, 2022 (n=1,341,192)*: <br> 
 unvaccinated 72.8% vs. fully vaccinated **13.8%** (+4.3% increase since December 14)
-- *Data extracted on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988)*: <br> 
+- *on December 15, 2021 for cases from December 14, 2020 up until November 27, 2021 (n=882,988)*: <br> 
 unvaccinated 76.1% vs. fully vaccinated **9.5%**
 
-
+**NB: \* Significant bias is introduced in the reporting of Fully-vaccinated deaths by counting  Deaths since December 14, 2020, when there were very few fully-vaccinated  people back between then and May.***
 
 
 #### Source [gc2]: ‘Reported side effects following COVID-19 vaccination in Canada’, Canadian COVID-19 vaccination safety report, Public Health Agency of Canada, <https://health-infobase.canada.ca/covid-19/vaccine-safety>
@@ -142,15 +144,17 @@ unvaccinated 76.1% vs. fully vaccinated **9.5%**
     
     -->
 
+
+- Total (since Jan 2021) "Serious": *	7,678.  Weekly: 118
+- Total (since Jan 2021) "Not serious":    28,486. 
+
+
 - Between *May 2021 and Oct 2021* "Serious" side-effects: **5200** (increased from 5038 posted in last month report)
 -  Of these: 1,111 heart diseases (including 64 Cardiac arrests, 77 Heart Attacks, 970
     Myocarditis1/Pericarditis), 947 thrombosis, 781 central nervous system failures
     (including 594 Bell's Palsy), 487 Anaphylaxis, 166 Auto-immune diseases, 37 Acute
     kidney injury, 25 Liver injury, and 208 deaths (some under investigation).
     
-
-- Total (since Jan 2021) "Serious": **7,526** 
-- Total (since Jan 2021) "Not serious": *20,159*    
 
 <!-- 
 - Many are not reported or published yet, like the one  [here](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)
