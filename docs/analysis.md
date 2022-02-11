@@ -1,8 +1,8 @@
 ## Statistical analysis of official data sources related to vaccine efficacy and safety (NEW EVIDENCE SINCE OCTOBER 2021)
 
-https://open-canada.github.io/vitals/
+[open-canada.github.io/vitals](https://open-canada.github.io/vitals) 
 
- [Deaths Statistics Tracker](https://open-canada.github.io/Apps/vitals) | [Analysis of Official Data](analysis) | [Minister's Personal Declaration](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf)| [Report side-effects](https://hpr-rps.hres.ca/side-effects-reporting-form.php?form=voluntary) ([Example](https://open-canada.github.io/vitals/SideEffectReporting-example-1.pdf)) | [Sign Petition](https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-3592) |  
+Last Updated: 2021-01-14 
 
 
 ### GC Sources:
@@ -124,4 +124,16 @@ The above references expose the lack of evidence and scientific integrity in the
 The data from vaccine tests have never been made public --- [All vaccine manufacturers refuse to provide them](https://www.bmj.com/content/376/bmj.o102)
 
 The last document, *released by Pfizer under the court order* on 17 November 2021, provides data that was collected, but  not disclosed by the manufacturer prior to 17 November 2021, on real world adverse events observed  in the first 2.5 months after Emergency Use Authorization. Among others, it lists: over 1,200 deaths; over 25,000 nervous system adverse events; and Anaphylaxis and Vaccine-Associated Enhanced Disease (listed under “Safety concerns”).
+
+
+-   *"A Personal Declaration Of Opposition To The Abuse of Our Charter of Rights and
+    Freedoms By The State"* by Hon. Brian Peckford (the last living First Minister who
+    helped craft the Constitution Act 1982 and The Charter of Rights and Freedoms that
+    forms part of it): [pdf (with
+    links)](https://open-canada.github.io/vitals/brian-peckford-declaration.pdf), [html
+    (with
+    comments)](https://peckford42.wordpress.com/2022/01/02/a-personal-declaration-of-opposition-to-the-abuse-of-our-charter-of-rights-and-freedoms-by-the-state/)
+
+
+
 
