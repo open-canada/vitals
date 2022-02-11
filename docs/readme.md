@@ -34,8 +34,6 @@ The solution to  this problem  was seen in keeping the discussion focused entire
 
 <!-- A[open-canada.github.io/vitals](https://open-canada.github.io/vitals)  lot of effort in this presentation was given to applaud many of the Government of Canada efforts -->
 
-<a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf" style="text-align: center">
-<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s1.png" width="500" align="center"></a>
 
 - ["One Year since Vaccination. What we have learnt - using Open Canada Data and Data Science"](https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf), 
 Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by the [R4GC Data Science community](https://open-canada.github.io/r4gc/index.html#r4gc-community)  lead, Senior Data Scientist, Dr. Dmitry Gorodnichy (4 February 2022).
@@ -44,6 +42,10 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup  by
 - Shorter version of the above deck, modified for larger audience is [here]()
 
 -->
+
+<a href="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-deck-meetup-2022-02-04.pdf" style="text-align: center">
+<img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s1.png" width="500" align="center"></a>
+
 
 White Papers and Tools:
 
@@ -65,10 +67,10 @@ Special Edition presentation for the R4GC Community 'Lunch and Learn' Meetup -->
 <img src="https://open-canada.github.io/vitals/OneYearOfVaccineInCanada-s19.png" width="500" align="center">
 </a>
 
-  <!-- 
+
 -   ["Statistical analysis of official data sources related to vaccine efficacy and  safety (NEW EVIDENCE SINCE OCTOBER
     2021)"](https://open-canada.github.io/vitals/analysis)
--->
+
 
 
 <!-- - Reverse-engineering Algorithmic Bias from published COVID-19 data -->
